@@ -27,7 +27,7 @@ const Layout = ({ children }) => (
                 <p>
                   When a sending system generates an EHR extract, the following
                   JSON MI event must be submitted. In the first instance we are
-                  interested in capturing attachment metadata.
+                  interested in capturing attachment metadata:
                 </p>
                 <pre>{`
 {
