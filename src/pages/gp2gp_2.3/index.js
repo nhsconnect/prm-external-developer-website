@@ -20,63 +20,61 @@ const Layout = ({ children }) => (
               <div className="app-pane__side-bar">
                 <PermenantMenu />
               </div>
-              <div className="app-pane__main-content">            
-                  <h1>GP2GP 2.3: Enhanced Managment Information (MI)</h1>
-                  <a name="overview"></a>
-                  <h2>Overview</h2>
-                  <p>
-                    In GP2GP we currently see a lot of errors that we either:
+              <div className="app-pane__main-content">
+                <h1>GP2GP 2.3: Enhanced Managment Information (MI)</h1>
+                <a name="overview"></a>
+                <h2>Overview</h2>
+                <p>
+                  In GP2GP we currently see a lot of errors that we either:
+                  <ul>
+                    <li>cannot currently measure</li>
+                    <li>
+                      or when we can measure, cannot currently understand.
+                    </li>
+                  </ul>
+                  The aim of the "Enhanced MI" specification update is to
+                  provide visibility in these key areas in a timely fashion.
+                </p>
+                <p>
+                  The goal is to provide additional information that is not
+                  currently provided in the 2.2b MI specification:
+                </p>
+                <h3>Sending Practice specific</h3>
+                <ul>
+                  <li>
+                    For each attachment that is in the EHR:
                     <ul>
-                      <li>cannot currently measure</li>
-                      <li>
-                        or when we can measure, cannot currently understand.
-                      </li>
+                      <li>Size</li>
+                      <li>Type</li>
+                      <li>Code</li>
                     </ul>
-                    The aim of the "Enhanced MI" specification update is to
-                    provide visibility in these key areas in a timely fashion.
-                  </p>
-                  <p>
-                    The goal is to provide additional information that is not
-                    currently provided in the 2.2b MI specification:
-                  </p>
-                  <h3>Sending Practice specific</h3>
-                  <ul>
-                    <li>
-                      For each attachment that is in the EHR:
-                      <ul>
-                        <li>Size</li>
-                        <li>Type</li>
-                        <li>Code</li>
-                      </ul>
-                    </li>
-                    <li>
-                      Whether that attachment was included in thhe GP2GP message
-                    </li>
-                    <li>
-                      Usage of 'Placeholders' when attachments are not sent
-                    </li>
-                  </ul>
-                  <h3>Recieving Practice specifc</h3>
-                  <ul>
-                    <li>
-                      For each attachment that is in the GP2GP message:
-                      <ul>
-                        <li>Size</li>
-                        <li>Type</li>
-                        <li>Code</li>
-                      </ul>
-                    </li>
-                    <li>
-                      Whether that attachment was integrated into the record
-                    </li>
-                    <li>
-                      For each degrade:
-                      <ul>
-                        <li>the code that was degraded</li>
-                        <li>The number of times it was degraded</li>
-                      </ul>
-                    </li>
-                  </ul>
+                  </li>
+                  <li>
+                    Whether that attachment was included in thhe GP2GP message
+                  </li>
+                  <li>Usage of 'Placeholders' when attachments are not sent</li>
+                </ul>
+                <h3>Recieving Practice specifc</h3>
+                <ul>
+                  <li>
+                    For each attachment that is in the GP2GP message:
+                    <ul>
+                      <li>Size</li>
+                      <li>Type</li>
+                      <li>Code</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Whether that attachment was integrated into the record
+                  </li>
+                  <li>
+                    For each degrade:
+                    <ul>
+                      <li>the code that was degraded</li>
+                      <li>The number of times it was degraded</li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
