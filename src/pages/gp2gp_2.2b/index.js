@@ -12,26 +12,15 @@ const Layout = ({ children }) => (
         tag: "Development:",
       }}
     />
-    <div className="nhsuk-width-container ">
-      <main className="nhsuk-main-wrapper">
-        <div className="nhsuk-grid-row">
-          <div className="nhsuk-grid-column-full">
-            <div className="app-pane">
-              <div className="app-pane__side-bar">
-                <PermenantMenu />
-              </div>
-              <div className="app-pane__main-content">
-                <h1>GP2GP 2.2b</h1>
-                <p>
-                  Here is the documentation that make up the GP2GP 2.2b
-                  standard:
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
+    <Layout>
+      <div className="app-pane__side-bar">
+        <PermenantMenu />
+      </div>
+      <div className="app-pane__main-content">
+        <h1>GP2GP 2.2b</h1>
+        <p>Here is the documentation that make up the GP2GP 2.2b standard:</p>
+      </div>
+    </Layout>
   </React.Fragment>
 )
 

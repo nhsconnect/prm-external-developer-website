@@ -1,5 +1,6 @@
 import React from "react"
 import Header from "../components/header"
+import { Layout } from "../components/layout"
 import "./index.scss"
 
 const Layout = ({ children }) => (
@@ -12,22 +13,14 @@ const Layout = ({ children }) => (
         tag: "Development:",
       }}
     />
-    <div className="nhsuk-width-container ">
-      <main className="nhsuk-main-wrapper">
-        <div className="nhsuk-grid-row">
-          <div className="nhsuk-grid-column-full">
-            <div className="app-pane">
-              <div className="app-pane__side-bar">
-                <PermenantMenu />
-              </div>
-              <div className="app-pane__main-content">
-                <h1>GP2GP</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
+    <Layout>
+      <div className="app-pane__side-bar">
+        <PermenantMenu />
+      </div>
+      <div className="app-pane__main-content">
+        <h1>GP2GP</h1>
+      </div>
+    </Layout>
   </React.Fragment>
 )
 
@@ -40,7 +33,10 @@ const PermenantMenu = ({ children }) => (
     <h2 className="nhsuk-u-visually-hidden">Contents</h2>
     <ol className="nhsuk-list">
       <li className="app-side-nav__item">
-        <a className="app-side-nav__link" href="/prm-external-developer-website/gp2gp_2.2b">
+        <a
+          className="app-side-nav__link"
+          href="/prm-external-developer-website/gp2gp_2.2b"
+        >
           GP2GP v2.2b
         </a>
       </li>

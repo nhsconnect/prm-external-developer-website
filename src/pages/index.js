@@ -1,8 +1,9 @@
 import React from "react"
 import Header from "../components/header"
+import { Layout } from "../components/layout"
 import "./index.scss"
 
-const Layout = ({ children }) => (
+const Index = ({ children }) => (
   <React.Fragment>
     <Header
       serviceName={"Patient Record Migration: Developer website"}
@@ -12,26 +13,18 @@ const Layout = ({ children }) => (
         tag: "Development:",
       }}
     />
-    <div className="nhsuk-width-container ">
-      <main className="nhsuk-main-wrapper">
-        <div className="nhsuk-grid-row">
-          <div className="nhsuk-grid-column-full">
-            <div className="app-pane">
-              <div className="app-pane__side-bar">
-                <PermenantMenu />
-              </div>
-              <div className="app-pane__main-content">
-                <h1>Patient Record Migration: Developer website</h1>
-                <p>
-                  Welcome to the Patient Record Migration: Developer website.
-                  Please click a link to the area you are interested in.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
+    <Layout>
+      <div className="app-pane__side-bar">
+        <PermenantMenu />
+      </div>
+      <div className="app-pane__main-content">
+        <h1>Patient Record Migration: Developer website</h1>
+        <p>
+          Welcome to the Patient Record Migration: Developer website. Please
+          click a link to the area you are interested in.
+        </p>
+      </div>
+    </Layout>
   </React.Fragment>
 )
 
@@ -44,7 +37,10 @@ const PermenantMenu = ({ children }) => (
     <h2 className="nhsuk-u-visually-hidden">Contents</h2>
     <ol className="nhsuk-list">
       <li className="app-side-nav__item">
-        <a className="app-side-nav__link" href="/prm-external-developer-website/gp2gp">
+        <a
+          className="app-side-nav__link"
+          href="/prm-external-developer-website/gp2gp"
+        >
           GP2GP
         </a>
       </li>
@@ -52,4 +48,4 @@ const PermenantMenu = ({ children }) => (
   </nav>
 )
 
-export default Layout
+export default Index
