@@ -1,9 +1,44 @@
-@import 'node_modules/nhsuk-frontend/packages/nhsuk';
+@import "node_modules/nhsuk-frontend/packages/nhsuk";
 
 .main-content {
-    display: flex;
+  display: flex;
 }
 
 .permenant-menu {
-    margin-right: 20px;
+  margin-right: 20px;
+}
+
+.app-pane {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+  overflow: inherit;
+  position: relative;
+}
+.app-pane__side-bar {
+  -ms-flex: 0 0 auto;
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+  width: 220px;
+}
+@media (max-width: 61.865em) {
+  .app-pane__side-bar {
+    width: 200px;
+  }
+}
+@media (max-width: 48.0525em) {
+  .app-pane__side-bar {
+    display: none;
+  }
+}
+.app-side-nav__item {
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.app-side-nav__item--current {
+  border-left: 4px solid #005eb8;
+  margin-left: -12px;
+  padding-left: 8px;
 }
