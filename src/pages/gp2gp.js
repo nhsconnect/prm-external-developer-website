@@ -33,12 +33,12 @@ const PermenantMenu = ({ children }) => (
     <h2 className="nhsuk-u-visually-hidden">Contents</h2>
     <ol className="nhsuk-contents-list__list">
       <li className="nhsuk-contents-list__item">
-        <a className="nhsuk-contents-list__link" href="/gp2gp_2.2b">
+        <a className="nhsuk-contents-list__link" href="gp2gp_2.2b">
           GP2GP v2.2b
         </a>
       </li>
       <li className="nhsuk-contents-list__item">
-        <a className="nhsuk-contents-list__link" href="/gp2gp_2.3">
+        <a className="nhsuk-contents-list__link" href="gp2gp_2.3">
           GP2GP v2.3 - "Enhanced MI"
         </a>
       </li>

@@ -143,7 +143,7 @@ const PermenantMenu = ({ children }) => (
     <h2 className="nhsuk-u-visually-hidden">Contents</h2>
     <ol className="nhsuk-contents-list__list">
       <li className="nhsuk-contents-list__item">
-        <a className="nhsuk-contents-list__link" href="/gp2gp_2.3">
+        <a className="nhsuk-contents-list__link" href="gp2gp_2.3">
           Overview
         </a>
       </li>
@@ -153,7 +153,7 @@ const PermenantMenu = ({ children }) => (
         </a>
       </li>
       <li className="nhsuk-contents-list__item">
-        <a className="nhsuk-contents-list__link" href="/gp2gp_2.3/scope">
+        <a className="nhsuk-contents-list__link" href="gp2gp_2.3/scope">
           Scope
         </a>
       </li>      
