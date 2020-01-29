@@ -84,12 +84,12 @@ const PermenantMenu = ({ children }) => (
         </a>
       </li>
       <li className="nhsuk-contents-list__item">
-        <a className="nhsuk-contents-list__link" href="gp2gp_2.3/vision">
+        <a className="nhsuk-contents-list__link" href="/prm-external-developer-website/gp2gp_2.3/vision">
           Vision
         </a>
       </li>
       <li className="nhsuk-contents-list__item">
-        <a className="nhsuk-contents-list__link" href="gp2gp_2.3/scope">
+        <a className="nhsuk-contents-list__link" href="/prm-external-developer-website/gp2gp_2.3/scope">
           Scope
         </a>
       </li>   
