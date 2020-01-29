@@ -158,14 +158,14 @@ const PermenantMenu = ({ children }) => (
     <h2 className="nhsuk-u-visually-hidden">Contents</h2>
     <ol className="nhsuk-list">
       <li className="app-side-nav__item">
-        <a className="app-side-nav__link" href="#overview">
+        <a className="app-side-nav__link" href="/prm-external-developer-website/gp2gp_2.3">
           Overview
         </a>
       </li>
       <li className="app-side-nav__item app-side-nav__item--current">
         <a
           className="app-side-nav__link"
-          href="/prm-external-developer-website/gp2gp_2.3/vision"
+          href="#vision"
         >
           Vision
         </a>

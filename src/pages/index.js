@@ -44,7 +44,7 @@ const PermenantMenu = ({ children }) => (
     <h2 className="nhsuk-u-visually-hidden">Contents</h2>
     <ol className="nhsuk-list">
       <li className="app-side-nav__item">
-        <a className="app-side-nav__link" href="#top">
+        <a className="app-side-nav__link" href="/prm-external-developer-website/gp2gp">
           GP2GP
         </a>
       </li>

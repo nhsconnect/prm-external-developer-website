@@ -51,7 +51,7 @@ const PermenantMenu = ({ children }) => (
       <li className="app-side-nav__item">
         <a
           className="app-side-nav__link"
-          href="/prm-external-developer-website/gp2gp_2.3/vision"
+          href="/prm-external-developer-website/gp2gp_2.3"
         >
           GP2GP v2.3 - "Enhanced MI"
         </a>
