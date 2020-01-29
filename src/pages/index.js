@@ -13,15 +13,23 @@ const Layout = ({ children }) => (
       }}
     />
     <div className="nhsuk-width-container ">
-      <main className="nhsuk-main-wrapper main-content ">
-        <PermenantMenu />
-        <article>
-          <h2>Patient Record Migration: Developer website</h2>
-          <p>
-            Welcome to the Patient Record Migration: Developer website. Please
-            click a link to the area you are interested in.
-          </p>
-        </article>
+      <main className="nhsuk-main-wrapper">
+        <div className="nhsuk-grid-row">
+          <div className="nhsuk-grid-column-full">
+            <div className="app-pane">
+              <div className="app-pane__side-bar">
+                <PermenantMenu />
+              </div>
+              <div className="app-pane__main-content">
+                <h1>Patient Record Migration: Developer website</h1>
+                <p>
+                  Welcome to the Patient Record Migration: Developer website.
+                  Please click a link to the area you are interested in.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
   </React.Fragment>
@@ -34,9 +42,9 @@ const PermenantMenu = ({ children }) => (
     aria-label="Pages in this guide"
   >
     <h2 className="nhsuk-u-visually-hidden">Contents</h2>
-    <ol className="nhsuk-contents-list__list">
-      <li className="nhsuk-contents-list__item">
-        <a className="nhsuk-contents-list__link" href="/prm-external-developer-website/gp2gp">
+    <ol className="nhsuk-list">
+      <li className="app-side-nav__item">
+        <a className="app-side-nav__link" href="#top">
           GP2GP
         </a>
       </li>
