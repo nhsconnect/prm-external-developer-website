@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: "/prm-external-developer-website",
   siteMetadata: {
     title: `PRM Developer Website`,
     description: `The developer website for all things PRM`,
