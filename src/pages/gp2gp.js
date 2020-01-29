@@ -18,14 +18,11 @@ const Layout = ({ children }) => (
           <div className="nhsuk-grid-column-full">
             <div className="app-pane">
               <div className="app-pane__side-bar">
-        <PermenantMenu />
-        </div>
-              <div className="app-pane__main-content">            
-                      
-              
-          <h1>GP2GP</h1>
-        
-          </div>
+                <PermenantMenu />
+              </div>
+              <div className="app-pane__main-content">
+                <h1>GP2GP</h1>
+              </div>
             </div>
           </div>
         </div>
