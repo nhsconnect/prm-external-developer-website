@@ -13,12 +13,22 @@ const Layout = ({ children }) => (
       }}
     />
     <div className="nhsuk-width-container ">
-      <main className="nhsuk-main-wrapper main-content ">
+      <main className="nhsuk-main-wrapper">
+        <div className="nhsuk-grid-row">
+          <div className="nhsuk-grid-column-full">
+            <div className="app-pane">
+              <div className="app-pane__side-bar">
         <PermenantMenu />
-        <article>
-          <h2>GP2GP</h2>
-          <p></p>
-        </article>
+        </div>
+              <div className="app-pane__main-content">            
+                      
+              
+          <h1>GP2GP</h1>
+        
+          </div>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
   </React.Fragment>
@@ -31,14 +41,17 @@ const PermenantMenu = ({ children }) => (
     aria-label="Pages in this guide"
   >
     <h2 className="nhsuk-u-visually-hidden">Contents</h2>
-    <ol className="nhsuk-contents-list__list">
-      <li className="nhsuk-contents-list__item">
-        <a className="nhsuk-contents-list__link" href="/prm-external-developer-website/gp2gp_2.2b">
+    <ol className="nhsuk-list">
+      <li className="app-side-nav__item">
+        <a className="app-side-nav__link" href="#overview">
           GP2GP v2.2b
         </a>
       </li>
-      <li className="nhsuk-contents-list__item">
-        <a className="nhsuk-contents-list__link" href="/prm-external-developer-website/gp2gp_2.3">
+      <li className="app-side-nav__item">
+        <a
+          className="app-side-nav__link"
+          href="/prm-external-developer-website/gp2gp_2.3/vision"
+        >
           GP2GP v2.3 - "Enhanced MI"
         </a>
       </li>
