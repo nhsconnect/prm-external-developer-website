@@ -1,9 +1,10 @@
 import React from "react"
 import Header from "../components/header"
 import { Layout } from "../components/layout"
+import { PermenantMenu } from "../components/permenantmenu"
 import "./index.scss"
 
-const Index = ({ children }) => (
+const Page = ({ children }) => (
   <React.Fragment>
     <Header
       serviceName={"Patient Record Migration: Developer website"}
@@ -15,7 +16,16 @@ const Index = ({ children }) => (
     />
     <Layout>
       <div className="app-pane__side-bar">
-        <PermenantMenu />
+        <PermenantMenu
+          data={{
+            items: [
+              {
+                url: "/prm-external-developer-website/gp2gp",
+                label: "GP2GP",
+              },
+            ],
+          }}
+        />
       </div>
       <div className="app-pane__main-content">
         <h1>Patient Record Migration: Developer website</h1>
@@ -28,24 +38,4 @@ const Index = ({ children }) => (
   </React.Fragment>
 )
 
-const PermenantMenu = ({ children }) => (
-  <nav
-    className="nhsuk-contents-list permenant-menu"
-    role="navigation"
-    aria-label="Pages in this guide"
-  >
-    <h2 className="nhsuk-u-visually-hidden">Contents</h2>
-    <ol className="nhsuk-list">
-      <li className="app-side-nav__item">
-        <a
-          className="app-side-nav__link"
-          href="/prm-external-developer-website/gp2gp"
-        >
-          GP2GP
-        </a>
-      </li>
-    </ol>
-  </nav>
-)
-
-export default Index
+export default Page
