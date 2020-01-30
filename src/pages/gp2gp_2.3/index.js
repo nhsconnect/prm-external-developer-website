@@ -20,7 +20,6 @@ const Page = ({ children }) => (
         </div>
         <div className="app-pane__main-content">
           <h1>GP2GP 2.3: Enhanced Managment Information (MI)</h1>
-          <a name="overview"></a>
           <h2>Overview</h2>
           <p>
             In GP2GP we currently see a lot of errors that we either:
@@ -82,7 +81,7 @@ const PermenantMenu = ({ children }) => (
     <h2 className="nhsuk-u-visually-hidden">Contents</h2>
     <ol className="nhsuk-list">
       <li className="app-side-nav__item app-side-nav__item--current">
-        <a className="app-side-nav__link" href="#overview">
+        <a className="app-side-nav__link" href="#top">
           Overview
         </a>
       </li>

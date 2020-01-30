@@ -19,7 +19,6 @@ const Page = ({ children }) => (
       </div>
       <div className="app-pane__main-content">
         <h1>GP2GP 2.3: Enhanced Managment Information (MI)</h1>
-        <a name="scope"></a>
         <h2>Scope</h2>
         <p>
           When a sending system generates an EHR extract, the following JSON MI
@@ -137,7 +136,7 @@ const PermenantMenu = ({ children }) => (
         </a>
       </li>
       <li className="app-side-nav__item app-side-nav__item--current">
-        <a className="app-side-nav__link" href="#scope">
+        <a className="app-side-nav__link" href="#top">
           Scope
         </a>
       </li>

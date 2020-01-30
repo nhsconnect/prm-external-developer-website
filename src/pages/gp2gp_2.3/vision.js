@@ -19,7 +19,6 @@ const Page = ({ children }) => (
       </div>
       <div className="app-pane__main-content">
         <h1>GP2GP 2.3: Enhanced Managment Information (MI)</h1>
-        <a name="vision"></a>
         <h2>Vision</h2>
         <h3>Motivation</h3>
         <p>
@@ -150,7 +149,7 @@ const PermenantMenu = ({ children }) => (
         </a>
       </li>
       <li className="app-side-nav__item app-side-nav__item--current">
-        <a className="app-side-nav__link" href="#vision">
+        <a className="app-side-nav__link" href="#top">
           Vision
         </a>
       </li>
