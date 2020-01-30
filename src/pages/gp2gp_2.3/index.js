@@ -1,6 +1,7 @@
 import React from "react"
 import Header from "../../components/header"
 import { Layout } from "../../components/layout"
+import { PermenantMenu } from "../../components/permenantmenu"
 import "../index.scss"
 
 const Page = ({ children }) => (
@@ -16,17 +17,37 @@ const Page = ({ children }) => (
     <Layout>
       <div className="app-pane">
         <div className="app-pane__side-bar">
-          <PermenantMenu />
+          <PermenantMenu
+            data={{
+              items: [
+                {
+                  url: "#top",
+                  label: "Overview",
+                  selected: true
+                },
+                {
+                  url: "/prm-external-developer-website/gp2gp_2.3/vision",
+                  label: "Vision",
+                },
+                {
+                  url: "/prm-external-developer-website/gp2gp_2.3/scope",
+                  label: "Scope",
+                },
+              ],
+            }}
+          />
         </div>
         <div className="app-pane__main-content">
           <h1>GP2GP 2.3: Enhanced Managment Information (MI)</h1>
           <h2>Overview</h2>
           <p>
             In GP2GP we currently see a lot of errors that we either:
+          </p>
             <ul>
               <li>cannot currently measure</li>
               <li>or when we can measure, cannot currently understand.</li>
             </ul>
+          <p>
             The aim of the "Enhanced MI" specification update is to provide
             visibility in these key areas in a timely fashion.
           </p>
@@ -70,39 +91,6 @@ const Page = ({ children }) => (
       </div>
     </Layout>
   </React.Fragment>
-)
-
-const PermenantMenu = ({ children }) => (
-  <nav
-    className="nhsuk-contents-list permenant-menu"
-    role="navigation"
-    aria-label="Pages in this guide"
-  >
-    <h2 className="nhsuk-u-visually-hidden">Contents</h2>
-    <ol className="nhsuk-list">
-      <li className="app-side-nav__item app-side-nav__item--current">
-        <a className="app-side-nav__link" href="#top">
-          Overview
-        </a>
-      </li>
-      <li className="app-side-nav__item">
-        <a
-          className="app-side-nav__link"
-          href="/prm-external-developer-website/gp2gp_2.3/vision"
-        >
-          Vision
-        </a>
-      </li>
-      <li className="app-side-nav__item">
-        <a
-          className="app-side-nav__link"
-          href="/prm-external-developer-website/gp2gp_2.3/scope"
-        >
-          Scope
-        </a>
-      </li>
-    </ol>
-  </nav>
 )
 
 export default Page

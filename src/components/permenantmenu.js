@@ -1,4 +1,5 @@
 import React from "react"
+import classNames from "classnames"
 
 export const PermenantMenu = props => (
   <nav
@@ -7,14 +8,20 @@ export const PermenantMenu = props => (
     aria-label="Pages in this guide"
   >
     <h2 className="nhsuk-u-visually-hidden">Contents</h2>
-    <ol className="nhsuk-list">
-      {props.data.items.map((item, key) => (
-        <li className="app-side-nav__item" key={key}>
-          <a className="app-side-nav__link" href={item.url}>
-            {item.label}
-          </a>
-        </li>
-      ))}
-    </ol>
+    <ul className="nhsuk-list">
+      {props.data.items.map((item, key) => {
+        let linkClasses = classNames({
+          "app-side-nav__item": true,
+          "app-side-nav__item--current": item.selected,
+        })
+        return (
+          <li className={linkClasses} key={key}>
+            <a className="app-side-nav__link" href={item.url}>
+              {item.label}
+            </a>
+          </li>
+        )
+      })}
+    </ul>
   </nav>
 )

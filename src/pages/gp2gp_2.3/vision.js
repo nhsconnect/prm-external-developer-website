@@ -1,6 +1,7 @@
 import React from "react"
 import Header from "../../components/header"
 import { Layout } from "../../components/layout"
+import { PermenantMenu } from "../../components/permenantmenu"
 import "../index.scss"
 
 const Page = ({ children }) => (
@@ -15,7 +16,25 @@ const Page = ({ children }) => (
     />
     <Layout>
       <div className="app-pane__side-bar">
-        <PermenantMenu />
+      <PermenantMenu
+          data={{
+            items: [
+              {
+                url: "/prm-external-developer-website/gp2gp_2.3",
+                label: "Overview",
+              },
+              {
+                url: "#top",
+                label: "Vision",
+                selected: true,
+              },
+              {
+                url: "/prm-external-developer-website/gp2gp_2.3/scope",
+                label: "Scope",
+              },
+            ],
+          }}
+        />
       </div>
       <div className="app-pane__main-content">
         <h1>GP2GP 2.3: Enhanced Managment Information (MI)</h1>
@@ -130,39 +149,6 @@ const Page = ({ children }) => (
       </div>
     </Layout>
   </React.Fragment>
-)
-
-const PermenantMenu = ({ children }) => (
-  <nav
-    className="nhsuk-contents-list permenant-menu"
-    role="navigation"
-    aria-label="Pages in this guide"
-  >
-    <h2 className="nhsuk-u-visually-hidden">Contents</h2>
-    <ol className="nhsuk-list">
-      <li className="app-side-nav__item">
-        <a
-          className="app-side-nav__link"
-          href="/prm-external-developer-website/gp2gp_2.3"
-        >
-          Overview
-        </a>
-      </li>
-      <li className="app-side-nav__item app-side-nav__item--current">
-        <a className="app-side-nav__link" href="#top">
-          Vision
-        </a>
-      </li>
-      <li className="app-side-nav__item">
-        <a
-          className="app-side-nav__link"
-          href="/prm-external-developer-website/gp2gp_2.3/scope"
-        >
-          Scope
-        </a>
-      </li>
-    </ol>
-  </nav>
 )
 
 export default Page
