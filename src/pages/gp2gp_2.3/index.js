@@ -1,9 +1,9 @@
 import React from "react"
 import Header from "../../components/header"
-import { Layout } from "../components/layout"
+import { Layout } from "../../components/layout"
 import "../index.scss"
 
-const Layout = ({ children }) => (
+const Page = ({ children }) => (
   <React.Fragment>
     <Header
       serviceName={"Patient Record Migration: Developer website"}
@@ -106,4 +106,4 @@ const PermenantMenu = ({ children }) => (
   </nav>
 )
 
-export default Layout
+export default Page
