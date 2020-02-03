@@ -21,6 +21,22 @@ const Page = ({ children }) => (
         },
       ],
     }}
+    breadcrumb={{
+      items: [
+        {
+          url: "/prm-external-developer-website/registrations",
+          label: "Registrations",
+        },
+        {
+          url: "/prm-external-developer-website/gp2gp",
+          label: "GP2GP",
+        },
+        {
+          url: "/prm-external-developer-website/gp2gp_2.3",
+          label: "GP2GP 2.3",
+        },
+      ],
+    }}
   >
     <h1>GP2GP 2.3: Enhanced Managment Information (MI)</h1>
     <h2>Overview</h2>

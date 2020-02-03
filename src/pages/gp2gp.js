@@ -1,41 +1,42 @@
 import React from "react"
-import Header from "../components/header"
-import { Layout } from "../components/layout"
-import { PermenantMenu } from "../components/permenantmenu"
+import { PageWithSideMenu } from "../components/pagelayouts/pagewithsidemenu"
 import "./index.scss"
 
 const Page = ({ children }) => (
-  <React.Fragment>
-    <Header
-      serviceName={"Patient Record Migration: Developer website"}
-      phaseBanner={{
-        text:
-          "This website and the standards contained is in early development. Whilst we hope you find it useful we would not recommend using this as your only source of guidance for developing.",
-        tag: "Development:",
-      }}
-    />
-    <Layout>
-      <div className="app-pane__side-bar">
-        <PermenantMenu
-          data={{
-            items: [
-              {
-                url: "/prm-external-developer-website/gp2gp_2.2b",
-                label: "GP2GP v2.2b",
-              },
-              {
-                url: "/prm-external-developer-website/gp2gp_2.3",
-                label: "GP2GP v2.3 - 'Enhanced MI'",
-              },
-            ],
-          }}
-        />
-      </div>
-      <div className="app-pane__main-content">
-        <h1>GP2GP</h1>
-      </div>
-    </Layout>
-  </React.Fragment>
+  <PageWithSideMenu
+    sidemenu={{
+      items: [
+        {
+          url: "/prm-external-developer-website/gp2gp_2.2b",
+          label: "GP2GP v2.2b",
+        },
+        {
+          url: "/prm-external-developer-website/gp2gp_2.3",
+          label: "GP2GP v2.3 - 'Enhanced MI'",
+        },
+      ],
+    }}
+    breadcrumb={{
+      items: [
+        {
+          url: "/prm-external-developer-website/registrations",
+          label: "Registrations",
+        },
+        {
+          url: "/prm-external-developer-website/gp2gp",
+          label: "GP2GP",
+        },
+      ],
+    }}
+  >
+    <h1>GP2GP</h1>
+    <p>
+      GP2GP is the standard that currently defines the process that you must
+      adhere to to retrieve the patients data from their previous practice and
+      the data model used when the data is transferred. For more details pick
+      the version you wish to know more about from the menu.
+    </p>
+  </PageWithSideMenu>
 )
 
 export default Page
