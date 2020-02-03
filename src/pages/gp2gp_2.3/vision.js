@@ -4,11 +4,13 @@ import { PermenantMenu } from "../../components/permenantmenu"
 import Breadcrumbs from "nhsuk-react-components/lib/components/breadcrumbs"
 import Header from "nhsuk-react-components/lib/components/header"
 import BackLink from "nhsuk-react-components/lib/components/back-link"
-import useMediaQuery from "react-use-media-query-hook"
+import { useMediaQuery } from "react-responsive"
 import "../index.scss"
 
 const Page = ({ children }) => {
-  const isMobile = useMediaQuery("(max-width: 640px)")
+  const isMobile = useMediaQuery({
+    query: "(max-width: 640px)",
+  })
 
   return (
     <React.Fragment>
