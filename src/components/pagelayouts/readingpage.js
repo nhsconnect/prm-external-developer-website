@@ -3,7 +3,7 @@ import React from "react"
 import { Layout } from "../layout"
 import { SharedHeader } from "../sharedheader"
 
-export const PageWithSideMenu = function({ children }) {
+export const ReadingPage = function({ children }) {
   return (
     <React.Fragment>
       <SharedHeader />
