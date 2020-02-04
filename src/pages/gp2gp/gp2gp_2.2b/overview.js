@@ -1,6 +1,7 @@
 import React from "react"
-import { PageWithSideMenu } from "../../components/pagelayouts/pagewithsidemenu"
-import "../index.scss"
+import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
+import "../../practicemigration"
+import { withPrefix } from "gatsby"
 
 const Page = ({ children }) => (
   <PageWithSideMenu
@@ -15,15 +16,15 @@ const Page = ({ children }) => (
     breadcrumb={{
       items: [
         {
-          url: "/prm-external-developer-website/registrations",
+          url: withPrefix("/registrations"),
           label: "Registrations",
         },
         {
-          url: "/prm-external-developer-website/gp2gp",
+          url: withPrefix("/gp2gp/overview"),
           label: "GP2GP",
         },
         {
-          url: "/prm-external-developer-website/gp2gp_2.2b",
+          url: withPrefix("/gp2gp/gp2gp_2.2b/overview"),
           label: "GP2GP 2.2b",
         },
       ],

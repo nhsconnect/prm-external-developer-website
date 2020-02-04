@@ -1,29 +1,30 @@
 import React from "react"
-import { PageWithSideMenu } from "../components/pagelayouts/pagewithsidemenu"
-import "./index.scss"
+import { withPrefix } from "gatsby"
+import { PageWithSideMenu } from "../../components/pagelayouts/pagewithsidemenu"
+import "../index.scss"
 
 const Page = ({ children }) => (
   <PageWithSideMenu
     sidemenu={{
       items: [
         {
-          url: "/prm-external-developer-website/gp2gp_2.2b",
+          url: withPrefix("/gp2gp/gp2gp_2.2b/overview"),
           label: "GP2GP v2.2b",
         },
         {
-          url: "/prm-external-developer-website/gp2gp_2.3",
-          label: "GP2GP v2.3 - 'Enhanced MI'",
+          url: withPrefix("/gp2gp/gp2gp_2.3/overview"),
+          label: "GP2GP v2.3",
         },
       ],
     }}
     breadcrumb={{
       items: [
         {
-          url: "/prm-external-developer-website/registrations",
+          url: withPrefix("/registrations"),
           label: "Registrations",
         },
         {
-          url: "/prm-external-developer-website/gp2gp",
+          url: withPrefix("/gp2gp/overview"),
           label: "GP2GP",
         },
       ],

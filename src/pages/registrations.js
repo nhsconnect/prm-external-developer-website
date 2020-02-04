@@ -1,4 +1,5 @@
 import React from "react"
+import { withPrefix } from "gatsby"
 import Promo from "nhsuk-react-components/lib/components/promo"
 import { ReadingPage } from "../components/pagelayouts/readingpage"
 import "./index.scss"
@@ -15,7 +16,7 @@ const Page = ({ children }) => (
       available to the GP Practice.
     </p>
     <Promo.Group>
-      <Promo href="/prm-external-developer-website/registrations/process">
+      <Promo href={withPrefix("/registrations/process")}>
         <Promo.Heading>Registration process in Primary Care</Promo.Heading>
         <Promo.Content>
           Find out information about how to successfully integrate with all the
@@ -23,7 +24,7 @@ const Page = ({ children }) => (
         </Promo.Content>
       </Promo>
       <Promo
-        href="/prm-external-developer-website/gp2gp"
+        href={withPrefix("/gp2gp/overview")}
       >
         <Promo.Heading>Migrating patient data using GP2GP</Promo.Heading>
         <Promo.Content>

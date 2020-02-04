@@ -1,4 +1,5 @@
 import React from "react"
+import { withPrefix } from "gatsby"
 import Header from "nhsuk-react-components/lib/components/header"
 
 export const SharedHeader = () => {
@@ -12,16 +13,16 @@ export const SharedHeader = () => {
         </Header.Content>
       </Header.Container>
       <Header.Navigation title="Menu">
-        <Header.Link href="/prm-external-developer-website" mobileOnly>
+        <Header.Link href={withPrefix("/")} mobileOnly>
           Home
         </Header.Link>
-        <Header.Link href="/prm-external-developer-website/registrations">
+        <Header.Link href={withPrefix("/registrations")}>
           Registrations
         </Header.Link>
-        <Header.Link href="/prm-external-developer-website/deductions">
+        <Header.Link href={withPrefix("/deductions")}>
           Deductions
         </Header.Link>
-        <Header.Link href="/prm-external-developer-website/practicemigration">
+        <Header.Link href={withPrefix("/practicemigration")}>
           Practice Migration
         </Header.Link>
       </Header.Navigation>
