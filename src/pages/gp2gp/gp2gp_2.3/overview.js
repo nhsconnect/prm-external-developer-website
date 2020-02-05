@@ -9,7 +9,7 @@ const Page = ({ children }) => (
     sidemenu={{
       items: [
         {
-          url: withPrefix("gp2gp/gp2gp_2.2b/overview"),
+          url: "#top",
           label: "Overview",
           selected: true,
         },
