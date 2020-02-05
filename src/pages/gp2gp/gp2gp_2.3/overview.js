@@ -1,92 +1,71 @@
 import React from "react"
-import { withPrefix } from "gatsby"
+import { withPrefix, Link } from "gatsby"
+import Promo from "nhsuk-react-components/lib/components/promo"
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
 import "../../index.scss"
-
 
 const Page = ({ children }) => (
   <PageWithSideMenu
     sidemenu={{
       items: [
         {
-          url: "#top",
+          url: withPrefix("gp2gp/gp2gp_2.2b/overview"),
           label: "Overview",
           selected: true,
-        },
-        {
-          url: withPrefix("gp2gp/gp2gp_2.3/vision"),
-          label: "Vision",
-        },
-        {
-          url: withPrefix("gp2gp/gp2gp_2.3/scope"),
-          label: "Scope",
         },
       ],
     }}
     breadcrumb={{
       items: [
         {
-          url: withPrefix("registrations"),
+          url: withPrefix("/registrations"),
           label: "Registrations",
         },
         {
-          url: withPrefix("gp2gp/overview"),
+          url: withPrefix("/gp2gp/overview"),
           label: "GP2GP",
         },
         {
-          url: withPrefix("gp2gp/gp2gp_2.3/overview"),
-          label: "GP2GP 2.3",
+          url: withPrefix("/gp2gp/gp2gp_2.2b/overview"),
+          label: "GP2GP 2.2b",
         },
       ],
     }}
   >
-    <h1>GP2GP 2.3: Enhanced Managment Information (MI)</h1>
-    <h2>Overview</h2>
-    <p>In GP2GP we currently see a lot of errors that we either:</p>
-    <ul>
-      <li>cannot currently measure</li>
-      <li>or when we can measure, cannot currently understand.</li>
-    </ul>
+    <h1>GP2GP 2.3</h1>
     <p>
-      The aim of the "Enhanced MI" specification update is to provide visibility
-      in these key areas in a timely fashion.
+      In GP2GP 2.3, we intend to improve the Management Information within GP2PG
+      so that we can start to make good decisions about the future of
+      registrations and how patient data is migrated between Primary Care
+      providers.
     </p>
     <p>
-      The goal is to provide additional information that is not currently
-      provided in the 2.2b MI specification:
+      GP2GP 2.3 intends to change GP2GP 2.2b by implementing{" "}
+      <Link to="/rfcs/RFC0001_gp2gp_mi/overview">RFC0001 GP2GP MI</Link>, which
+      details the changes we intend to make to Management Information. The
+      following documentation has been written AS IF that RFC has been accepted.
     </p>
-    <h3>Sending Practice specific</h3>
-    <ul>
-      <li>
-        For each attachment that is in the EHR:
-        <ul>
-          <li>Size</li>
-          <li>Type</li>
-          <li>Code</li>
-        </ul>
-      </li>
-      <li>Whether that attachment was included in thhe GP2GP message</li>
-      <li>Usage of 'Placeholders' when attachments are not sent</li>
-    </ul>
-    <h3>Recieving Practice specifc</h3>
-    <ul>
-      <li>
-        For each attachment that is in the GP2GP message:
-        <ul>
-          <li>Size</li>
-          <li>Type</li>
-          <li>Code</li>
-        </ul>
-      </li>
-      <li>Whether that attachment was integrated into the record</li>
-      <li>
-        For each degrade:
-        <ul>
-          <li>the code that was degraded</li>
-          <li>The number of times it was degraded</li>
-        </ul>
-      </li>
-    </ul>
+    <p>
+      Understanding the GP2GP 2.3 specification is difficult and complicated and
+      involves reading lots of documentation. What follows is our current
+      understanding of how best to read that documentation for those who are
+      trying to implement GP2GP 2.3 from scratch.
+    </p>
+    <p>Here is the opening high level use case for GP2GP 2.3:</p>
+    <Promo
+      href={withPrefix(
+        "/NPFIT-PC-BLD-0172.02 GP2GP UC1 Transfer Electronic Health Record.pdf"
+      )}
+      small
+    >
+      <Promo.Heading>
+        NPFIT-PC-BLD-0172.02 GP2GP UC1 Transfer Electronic Health Record
+      </Promo.Heading>
+      <Promo.Content>
+        Describes the initial use case for GP2GP and its use in the transfer of
+        the EHR
+      </Promo.Content>
+    </Promo>
   </PageWithSideMenu>
 )
 

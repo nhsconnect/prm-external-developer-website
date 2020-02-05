@@ -23,9 +23,7 @@ const Page = ({ children }) => (
           systems required for Primary Care registrations.
         </Promo.Content>
       </Promo>
-      <Promo
-        href={withPrefix("/gp2gp/overview")}
-      >
+      <Promo href={withPrefix("/gp2gp/overview")}>
         <Promo.Heading>Migrating patient data using GP2GP</Promo.Heading>
         <Promo.Content>
           During a patient registration in Primary Care we currently use GP2GP

@@ -25,6 +25,9 @@ export const SharedHeader = () => {
         <Header.Link href={withPrefix("/practicemigration")}>
           Practice Migration
         </Header.Link>
+        <Header.Link href={withPrefix("/rfcs")}>
+          RFCs
+        </Header.Link>        
       </Header.Navigation>
     </Header>
   )

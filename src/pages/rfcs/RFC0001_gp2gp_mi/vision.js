@@ -9,7 +9,7 @@ const Page = ({ children }) => {
       sidemenu={{
         items: [
           {
-            url: withPrefix("gp2gp/gp2gp_2.3/overview"),
+            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/overview"),
             label: "Overview",
           },
           {
@@ -18,7 +18,7 @@ const Page = ({ children }) => {
             selected: true,
           },
           {
-            url: withPrefix("gp2gp/gp2gp_2.3/scope"),
+            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/scope"),
             label: "Scope",
           },
         ],
@@ -26,16 +26,12 @@ const Page = ({ children }) => {
       breadcrumb={{
         items: [
           {
-            url: withPrefix("registrations"),
-            label: "Registrations",
+            url: withPrefix("/rfcs"),
+            label: "RFCs",
           },
           {
-            url: withPrefix("gp2gp/overview"),
-            label: "GP2GP",
-          },
-          {
-            url: withPrefix("gp2gp/gp2gp_2.3/overview"),
-            label: "GP2GP 2.3",
+            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/overview"),
+            label: "RFC0001 GP2GP MI",
           },
         ],
       }}

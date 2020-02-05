@@ -16,7 +16,7 @@ const Page = ({ children }) => (
         },
         {
           url: withPrefix("gp2gp/gp2gp_2.2b/spine_technical_design"),
-          label: "Spine techhnical design",
+          label: "Spine technical design",
         },
         {
           url: withPrefix("gp2gp/gp2gp_2.2b/management_information"),
