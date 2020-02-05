@@ -3,30 +3,31 @@ import { withPrefix } from "gatsby"
 import Promo from "nhsuk-react-components/lib/components/promo"
 import Pagination from "nhsuk-react-components/lib/components/pagination"
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
+import "../../index.scss"
 
 const Page = ({ children }) => (
   <PageWithSideMenu
     sidemenu={{
-        items: [
-          {
-            url: withPrefix("gp2gp/gp2gp_2.2b/overview"),
-            label: "Overview",
-          },
-          {
-            url: withPrefix("gp2gp/gp2gp_2.2b/spine_technical_design"),
-            label: "Spine techhnical design",
-          },
-          {
-            url: withPrefix("gp2gp/gp2gp_2.2b/management_information"),
-            label: "Management Information",
-            selected: true,
-          },
-          {
-              url: withPrefix("gp2gp/gp2gp_2.2b/appendix"),
-              label: "Appendix",
-            },    
-        ],
-      }}
+      items: [
+        {
+          url: withPrefix("gp2gp/gp2gp_2.2b/overview"),
+          label: "Overview",
+        },
+        {
+          url: withPrefix("gp2gp/gp2gp_2.2b/spine_technical_design"),
+          label: "Spine techhnical design",
+        },
+        {
+          url: withPrefix("gp2gp/gp2gp_2.2b/management_information"),
+          label: "Management Information",
+          selected: true,
+        },
+        {
+          url: withPrefix("gp2gp/gp2gp_2.2b/appendix"),
+          label: "Appendix",
+        },
+      ],
+    }}
     breadcrumb={{
       items: [
         {
