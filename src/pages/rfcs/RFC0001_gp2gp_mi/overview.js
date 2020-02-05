@@ -1,6 +1,7 @@
 import React from "react"
 import { withPrefix } from "gatsby"
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
+import InsetText from "nhsuk-react-components/lib/components/inset-text"
 import "../../index.scss"
 
 const Page = ({ children }) => (
@@ -35,7 +36,20 @@ const Page = ({ children }) => (
       ],
     }}
   >
-    <h1>GP2GP 2.3: Enhanced Managment Information (MI)</h1>
+    <InsetText>
+      <p>
+        This RFC is currently 'Being discussed'. If you want to have your say
+        then go to our{" "}
+        <a
+          href="https://github.com/nhsconnect/prm-external-developer-website/issues/1"
+          title="External website where RFC comments are allowed"
+        >
+          Github site
+        </a>
+        .
+      </p>
+    </InsetText>
+    <h1>GP2GP 2.3</h1>
     <h2>Overview</h2>
     <p>In GP2GP we currently see a lot of errors that we either:</p>
     <ul>
