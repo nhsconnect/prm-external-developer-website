@@ -26,8 +26,8 @@ const Page = ({ children }) => (
           label: "GP2GP",
         },
         {
-          url: withPrefix("/gp2gp/gp2gp_2.2b/overview"),
-          label: "GP2GP 2.2b",
+          url: withPrefix("/gp2gp/gp2gp_2.3/overview"),
+          label: "GP2GP 2.3",
         },
       ],
     }}
