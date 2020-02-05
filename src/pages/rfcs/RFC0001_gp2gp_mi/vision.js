@@ -37,20 +37,20 @@ const Page = ({ children }) => {
         ],
       }}
     >
-    <InsetText>
-      <p>
-        This RFC is currently 'Being discussed'. If you want to have your say
-        then go to our{" "}
-        <a
-          href="https://github.com/nhsconnect/prm-external-developer-website/issues/1"
-          title="External website where RFC comments are allowed"
-        >
-          Github site
-        </a>
-        .
-      </p>
-    </InsetText>      
-      <h1>GP2GP 2.3</h1>
+      <InsetText>
+        <p>
+          This RFC is currently 'Being discussed'. If you want to have your say
+          then go to our{" "}
+          <a
+            href="https://github.com/nhsconnect/prm-external-developer-website/issues/1"
+            title="External website where RFC comments are allowed"
+          >
+            Github site
+          </a>
+          .
+        </p>
+      </InsetText>
+      <h1>RFC0001 GP2GP MI</h1>
       <h2>Vision</h2>
       <h3>Motivation</h3>
       <p>

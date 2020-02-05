@@ -48,8 +48,8 @@ const Page = ({ children }) => (
         </a>
         .
       </p>
-    </InsetText>    
-    <h1>GP2GP 2.3</h1>
+    </InsetText>
+    <h1>RFC0001 GP2GP MI</h1>
     <h2>Scope</h2>
     <p>
       When a sending system generates an EHR extract, the following JSON MI

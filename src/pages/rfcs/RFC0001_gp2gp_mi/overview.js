@@ -49,7 +49,7 @@ const Page = ({ children }) => (
         .
       </p>
     </InsetText>
-    <h1>GP2GP 2.3</h1>
+    <h1>RFC0001 GP2GP MI</h1>
     <h2>Overview</h2>
     <p>In GP2GP we currently see a lot of errors that we either:</p>
     <ul>
