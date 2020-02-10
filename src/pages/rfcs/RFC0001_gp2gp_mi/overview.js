@@ -2,6 +2,7 @@ import React from "react"
 import { withPrefix } from "gatsby"
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
 import InsetText from "nhsuk-react-components/lib/components/inset-text"
+import Pagination from "nhsuk-react-components/lib/components/pagination"
 import "../../index.scss"
 
 const Page = ({ children }) => (
@@ -21,6 +22,10 @@ const Page = ({ children }) => (
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/scope"),
           label: "Scope",
         },
+        {
+          url: withPrefix("/rfcs/RFC0001_gp2gp_mi/mandatory_events"),
+          label: "Mandatory Events",
+        },
       ],
     }}
     breadcrumb={{
@@ -38,8 +43,10 @@ const Page = ({ children }) => (
   >
     <InsetText>
       <p>
-        This RFC is currently 'Being discussed'. If you want to have your say
-        then go to our{" "}
+        This RFC is currently 'Being discussed'. As such, it may be undergoing
+        significant change and should not be used as the basis of an
+        implementation at the moment. If you want to have your say and
+        contribute to this RFC then go to our{" "}
         <a
           href="https://github.com/nhsconnect/prm-external-developer-website/issues/1"
           title="External website where RFC comments are allowed"
@@ -51,51 +58,27 @@ const Page = ({ children }) => (
     </InsetText>
     <h1>RFC0001 GP2GP MI</h1>
     <h2>Overview</h2>
-    <p>In GP2GP we currently see a lot of errors that we either:</p>
+    <p>In GP2GP we currently see a large number of errors that we either:</p>
     <ul>
       <li>cannot currently measure</li>
       <li>or when we can measure, cannot currently understand.</li>
     </ul>
     <p>
-      The aim of the "Enhanced MI" specification update is to provide visibility
-      in these key areas in a timely fashion.
+      The aim of the Management Information (MI) specification update is to
+      provide visibility in these key areas in a timely fashion.
     </p>
     <p>
-      The goal is to provide additional information that is not currently
-      provided in the 2.2b MI specification:
+      We believe that the current implementation is not fit for purpose and
+      cannot be extended simply. As such we are proposing moving to a more 'real
+      time events' way of tracking the GP2GP and the surrounding registraiton
+      process.
     </p>
-    <h3>Sending Practice specific</h3>
-    <ul>
-      <li>
-        For each attachment that is in the EHR:
-        <ul>
-          <li>Size</li>
-          <li>Type</li>
-          <li>Code</li>
-        </ul>
-      </li>
-      <li>Whether that attachment was included in thhe GP2GP message</li>
-      <li>Usage of 'Placeholders' when attachments are not sent</li>
-    </ul>
-    <h3>Recieving Practice specifc</h3>
-    <ul>
-      <li>
-        For each attachment that is in the GP2GP message:
-        <ul>
-          <li>Size</li>
-          <li>Type</li>
-          <li>Code</li>
-        </ul>
-      </li>
-      <li>Whether that attachment was integrated into the record</li>
-      <li>
-        For each degrade:
-        <ul>
-          <li>the code that was degraded</li>
-          <li>The number of times it was degraded</li>
-        </ul>
-      </li>
-    </ul>
+    <p>This RFC outlines the proposal.</p>
+    <Pagination>
+      <Pagination.Next href={withPrefix("rfcs/RFC0001_gp2gp_mi/vision")}>
+        Vision
+      </Pagination.Next>
+    </Pagination>
   </PageWithSideMenu>
 )
 

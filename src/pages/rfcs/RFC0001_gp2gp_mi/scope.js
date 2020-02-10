@@ -2,6 +2,8 @@ import React from "react"
 import { withPrefix } from "gatsby"
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
 import InsetText from "nhsuk-react-components/lib/components/inset-text"
+import Image from "nhsuk-react-components/lib/components/image"
+import Pagination from "nhsuk-react-components/lib/components/pagination"
 import "../../index.scss"
 
 const Page = ({ children }) => (
@@ -21,6 +23,10 @@ const Page = ({ children }) => (
           label: "Scope",
           selected: true,
         },
+        {
+          url: withPrefix("/rfcs/RFC0001_gp2gp_mi/mandatory_events"),
+          label: "Mandatory Events",
+        },
       ],
     }}
     breadcrumb={{
@@ -38,8 +44,10 @@ const Page = ({ children }) => (
   >
     <InsetText>
       <p>
-        This RFC is currently 'Being discussed'. If you want to have your say
-        then go to our{" "}
+        This RFC is currently 'Being discussed'. As such, it may be undergoing
+        significant change and should not be used as the basis of an
+        implementation at the moment. If you want to have your say and
+        contribute to this RFC then go to our{" "}
         <a
           href="https://github.com/nhsconnect/prm-external-developer-website/issues/1"
           title="External website where RFC comments are allowed"
@@ -52,84 +60,66 @@ const Page = ({ children }) => (
     <h1>RFC0001 GP2GP MI</h1>
     <h2>Scope</h2>
     <p>
-      When a sending system generates an EHR extract, the following JSON MI
-      event must be submitted. In the first instance we are interested in
-      capturing attachment metadata:
+      We believe that initially, we should focus on the areas where we want to
+      gather new information first, to prove out thhe solution, as such we will
+      be focusing on the events around when the EHR is sent, and then when then
+      EHR is received.
     </p>
-    <pre>{`
-{
-  "id": "ABC123",
-  "event_type": "ehr_generated",
-  "registration_id": "DEF456",
-  "timestamp": 1575384234,
-  "attachments" : [
-    {"id": "xyz", "mimetype": "application/pdf", "size_bytes": 3084322},
-    {"id": "qrt", "mimetype": "audio/mpeg", "size_bytes": 24352346}
-  ]
-}
-          `}</pre>
-
-    <h3>Event fields</h3>
-    <table>
-      <tbody>
-        <tr>
-          <th>Field</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td>id</td>
-          <td>Unique identifier for this event.</td>
-        </tr>
-        <tr>
-          <td>event_type</td>
-          <td>The type of this event: “ehr_generated”</td>
-        </tr>
-        <tr>
-          <td>registration_id</td>
-          <td>Unique identifier of the registration this event belongs to</td>
-        </tr>
-        <tr>
-          <td>timestamp</td>
-          <td>Unix epoch timestamp of when the EHR was generated</td>
-        </tr>
-        <tr>
-          <td>attachment</td>
-          <td>JSON list containing metadata for each attachment in the EHR</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h3>Attachment metadata fields</h3>
-    <table>
-      <tbody>
-        <tr>
-          <th>Field</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td>id</td>
-          <td>
-            The ID of the attachment (as found in the XML of the EHR extract)
-          </td>
-        </tr>
-        <tr>
-          <td>mimetype</td>
-          <td>The mime type of the attachment</td>
-        </tr>
-        <tr>
-          <td>size_bytes</td>
-          <td>The size in bytes of the attachment</td>
-        </tr>
-        <tr>
-          <td>timestamp</td>
-          <td>Unix epoch timestamp of when the EHR was generated</td>
-        </tr>
-        <tr>
-          <td>attachment</td>
-          <td>JSON list containing metadata for each attachment in the EHR</td>
-        </tr>
-      </tbody>
-    </table>
+    <Image
+      src="/RFC0001_gp2gp_mi/scope_example.png"
+      alt="Highlighting the area of focus for this RFC around the EHR being sent and received"
+      caption="Our area of focus around the EHR being sent and received"
+      className="image-fullwidth"
+    />
+    <p>
+      As well as moving to events, we wish to collect additional data that is
+      not currently in the MI for those events, including:
+    </p>
+    <h3>Sending Practice specific</h3>
+    <ul>
+      <li>
+        For each attachment that is in the EHR:
+        <ul>
+          <li>Size</li>
+          <li>Type</li>
+          <li>
+            Code recorded in the EHR by the GP practice for that attachment
+          </li>
+        </ul>
+      </li>
+      <li>Whether that attachment was included in thhe GP2GP message</li>
+      <li>Usage of 'Placeholders' when attachments are not sent</li>
+    </ul>
+    <h3>Recieving Practice specifc</h3>
+    <ul>
+      <li>
+        For each attachment that is in the GP2GP message:
+        <ul>
+          <li>Size</li>
+          <li>Type</li>
+          <li>Code</li>
+        </ul>
+      </li>
+      <li>Whether that attachment was integrated into the record</li>
+      <li>
+        For each degrade:
+        <ul>
+          <li>the code that was degraded</li>
+          <li>The number of times it was degraded</li>
+        </ul>
+      </li>
+    </ul>
+    <p>Our proposed specificaiton for these events follows.</p>
+    <Pagination>
+      <Pagination.Previous href={withPrefix("rfcs/RFC0001_gp2gp_mi/vision")}>
+        Vision
+      </Pagination.Previous>
+      <Pagination.Next
+        href={withPrefix("rfcs/RFC0001_gp2gp_mi/mandatory_events")}
+      >
+        Mandatory Events
+      </Pagination.Next>
+    </Pagination>
   </PageWithSideMenu>
 )
 
