@@ -2,7 +2,6 @@ import React from "react"
 import { withPrefix } from "gatsby"
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
 import InsetText from "nhsuk-react-components/lib/components/inset-text"
-import Image from "nhsuk-react-components/lib/components/image"
 import Pagination from "nhsuk-react-components/lib/components/pagination"
 import "../../index.scss"
 
@@ -24,9 +23,13 @@ const Page = ({ children }) => (
         },
         {
           url: "#top",
-          label: "Mandatory Events",
+          label: "Event: EHR Generated",
           selected: true,
         },
+        {
+          url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_recieved"),
+          label: "Event: EHR Recieved",
+        },   
       ],
     }}
     breadcrumb={{
@@ -58,29 +61,60 @@ const Page = ({ children }) => (
       </p>
     </InsetText>
     <h1>RFC0001 GP2GP MI</h1>
-    <h2>Mandatory Events</h2>
-    <h3>EHR Generated</h3>
-    <h4>Event Description</h4>
+    <h2>EHR Generated</h2>
+    <h3>Event Description</h3>
     <p>
       The EHR Generated event should be sent when a sending system has generated
       the GP2GP EHR Extract message but <em>before</em> it has started to send
       the content to the receiving system.
     </p>
-    <h4>Event Example Payload</h4>
+    <h3>EHR Generated Event Example Payload</h3>
     <pre>{`
 {
-"id": "ABC123",
+  "event_id": "1234-123456-1234-123456",
   "event_type": "ehr_generated",
-  "registration_id": "DEF456",
-  "timestamp": 1575384234,
-  "attachments" : [
-    {"id": "xyz", "mimetype": "application/pdf", "size_bytes": 3084322},
-    {"id": "qrt", "mimetype": "audio/mpeg", "size_bytes": 24352346}
-  ]
+  "event_generated_timestamp": 1575384234,  
+  "payload": {
+    "registration_id": "4567-456789-4567-456789",
+    "gp2gp": {
+        "conversation_id": "4345-986959-4930-684038"
+    }
+    "ehr": {
+        "ehr_generated_timestamp": 1575384000,
+        "ehr_size_bytes": 5699433  
+    },
+    "attachments" : [
+      {
+        "id": "3424-342456-3424-342456", 
+        "mimetype": "application/pdf", 
+        "size_bytes": 3084322,
+        "code": {
+          "coding": [{
+            "code": "886721000000107",
+            "system": "http://snomed.info/sct"
+          }]
+        },        
+        {"id": "1323-132345-1323-132345", "mimetype": "audio/mpeg", "size_bytes": 24352346}
+      ],
+      "placeholders" : [
+        {"id": "9876-987654-9876-987654", "mimetype": "application/pdf", "size_bytes": 3084322},
+        {
+          "id": "6785-678543-6785-678543", 
+          "mimetype": "audio/mpeg", 
+          "size_bytes": 24352346, 
+          "code": {
+            "coding": [{
+                "code": "886721000000107",
+                "system": "http://snomed.info/sct"
+            }]
+          },
+        }
+      ]
+  }
 }
     `}</pre>
 
-    <h4>Event Fields</h4>
+    <h3>Event Fields</h3>
     <table>
       <tbody>
         <tr>
@@ -110,7 +144,7 @@ const Page = ({ children }) => (
       </tbody>
     </table>
 
-    <h4>Attachment Metadata Fields</h4>
+    <h3>Attachment Metadata Fields</h3>
     <table>
       <tbody>
         <tr>
@@ -141,16 +175,13 @@ const Page = ({ children }) => (
         </tr>
       </tbody>
     </table>
-    <h3>EHR Integrated</h3>
-    <h4>Event Description</h4>
-    <p>
-      The EHR Integrated event should be sent when a receiving system has
-      accepted the record into its EHR.
-    </p>
     <Pagination>
       <Pagination.Previous href={withPrefix("rfcs/RFC0001_gp2gp_mi/scope")}>
         Scope
       </Pagination.Previous>
+      <Pagination.Next href={withPrefix("rfcs/RFC0001_gp2gp_mi/event_ehr_recieved")}>
+        Event: EHR Recieved
+      </Pagination.Next>      
     </Pagination>
   </PageWithSideMenu>
 )

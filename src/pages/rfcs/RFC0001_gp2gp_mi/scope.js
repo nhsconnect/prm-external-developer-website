@@ -24,9 +24,14 @@ const Page = ({ children }) => (
           selected: true,
         },
         {
-          url: withPrefix("/rfcs/RFC0001_gp2gp_mi/mandatory_events"),
-          label: "Mandatory Events",
+          url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_generated"),
+          label: "Event: EHR Generated",
         },
+        {
+          url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_recieved"),
+          label: "Event: EHR Recieved",
+        },   
+
       ],
     }}
     breadcrumb={{
@@ -61,7 +66,7 @@ const Page = ({ children }) => (
     <h2>Scope</h2>
     <p>
       We believe that initially, we should focus on the areas where we want to
-      gather new information first, to prove out thhe solution, as such we will
+      gather new information first, to prove out the solution, as such we will
       be focusing on the events around when the EHR is sent, and then when then
       EHR is received.
     </p>
@@ -71,45 +76,11 @@ const Page = ({ children }) => (
       caption="Our area of focus around the EHR being sent and received"
       className="image-fullwidth"
     />
-    <p>
-      As well as moving to events, we wish to collect additional data that is
-      not currently in the MI for those events, including:
-    </p>
-    <h3>Sending Practice specific</h3>
-    <ul>
-      <li>
-        For each attachment that is in the EHR:
-        <ul>
-          <li>Size</li>
-          <li>Type</li>
-          <li>
-            Code recorded in the EHR by the GP practice for that attachment
-          </li>
-        </ul>
-      </li>
-      <li>Whether that attachment was included in thhe GP2GP message</li>
-      <li>Usage of 'Placeholders' when attachments are not sent</li>
-    </ul>
-    <h3>Recieving Practice specifc</h3>
-    <ul>
-      <li>
-        For each attachment that is in the GP2GP message:
-        <ul>
-          <li>Size</li>
-          <li>Type</li>
-          <li>Code</li>
-        </ul>
-      </li>
-      <li>Whether that attachment was integrated into the record</li>
-      <li>
-        For each degrade:
-        <ul>
-          <li>the code that was degraded</li>
-          <li>The number of times it was degraded</li>
-        </ul>
-      </li>
-    </ul>
-    <p>Our proposed specificaiton for these events follows.</p>
+    <p>Delivery method</p>
+    <p>Data model</p>
+    <p>Authorisation/Authentication</p>
+    <p>Assurance</p>    
+    <p>Use cases</p>
     <Pagination>
       <Pagination.Previous href={withPrefix("rfcs/RFC0001_gp2gp_mi/vision")}>
         Vision

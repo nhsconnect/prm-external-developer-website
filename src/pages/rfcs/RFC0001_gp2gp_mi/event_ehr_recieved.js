@@ -10,9 +10,8 @@ const Page = ({ children }) => (
     sidemenu={{
       items: [
         {
-          url: "#top",
+          url: withPrefix("/rfcs/RFC0001_gp2gp_mi/overview"),
           label: "Overview",
-          selected: true,
         },
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/vision"),
@@ -25,12 +24,12 @@ const Page = ({ children }) => (
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_generated"),
           label: "Event: EHR Generated",
-        },
+        },        
         {
-          url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_recieved"),
+          url: "#top",
           label: "Event: EHR Recieved",
-        },   
-
+          selected: true,
+        },
       ],
     }}
     breadcrumb={{
@@ -62,27 +61,16 @@ const Page = ({ children }) => (
       </p>
     </InsetText>
     <h1>RFC0001 GP2GP MI</h1>
-    <h2>Overview</h2>
-    <p>In GP2GP we currently see a large number of errors that we either:</p>
-    <ul>
-      <li>cannot currently measure</li>
-      <li>or when we can measure, cannot currently understand.</li>
-    </ul>
+    <h2>Event: EHR Recieved</h2>
+    <h4>Event Description</h4>
     <p>
-      The aim of the Management Information (MI) specification update is to
-      provide visibility in these key areas in a timely fashion.
+      The EHR Integrated event should be sent when a receiving system has
+      received the EHR but it has not yet integrated it.
     </p>
-    <p>
-      We believe that the current implementation is not fit for purpose and
-      cannot be extended simply. As such we are proposing moving to a more 'real
-      time events' way of tracking the GP2GP and the surrounding registraiton
-      process.
-    </p>
-    <p>This RFC outlines the proposal.</p>
     <Pagination>
-      <Pagination.Next href={withPrefix("rfcs/RFC0001_gp2gp_mi/vision")}>
-        Vision
-      </Pagination.Next>
+      <Pagination.Previous href={withPrefix("rfcs/RFC0001_gp2gp_mi/event_ehr_generated")}>
+        Event: EHR Generated
+      </Pagination.Previous>
     </Pagination>
   </PageWithSideMenu>
 )

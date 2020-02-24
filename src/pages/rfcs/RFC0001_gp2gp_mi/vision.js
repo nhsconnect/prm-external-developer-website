@@ -25,9 +25,14 @@ const Page = ({ children }) => {
             label: "Scope",
           },
           {
-            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/mandatory_events"),
-            label: "Mandatory Events",
+            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_generated"),
+            label: "Event: EHR Generated",
           },
+          {
+            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_recieved"),
+            label: "Event: EHR Recieved",
+          },   
+  
         ],
       }}
       breadcrumb={{
