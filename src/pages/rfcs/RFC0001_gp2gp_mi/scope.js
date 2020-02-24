@@ -66,7 +66,7 @@ const Page = ({ children }) => (
       EHR is received.
     </p>
     <Image
-      src="/RFC0001_gp2gp_mi/scope_example.png"
+      src={withPrefix("/RFC0001_gp2gp_mi/scope_example.png")}
       alt="Highlighting the area of focus for this RFC around the EHR being sent and received"
       caption="Our area of focus around the EHR being sent and received"
       className="image-fullwidth"

@@ -113,7 +113,7 @@ const Page = ({ children }) => {
         capturing management information.
       </p>
       <Image
-        src="/RFC0001_gp2gp_mi/events_example.png"
+        src={withPrefix("/RFC0001_gp2gp_mi/events_example.png")}
         alt="An example of events being raised by the registration process"
         caption="An example of raising different events during the registration process"
         className="image-fullwidth"
