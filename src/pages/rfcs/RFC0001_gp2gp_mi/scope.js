@@ -30,8 +30,7 @@ const Page = ({ children }) => (
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_recieved"),
           label: "Event: EHR Recieved",
-        },   
-
+        },
       ],
     }}
     breadcrumb={{
@@ -79,7 +78,7 @@ const Page = ({ children }) => (
     <p>Delivery method</p>
     <p>Data model</p>
     <p>Authorisation/Authentication</p>
-    <p>Assurance</p>    
+    <p>Assurance</p>
     <p>Use cases</p>
     <Pagination>
       <Pagination.Previous href={withPrefix("rfcs/RFC0001_gp2gp_mi/vision")}>

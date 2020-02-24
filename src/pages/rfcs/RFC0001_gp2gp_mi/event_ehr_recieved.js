@@ -24,7 +24,7 @@ const Page = ({ children }) => (
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_generated"),
           label: "Event: EHR Generated",
-        },        
+        },
         {
           url: "#top",
           label: "Event: EHR Recieved",
@@ -68,7 +68,9 @@ const Page = ({ children }) => (
       received the EHR but it has not yet integrated it.
     </p>
     <Pagination>
-      <Pagination.Previous href={withPrefix("rfcs/RFC0001_gp2gp_mi/event_ehr_generated")}>
+      <Pagination.Previous
+        href={withPrefix("rfcs/RFC0001_gp2gp_mi/event_ehr_generated")}
+      >
         Event: EHR Generated
       </Pagination.Previous>
     </Pagination>

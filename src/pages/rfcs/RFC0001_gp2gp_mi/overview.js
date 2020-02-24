@@ -29,8 +29,7 @@ const Page = ({ children }) => (
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_recieved"),
           label: "Event: EHR Recieved",
-        },   
-
+        },
       ],
     }}
     breadcrumb={{
