@@ -167,7 +167,7 @@ const Page = ({ children }) => {
         via HTTPS POST request to the GP2GP MI endpoint. To simplify the
         implementation, systems will not have to retry if this request fails.
       </p>
-      <h4>Registration ID</h4>
+      <h4>End to end view of the registration process</h4>
       <p>
         To allow events related to a single registration to be correlated, each
         event must have a field containing an anonymous identifier that is
