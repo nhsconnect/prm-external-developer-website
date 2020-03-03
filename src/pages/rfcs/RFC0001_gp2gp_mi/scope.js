@@ -85,9 +85,9 @@ const Page = ({ children }) => (
         Vision
       </Pagination.Previous>
       <Pagination.Next
-        href={withPrefix("rfcs/RFC0001_gp2gp_mi/mandatory_events")}
+        href={withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_generated")}
       >
-        Mandatory Events
+        Event: EHR Generated
       </Pagination.Next>
     </Pagination>
   </PageWithSideMenu>
