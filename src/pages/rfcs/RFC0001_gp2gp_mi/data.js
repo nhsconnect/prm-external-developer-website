@@ -81,9 +81,15 @@ const Page = ({ children }) => (
     <p>
       We want to understand the size of EHRs being transferred both as a whole
       (ie. including attachments) and purely as structured information without
-      reference to the attachments. This information is important to us to
-      understand the impact of digitisation as paper is increasingly removed
-      from GPs and digitised.
+      reference to the attachments.
+    </p>
+    <p>
+      We also want to know the number of degrades that the clinical staff have
+      to resolve when integrating the record.
+    </p>
+    <p>
+      This information is important to us to understand the impact of
+      digitisation as paper is increasingly removed from GPs and is digitised.
     </p>
     <h3>Attachments</h3>
     <p>
