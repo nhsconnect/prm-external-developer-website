@@ -68,9 +68,8 @@ const Page = ({ children }) => (
     <h2>EHR Generated</h2>
     <h3>Event Description</h3>
     <p>
-      The EHR Generated event should be sent when a sending system has generated
-      the GP2GP EHR Extract message but <em>before</em> it has started to send
-      the content to the receiving system.
+      The EHR Generated event should be sent immediately <em>before</em> the
+      sending system sends the EHR Extract (RCMR_MT030101UK04) message.
     </p>
     <h3>EHR Generated Event Example Payload</h3>
     <pre>{`
@@ -78,19 +77,28 @@ const Page = ({ children }) => (
   "event_id": "1234-123456-1234-123456",
   "event_type": "ehr_generated",
   "event_generated_timestamp": 1575384234,  
+  "meta": {
+    "system_supplier": "SYSTEM_SUPPLIER"
+    "ods_code": "XYZ4567"
+  }
   "payload": {
-    "registration_id": "4567-456789-4567-456789",
+    "registration": {
+      "requesting_ods_code": "ABC1234"
+      "sending_ods_code": "XYZ4567"
+    },    
     "gp2gp": {
         "conversation_id": "4345-986959-4930-684038"
     }
     "ehr": {
         "ehr_generated_timestamp": 1575384000,
-        "ehr_size_bytes": 5699433  
+        "ehr_total_size_bytes": 5699433  
+        "ehr_structured_size_bytes": 4096  
     },
     "attachments" : [
       {
-        "id": "3424-342456-3424-342456", 
-        "mimetype": "application/pdf", 
+        "attachment_id": "3424-342456-3424-342456", 
+        "clinical_type": "Scanned document",
+        "mime_type": "application/pdf", 
         "size_bytes": 3084322,
         "code": {
           "coding": [{
@@ -101,24 +109,18 @@ const Page = ({ children }) => (
         {"id": "1323-132345-1323-132345", "mimetype": "audio/mpeg", "size_bytes": 24352346}
       ],
       "placeholders" : [
-        {"id": "9876-987654-9876-987654", "mimetype": "application/pdf", "size_bytes": 3084322},
-        {
-          "id": "6785-678543-6785-678543", 
-          "mimetype": "audio/mpeg", 
-          "size_bytes": 24352346, 
-          "code": {
-            "coding": [{
-                "code": "886721000000107",
-                "system": "http://snomed.info/sct"
-            }]
-          },
-        }
+        {
+          "placeholder_id": "9876-987654-9876-987654", 
+          "attachment_id": "1323-132345-1323-132345",
+          "generated_by": "XYZ4567",
+          "reason": 1
+        },       
       ]
   }
 }
     `}</pre>
 
-    <h3>Event Fields</h3>
+    <h3>Top Level Event Fields</h3>
     <table>
       <tbody>
         <tr>
@@ -126,7 +128,7 @@ const Page = ({ children }) => (
           <th>Description</th>
         </tr>
         <tr>
-          <td>id</td>
+          <td>event_id</td>
           <td>Unique identifier for this event.</td>
         </tr>
         <tr>
@@ -134,21 +136,20 @@ const Page = ({ children }) => (
           <td>The type of this event: “ehr_generated”</td>
         </tr>
         <tr>
-          <td>registration_id</td>
-          <td>Unique identifier of the registration this event belongs to</td>
+          <td>meta</td>
+          <td>
+            An object that contains information about the generation of the
+            event
+          </td>
         </tr>
         <tr>
-          <td>timestamp</td>
-          <td>Unix epoch timestamp of when the EHR was generated</td>
-        </tr>
-        <tr>
-          <td>attachment</td>
-          <td>JSON list containing metadata for each attachment in the EHR</td>
+          <td>payload</td>
+          <td>An object that contains the detailed payload of the event</td>
         </tr>
       </tbody>
     </table>
 
-    <h3>Attachment Metadata Fields</h3>
+    <h3>Payload Event Fields</h3>
     <table>
       <tbody>
         <tr>
@@ -156,29 +157,221 @@ const Page = ({ children }) => (
           <th>Description</th>
         </tr>
         <tr>
-          <td>id</td>
+          <td>registration</td>
           <td>
-            The ID of the attachment (as found in the XML of the EHR extract)
+            An object that contains information about the registration process
           </td>
         </tr>
         <tr>
-          <td>mimetype</td>
-          <td>The mime type of the attachment</td>
+          <td>gp2gp</td>
+          <td>An object that contains information about the GP2GP transfer</td>
         </tr>
         <tr>
-          <td>size_bytes</td>
-          <td>The size in bytes of the attachment</td>
+          <td>ehr</td>
+          <td>
+            An object that contains information about the EHR used in the GP2GP
+            transfer
+          </td>
         </tr>
         <tr>
-          <td>timestamp</td>
-          <td>Unix epoch timestamp of when the EHR was generated</td>
+          <td>attachments</td>
+          <td>
+            A list that contains information about ALL the attachments contained
+            in the EHR. This should include all attachments that are either
+            directly attached OR that are linked to from within the EHR.
+          </td>
         </tr>
         <tr>
-          <td>attachment</td>
-          <td>JSON list containing metadata for each attachment in the EHR</td>
+          <td>placeholders</td>
+          <td>
+            An list that contains information about the attachhments that were
+            in the EHR but not contained in the GP2GP message
+          </td>
         </tr>
       </tbody>
     </table>
+
+    <h3>Registration Event Fields</h3>
+    <table>
+      <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>requesting_ods_code</td>
+          <td>The ODS code of the practice requesting the EHR</td>
+        </tr>
+        <tr>
+          <td>sending_ods_code</td>
+          <td>The ODS code of the practice sending the EHR</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>GP2GP Event Fields</h3>
+    <table>
+      <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>conversation_id</td>
+          <td>
+            The ConversationID used in the GP2GP process for this registration.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>EHR Event Fields</h3>
+    <table>
+      <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>ehr_generated_timestamp</td>
+          <td>
+            The unix timestamp in milliseconds that the event was generated by
+            the system.
+          </td>
+        </tr>
+        <tr>
+          <td>ehr_total_size_bytes</td>
+          <td>
+            The total size in bytes of the GP2GP message BEFORE it is split for
+            transfer including all attachments.
+          </td>
+        </tr>
+        <tr>
+          <td>ehr_structured_size_bytes</td>
+          <td>
+            The total size in bytes of structured part of the GP2GP message
+            (attachments are NOT to be included).
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Attachments Event Fields</h3>
+    <table>
+      <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>attachment_id</td>
+          <td>
+            A unique id for the attachment that can be resolved in the clinical
+            system.
+          </td>
+        </tr>
+        <tr>
+          <td>clinical_type</td>
+          <td>
+            The text value corresponding to the value used in EhrAttachmentCode
+            in the code element of ExternalDocument as defined in the MIM.
+          </td>
+        </tr>
+        <tr>
+          <td>mime_type</td>
+          <td>
+            The mime type of the attachment as used as part of the text element
+            in ExternalDocument as defined in the MIM.
+          </td>
+        </tr>
+        <tr>
+          <td>size_bytes</td>
+          <td>The size in bytes of the attachment.</td>
+        </tr>
+        <tr>
+          <td>code</td>
+          <td>
+            An object that contains the code given to the attachment by the
+            clinician as the attachment was attached to the EHR.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Code Event Fields</h3>
+    <table>
+      <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>coding</td>
+          <td>
+            A list of objects that contain the codes used when the clinician
+            attached the object to the EHR.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Coding Event Fields</h3>
+    <table>
+      <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>code</td>
+          <td>
+            The code entered by the clinican in the system as the attachment was
+            attached.
+          </td>
+        </tr>
+        <tr>
+          <td>system</td>
+          <td>The coding system used.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Placeholders Event Fields</h3>
+    <table>
+      <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>placeholder_id</td>
+          <td>
+            A unique id for the placeholder that can be resolved in the clinical
+            system.
+          </td>
+        </tr>
+        <tr>
+          <td>attachhment_id</td>
+          <td>
+            A reference to the attachment that the placeholder replaces (should
+            be contained in the list of attachments)
+          </td>
+        </tr>
+        <tr>
+          <td>generated_by</td>
+          <td>
+            The ODS code of the practice that generated the placeholder.
+          </td>
+        </tr>        
+        <tr>
+          <td>generated_by</td>
+          <td>
+            The reason the placeholder was generated.
+          </td>
+        </tr>                
+      </tbody>
+    </table>
+
     <Pagination>
       <Pagination.Previous href={withPrefix("rfcs/RFC0001_gp2gp_mi/scope")}>
         Scope
