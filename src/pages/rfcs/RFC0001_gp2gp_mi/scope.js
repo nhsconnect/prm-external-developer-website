@@ -1,5 +1,5 @@
 import React from "react"
-import { withPrefix } from "gatsby"
+import { withPrefix, Link } from "gatsby"
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
 import InsetText from "nhsuk-react-components/lib/components/inset-text"
 import Image from "nhsuk-react-components/lib/components/image"
@@ -66,8 +66,8 @@ const Page = ({ children }) => (
     <p>
       We believe that initially, we should focus on the areas where we want to
       gather new information first, to prove out the solution, as such we will
-      be focusing on the events around when the EHR is sent, and then when then
-      EHR is received.
+      be focusing on the events around when the EHR is sent and when the EHR is
+      received.
     </p>
     <Image
       src={withPrefix("/RFC0001_gp2gp_mi/scope_example.png")}
@@ -75,11 +75,37 @@ const Page = ({ children }) => (
       caption="Our area of focus around the EHR being sent and received"
       className="image-fullwidth"
     />
-    <p>Delivery method</p>
-    <p>Data model</p>
-    <p>Authorisation/Authentication</p>
-    <p>Assurance</p>
-    <p>Use cases</p>
+    <h3>Event delivery method</h3>
+    <p>
+      We intend to provide a public internet facing HTTPS end point and make it
+      available via the evolving NHS 'developer' website:{" "}
+      <Link to="https://digital.nhs.uk/developer">
+        https://digital.nhs.uk/developer
+      </Link>
+      . We are equally happy to explore other methods with suppliers if
+      appropriate.
+    </p>
+    <h3>Authorisation and Authentication</h3>
+    <p>
+      We intend to provide authorisation and authentication via existing methods{" "}
+      <Link to="https://digital.nhs.uk/developer/security-and-authorisation">
+        https://digital.nhs.uk/developer/security-and-authorisation
+      </Link>
+      . We are equally happy to explore other methods with suppliers if
+      appropriate.
+    </p>
+    <h3>Use cases</h3>
+    <p>
+      We intend to provide use cases that outline the events and data we expect
+      to see for specific flows in the registration process.
+    </p>
+    <h3>Assurance</h3>
+    <p>
+      Assurance will intially take the form of collaboratively developing with
+      suppliers against the use cases provided. We are then looking to explore
+      how we might best continue assurance through to production and then
+      ongoing.
+    </p>
     <Pagination>
       <Pagination.Previous href={withPrefix("rfcs/RFC0001_gp2gp_mi/vision")}>
         Vision
