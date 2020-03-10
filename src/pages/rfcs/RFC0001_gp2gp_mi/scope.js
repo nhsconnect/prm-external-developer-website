@@ -32,8 +32,8 @@ const Page = ({ children }) => (
           label: "Event: EHR Generated",
         },
         {
-          url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_recieved"),
-          label: "Event: EHR Recieved",
+          url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_validated"),
+          label: "Event: EHR Validated",
         },
       ],
     }}

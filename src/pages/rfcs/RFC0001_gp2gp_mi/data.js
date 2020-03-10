@@ -1,8 +1,7 @@
 import React from "react"
-import { withPrefix, Link } from "gatsby"
+import { withPrefix } from "gatsby"
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
 import InsetText from "nhsuk-react-components/lib/components/inset-text"
-import Image from "nhsuk-react-components/lib/components/image"
 import Pagination from "nhsuk-react-components/lib/components/pagination"
 import "../../index.scss"
 
@@ -32,8 +31,8 @@ const Page = ({ children }) => (
           label: "Event: EHR Generated",
         },
         {
-          url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_recieved"),
-          label: "Event: EHR Recieved",
+          url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_validated"),
+          label: "Event: EHR Validated",
         },
       ],
     }}
