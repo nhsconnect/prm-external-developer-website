@@ -27,12 +27,20 @@ const Page = ({ children }) => (
           selected: true,
         },
         {
+          url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_registration_started"),
+          label: "Event: Registration Started",
+        },           
+        {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_generated"),
           label: "Event: EHR Generated",
         },
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_validated"),
           label: "Event: EHR Validated",
+        },
+        {
+          url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_integrated"),
+          label: "Event: EHR Integrated",
         },
       ],
     }}
@@ -115,9 +123,9 @@ const Page = ({ children }) => (
         Scope
       </Pagination.Previous>
       <Pagination.Next
-        href={withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_generated")}
+        href={withPrefix("/rfcs/RFC0001_gp2gp_mi/event_registration_started")}
       >
-        Event: EHR Generated
+        Event: Registration Started
       </Pagination.Next>
     </Pagination>
   </PageWithSideMenu>

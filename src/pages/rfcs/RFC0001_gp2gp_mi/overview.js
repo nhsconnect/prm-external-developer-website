@@ -27,12 +27,20 @@ const Page = ({ children }) => (
           label: "New data to be collected",
         },
         {
+          url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_registration_started"),
+          label: "Event: Registration Started",
+        },
+        {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_generated"),
           label: "Event: EHR Generated",
         },
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_validated"),
           label: "Event: EHR Validated",
+        },
+        {
+          url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_integrated"),
+          label: "Event: EHR Integrated",
         },
       ],
     }}

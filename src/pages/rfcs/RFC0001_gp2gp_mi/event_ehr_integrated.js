@@ -28,15 +28,15 @@ const Page = ({ children }) => (
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_registration_started"),
           label: "Event: Registration Started",
-        },
-        {
-          url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_generated"),
-          label: "Event: EHR Generated",
-        },
+        },          
         {
           url: "#top",
-          label: "Event: EHR Validated",
+          label: "Event: EHR Generated",
           selected: true,
+        },
+        {
+          url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_validated"),
+          label: "Event: EHR Validated",
         },
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_integrated"),
@@ -73,58 +73,59 @@ const Page = ({ children }) => (
       </p>
     </InsetText>
     <h1>RFC0001 GP2GP MI</h1>
-    <h2>Event: EHR Validated</h2>
+    <h2>EHR Generated</h2>
     <h3>Event Description</h3>
     <p>
-      The EHR Validated event should be emitted when a requesting system has
-      validated an incoming EHR and the EHR is ready to be reviewed for
-      integration by clinical staff. In practice, this will be as the EHR enters
-      the GP2GP WorkFlow for integration by the clinical system.
+      The EHR Generated event should be sent immediately <em>before</em> the
+      sending system sends the EHR Extract (RCMR_MT030101UK04) message.
     </p>
-    <h3>EHR Validated Event Example Payload</h3>
+    <h3>EHR Generated Event Example Payload</h3>
     <pre>{`
 {
 	"event_id": "1234-123456-1234-123456",
-	"event_type": "ehr_validated",
+	"event_type": "ehr_generated",
 	"event_generated_timestamp": 1575384234,
 	"meta": {
 		"system_supplier": "SYSTEM_SUPPLIER",
-		"ods_code": "ABC1234"
+		"ods_code": "XYZ4567"
 	},
 	"payload": {
 		"registration": {
-			"registration_id": "9087-978098-9087-978098",
 			"requesting_ods_code": "ABC1234",
 			"sending_ods_code": "XYZ4567"
 		},
 		"gp2gp": {
-			"conversation_id": "4345-986959-4930-684038",
-			"ehr_validated_timestamp": 1575384000
+      "conversation_id": "4345-986959-4930-684038"
+      "ehr_generated_timestamp": 1575384000,
 		},
-		"ehr": {
+		"ehr": {			
 			"ehr_total_size_bytes": 5699433,
-			"ehr_structured_size_bytes": 4096,
-			"number_of_degrades": 27
+			"ehr_structured_size_bytes": 4096
 		},
 		"attachments": [{
-			"attachment_id": "3424-342456-3424-342456",
-			"clinical_type": "Scanned document",
-			"mime_type": "application/pdf",
-			"size_bytes": 3084322
-		}],
-		"placeholders": [{
-				"placeholder_id": "9876-987654-9876-987654",
-				"attachment_id": "1323-132345-1323-132345",
-				"generated_by": "XYZ4567",
-				"reason": 1
+				"attachment_id": "3424-342456-3424-342456",
+				"clinical_type": "Scanned document",
+				"mime_type": "application/pdf",
+				"size_bytes": 3084322,
+				"code": {
+					"coding": [{
+						"code": "886721000000107",
+						"system": "http://snomed.info/sct"
+					}]
+				}
 			},
 			{
-				"placeholder_id": "4354-435467-4354-435467",
-				"attachment_id": "3424-342456-3424-342456",
-				"generated_by": "ABC1234",
-				"reason": 2
+				"attachment_id": "1323-132345-1323-132345",
+				"mime_type": "audio/mpeg",
+				"size_bytes": 24352346
 			}
-		]
+		],
+		"placeholders": [{
+			"placeholder_id": "9876-987654-9876-987654",
+			"attachment_id": "1323-132345-1323-132345",
+			"generated_by": "XYZ4567",
+			"reason": 1
+		}]
 	}
 }
     `}</pre>
@@ -142,7 +143,7 @@ const Page = ({ children }) => (
         </tr>
         <tr>
           <td>event_type</td>
-          <td>The type of this event: "ehr_validated"</td>
+          <td>The type of this event: "ehr_generated"</td>
         </tr>
         <tr>
           <td>event_generated_timestamp</td>
@@ -214,17 +215,15 @@ const Page = ({ children }) => (
           <td>attachments</td>
           <td>
             A list that contains information about ALL the attachments contained
-            in the EHR as received by the receiving system. This should include
-            all attachments that are either directly attached OR that are linked
-            to from within the EHR.
+            in the EHR. This should include all attachments that are either
+            directly attached OR that are linked to from within the EHR.
           </td>
         </tr>
         <tr>
           <td>placeholders</td>
           <td>
-            A list that contains information about all the placeholders in the
-            EHR as received by the recieving system AND any placeholders that
-            have been created by the recieving system.
+            An list that contains information about the attachhments that were
+            in the EHR but not contained in the GP2GP message
           </td>
         </tr>
       </tbody>
@@ -236,13 +235,6 @@ const Page = ({ children }) => (
         <tr>
           <th>Field</th>
           <th>Description</th>
-        </tr>
-        <tr>
-          <td>registration_id</td>
-          <td>
-            The unique identifier for this registration that can be resolved in
-            the clinical system.
-          </td>
         </tr>
         <tr>
           <td>requesting_ods_code</td>
@@ -269,11 +261,10 @@ const Page = ({ children }) => (
           </td>
         </tr>
         <tr>
-          <td>ehr_validated_timestamp</td>
+          <td>ehr_generated_timestamp</td>
           <td>
             The unix timestamp in milliseconds that the EHR used in the GP2GP
-            transfer was added to the GP2GP workflow to be integrated by the
-            clinical staff.
+            transfer was generated by the system.
           </td>
         </tr>
       </tbody>
@@ -289,23 +280,15 @@ const Page = ({ children }) => (
         <tr>
           <td>ehr_total_size_bytes</td>
           <td>
-            The total size in bytes of the GP2GP message as reconstituted by the
-            recieving system including all attachments recieved.
+            The total size in bytes of the GP2GP message BEFORE it is split for
+            transfer including all attachments.
           </td>
         </tr>
         <tr>
           <td>ehr_structured_size_bytes</td>
           <td>
-            The total size in bytes of structured part of the GP2GP message as
-            received by the recieving system (attachments are NOT to be
-            included).
-          </td>
-        </tr>
-        <tr>
-          <td>number_of_degrades</td>
-          <td>
-            The total number of degrades that the clinical staff will need to
-            resolve.
+            The total size in bytes of structured part of the GP2GP message
+            (attachments are NOT to be included).
           </td>
         </tr>
       </tbody>
@@ -343,6 +326,51 @@ const Page = ({ children }) => (
           <td>size_bytes</td>
           <td>The size in bytes of the attachment.</td>
         </tr>
+        <tr>
+          <td>code</td>
+          <td>
+            An object that contains the code given to the attachment by the
+            clinician as the attachment was attached to the EHR.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Code Event Fields</h3>
+    <table>
+      <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>coding</td>
+          <td>
+            A list of objects that contain the codes used when the clinician
+            attached the object to the EHR.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Coding Event Fields</h3>
+    <table>
+      <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>code</td>
+          <td>
+            The code entered by the clinican in the system as the attachment was
+            attached.
+          </td>
+        </tr>
+        <tr>
+          <td>system</td>
+          <td>The coding system used.</td>
+        </tr>
       </tbody>
     </table>
 
@@ -379,16 +407,14 @@ const Page = ({ children }) => (
     </table>
 
     <Pagination>
-      <Pagination.Previous
-        href={withPrefix("rfcs/RFC0001_gp2gp_mi/event_ehr_generated")}
-      >
-        Event: EHR Generated
+      <Pagination.Previous href={withPrefix("rfcs/RFC0001_gp2gp_mi/scope")}>
+        Scope
       </Pagination.Previous>
       <Pagination.Next
-        href={withPrefix("rfcs/RFC0001_gp2gp_mi/event_ehr_integrated")}
+        href={withPrefix("rfcs/RFC0001_gp2gp_mi/event_ehr_validated")}
       >
-        Event: EHR Integrated
-      </Pagination.Next>      
+        Event: EHR Validated
+      </Pagination.Next>
     </Pagination>
   </PageWithSideMenu>
 )
