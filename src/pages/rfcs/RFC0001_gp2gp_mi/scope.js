@@ -82,7 +82,14 @@ const Page = ({ children }) => (
       <Link to="https://digital.nhs.uk/developer">
         https://digital.nhs.uk/developer
       </Link>
-      . We are equally happy to explore other methods with suppliers if
+      .
+    </p>
+    <p>
+      All data should be captured as close to the time of the real life event as
+      possible.
+    </p>
+    <p>
+      We are equally happy to explore other methods with suppliers if
       appropriate.
     </p>
     <h3>Authorisation and Authentication</h3>
@@ -105,6 +112,12 @@ const Page = ({ children }) => (
       suppliers against the use cases provided. We are then looking to explore
       how we might best continue assurance through to production and then
       ongoing.
+    </p>
+    <h3>Correlation to old MI data set</h3>
+    <p>
+      Whilst we intend to decomission the existing MI data as soon as possible,
+      we know that for a period of time we need to dual run and be able to
+      correlate data.
     </p>
     <Pagination>
       <Pagination.Previous href={withPrefix("rfcs/RFC0001_gp2gp_mi/vision")}>
