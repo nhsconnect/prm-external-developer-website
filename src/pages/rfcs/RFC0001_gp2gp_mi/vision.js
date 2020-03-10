@@ -175,7 +175,7 @@ const Page = ({ children }) => {
       <p>
         To allow events related to a single registration to be correlated, each
         event must have a field containing an anonymous identifier that is
-        unique to each registration. This will allow us to understand where
+        unique to each registration, at the moment we only get this unique identifier when a GP2GP conversation is started (via the 'ConversationID'). This will allow us to understand where
         errors that happen at different points in the process in different
         systems impact the overall registration process.
       </p>
