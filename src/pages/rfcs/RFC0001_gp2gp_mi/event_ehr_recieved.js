@@ -22,6 +22,10 @@ const Page = ({ children }) => (
           label: "Scope",
         },
         {
+          url: withPrefix("/rfcs/RFC0001_gp2gp_mi/data"),
+          label: "New data to be collected",
+        },
+        {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_generated"),
           label: "Event: EHR Generated",
         },
