@@ -1,5 +1,5 @@
 import React from "react"
-import { withPrefix } from "gatsby"
+import { withPrefix, Link } from "gatsby"
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
 import InsetText from "nhsuk-react-components/lib/components/inset-text"
 import Pagination from "nhsuk-react-components/lib/components/pagination"
@@ -401,17 +401,26 @@ const Page = ({ children }) => (
         </tr>
         <tr>
           <td>reason</td>
-          <td>            The reason the placeholder was generated. These codes should match
+          <td>
+            {" "}
+            The reason the placeholder was generated. These codes should match
             the values described in{" "}
-            <Link to={withPrefix("/NPFIT-PC-BLD-0099.04 GP2GP Handling Missing Attachments.pdf")}>
+            <Link
+              to={withPrefix(
+                "/NPFIT-PC-BLD-0099.04 GP2GP Handling Missing Attachments.pdf"
+              )}
+            >
               NPFIT-PC-BLD-0099.04 GP2GP Handling Missing Attachments
-            </Link></td>
+            </Link>
+          </td>
         </tr>
       </tbody>
     </table>
 
     <Pagination>
-      <Pagination.Previous href={withPrefix("rfcs/RFC0001_gp2gp_mi/event_registration_started")}>
+      <Pagination.Previous
+        href={withPrefix("rfcs/RFC0001_gp2gp_mi/event_registration_started")}
+      >
         Event: Registration Started
       </Pagination.Previous>
       <Pagination.Next
