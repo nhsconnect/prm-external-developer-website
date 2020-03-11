@@ -80,7 +80,7 @@ const Page = ({ children }) => (
       clinical staff member has chosen to integrate the GP2GP record into the
       system.
     </p>
-    <h3>EHR Generated Event Example Payload</h3>
+    <h3>EHR Integrated Event Example Payload</h3>
     <pre>{`
 {
 	"event_id": "1234-123456-1234-123456",
@@ -118,7 +118,7 @@ const Page = ({ children }) => (
         </tr>
         <tr>
           <td>event_type</td>
-          <td>The type of this event: "ehr_generated"</td>
+          <td>The type of this event: "ehr_integrated"</td>
         </tr>
         <tr>
           <td>event_generated_timestamp</td>
