@@ -407,7 +407,7 @@ const Page = ({ children }) => (
             the values described in{" "}
             <Link
               to={withPrefix(
-                "/NPFIT-PC-BLD-0099.04 GP2GP Handling Missing Attachments.pdf"
+                "NPFIT-PC-BLD-0099.04 GP2GP Handling Missing Attachments.pdf"
               )}
             >
               NPFIT-PC-BLD-0099.04 GP2GP Handling Missing Attachments
