@@ -402,16 +402,15 @@ const Page = ({ children }) => (
         <tr>
           <td>reason</td>
           <td>
-            {" "}
             The reason the placeholder was generated. These codes should match
             the values described in{" "}
-            <Link
-              to={
+            <a
+              href={withPrefix(
                 "/NPFIT-PC-BLD-0099.04 GP2GP Handling Missing Attachments.pdf"
-              }
+              )}
             >
               NPFIT-PC-BLD-0099.04 GP2GP Handling Missing Attachments
-            </Link>
+            </a>
           </td>
         </tr>
       </tbody>

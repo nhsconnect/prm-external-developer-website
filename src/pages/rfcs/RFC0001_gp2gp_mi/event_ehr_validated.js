@@ -376,11 +376,13 @@ const Page = ({ children }) => (
           <td>
             The reason the placeholder was generated. These codes should match
             the values described in{" "}
-            <Link
-              to={"NPFIT-PC-BLD-0099.04 GP2GP Handling Missing Attachments.pdf"}
+            <a
+              href={withPrefix(
+                "/NPFIT-PC-BLD-0099.04 GP2GP Handling Missing Attachments.pdf"
+              )}
             >
               NPFIT-PC-BLD-0099.04 GP2GP Handling Missing Attachments
-            </Link>
+            </a>
           </td>
         </tr>
       </tbody>
