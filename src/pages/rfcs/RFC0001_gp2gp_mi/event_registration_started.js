@@ -33,7 +33,7 @@ const Page = ({ children }) => (
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_generated"),
           label: "Event: EHR Generated",
-        },        
+        },
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_validated"),
           label: "Event: EHR Validated",
@@ -41,7 +41,7 @@ const Page = ({ children }) => (
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_integrated"),
           label: "Event: EHR Integrated",
-        },        
+        },
       ],
     }}
     breadcrumb={{
@@ -84,19 +84,19 @@ const Page = ({ children }) => (
     <h3>Registration Started Event Example Payload</h3>
     <pre>{`
 {
-	"event_id": "1234-123456-1234-123456",
-	"event_type": "registration_started",
-	"event_generated_timestamp": 1575384234,
-	"meta": {
-		"system_supplier": "SYSTEM_SUPPLIER",
-		"ods_code": "ABC1234"
-	},
-	"payload": {
-		"registration": {
+  "event_id": "1234-123456-1234-123456",
+  "event_type": "registration_started",
+  "event_generated_timestamp": 1575384234,
+  "meta": {
+    "system_supplier": "SYSTEM_SUPPLIER",
+    "ods_code": "ABC1234"
+  },
+  "payload": {
+    "registration": {
       "registration_id": "9087-978098-9087-978098",
-			"registration_started_timestamp": 1575383999
-		}		
-	}
+      "registration_started_timestamp": 1575383999
+    }		
+  }
 }
     `}</pre>
 
