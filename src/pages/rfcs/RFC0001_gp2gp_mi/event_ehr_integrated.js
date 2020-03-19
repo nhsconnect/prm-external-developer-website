@@ -83,25 +83,25 @@ const Page = ({ children }) => (
     <h3>EHR Integrated Event Example Payload</h3>
     <pre>{`
 {
-	"event_id": "1234-123456-1234-123456",
-	"event_type": "ehr_integrated",
-	"event_generated_timestamp": 1575384234,
-	"meta": {
-		"system_supplier": "SYSTEM_SUPPLIER",
-		"ods_code": "ABC1234"
-	},
-	"payload": {
-		"registration": {
+  "event_id": "1234-123456-1234-123456",
+  "event_type": "ehr_integrated",
+  "event_generated_timestamp": 1575384234,
+  "meta": {
+    "system_supplier": "SYSTEM_SUPPLIER",
+    "ods_code": "ABC1234"
+  },  
+  "payload": {
+    "registration": {
       "registration_id": "",
-			"requesting_ods_code": "ABC1234",
-			"sending_ods_code": "XYZ4567"
-		},
-		"gp2gp": {
+      "requesting_ods_code": "ABC1234",
+      "sending_ods_code": "XYZ4567"
+    },
+    "gp2gp": {
       "conversation_id": "4345-986959-4930-684038"
       "ehr_integrated_timestamp": 1575384000,
       "number_of_days_to_integrate": 4
-		}		
-	}
+    }
+  }
 }
     `}</pre>
 
@@ -239,8 +239,10 @@ const Page = ({ children }) => (
     </table>
 
     <Pagination>
-      <Pagination.Previous href={withPrefix("rfcs/RFC0001_gp2gp_mi/event_ehr_validated")}>
-      Event: EHR Validated
+      <Pagination.Previous
+        href={withPrefix("rfcs/RFC0001_gp2gp_mi/event_ehr_validated")}
+      >
+        Event: EHR Validated
       </Pagination.Previous>
     </Pagination>
   </PageWithSideMenu>
