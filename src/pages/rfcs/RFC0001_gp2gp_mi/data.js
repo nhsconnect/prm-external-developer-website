@@ -22,6 +22,10 @@ const Page = ({ children }) => (
           label: "Scope",
         },
         {
+          url: withPrefix("/rfcs/RFC0001_gp2gp_mi/usecases"),
+          label: "Usecases",
+        },
+        {
           url: "#top",
           label: "New data to be collected",
           selected: true,
@@ -119,8 +123,8 @@ const Page = ({ children }) => (
       follow a patient to their new GP is increasingly risky.
     </p>
     <Pagination>
-      <Pagination.Previous href={withPrefix("rfcs/RFC0001_gp2gp_mi/scope")}>
-        Scope
+      <Pagination.Previous href={withPrefix("rfcs/RFC0001_gp2gp_mi/usecases")}>
+        Usecases
       </Pagination.Previous>
       <Pagination.Next
         href={withPrefix("/rfcs/RFC0001_gp2gp_mi/event_registration_started")}

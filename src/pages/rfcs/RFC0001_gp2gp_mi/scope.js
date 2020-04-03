@@ -24,6 +24,10 @@ const Page = ({ children }) => (
           selected: true,
         },
         {
+          url: withPrefix("/rfcs/RFC0001_gp2gp_mi/usecases"),
+          label: "Usecases",
+        },
+        {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/data"),
           label: "New data to be collected",
         },
@@ -135,8 +139,8 @@ const Page = ({ children }) => (
       <Pagination.Previous href={withPrefix("rfcs/RFC0001_gp2gp_mi/vision")}>
         Vision
       </Pagination.Previous>
-      <Pagination.Next href={withPrefix("/rfcs/RFC0001_gp2gp_mi/data")}>
-        New data to be collected
+      <Pagination.Next href={withPrefix("/rfcs/RFC0001_gp2gp_mi/usecases")}>
+        Usecases
       </Pagination.Next>
     </Pagination>
   </PageWithSideMenu>
