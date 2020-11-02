@@ -95,9 +95,12 @@ const Page = ({ children }) => (
     <p>
       We intend to provide a public internet facing HTTPS end point and make it
       available via the evolving NHS 'developer' website:{" "}
-      <Link to="https://digital.nhs.uk/developer">
+      <a
+        href="https://digital.nhs.uk/developer"
+        title="External link to NHS 'developer' website"
+      >
         https://digital.nhs.uk/developer
-      </Link>
+      </a>
       .
     </p>
     <p>
@@ -111,9 +114,12 @@ const Page = ({ children }) => (
     <h3>Authorisation and Authentication</h3>
     <p>
       We intend to provide authorisation and authentication via existing methods{" "}
-      <Link to="https://digital.nhs.uk/developer/security-and-authorisation">
-        https://digital.nhs.uk/developer/security-and-authorisation
-      </Link>
+      <a
+        href="https://digital.nhs.uk/developer/guides-and-documentation/security-and-authorisation"
+        title="External link to NHS 'developer' website on security and authorisation"
+      >
+        https://digital.nhs.uk/developer/guides-and-documentation/security-and-authorisations
+      </a>
       . We are equally happy to explore other methods with suppliers if
       appropriate.
     </p>

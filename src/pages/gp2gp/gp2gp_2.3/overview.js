@@ -34,7 +34,7 @@ const Page = ({ children }) => (
   >
     <h1>GP2GP 2.3</h1>
     <p>
-      In GP2GP 2.3, we intend to improve the Management Information within GP2PG
+      In GP2GP 2.3, we intend to improve the Management Information within GP2GP
       so that we can start to make good decisions about the future of
       registrations and how patient data is migrated between Primary Care
       providers.
