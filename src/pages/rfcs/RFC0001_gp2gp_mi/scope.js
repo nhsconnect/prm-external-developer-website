@@ -1,5 +1,5 @@
 import React from "react"
-import { withPrefix, Link } from "gatsby"
+import { withPrefix } from "gatsby"
 import { Helmet } from "react-helmet"
 
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
@@ -93,8 +93,8 @@ const Page = ({ children }) => (
       </p>
       <Image
         src={withPrefix("/RFC0001_gp2gp_mi/scope_example.png")}
-        alt="Highlighting the area of focus for this RFC around the EHR being sent and received"
-        caption="Our area of focus around the EHR being sent and received"
+        alt="Highlighting areas of focus for this RFC around the EHR being sent and received"
+        caption="Our areas of focus around the EHR being sent and received"
         className="image-fullwidth"
       />
       <h3>Event delivery method</h3>
