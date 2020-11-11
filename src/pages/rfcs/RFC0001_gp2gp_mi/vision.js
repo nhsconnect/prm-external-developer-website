@@ -26,7 +26,7 @@ const Page = ({ children }) => {
           },
           {
             url: withPrefix("/rfcs/RFC0001_gp2gp_mi/usecases"),
-            label: "Usecases",
+            label: "Use Cases",
           },
           {
             url: withPrefix("/rfcs/RFC0001_gp2gp_mi/data"),
@@ -97,7 +97,7 @@ const Page = ({ children }) => {
         <li>
           Inability to represent structured data - Because CSV is used as a
           serialisation format, it's not easy to add data that is structured or
-          list like (e.g attachment metadata)
+          list like (e.g attachment metadata).
         </li>
         <li>
           Inconsistent and unreported information - The implementations of GP2GP
@@ -107,7 +107,7 @@ const Page = ({ children }) => {
         <li>
           Challenges de-duplicating records - There is no unique identifier that
           can be used to de-duplicate the MI records in the way outlined by the
-          existing specification
+          existing specification.
         </li>
         <li>
           Lack of fidelity - While representing the state of each registration

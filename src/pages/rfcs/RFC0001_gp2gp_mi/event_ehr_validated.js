@@ -23,7 +23,7 @@ const Page = ({ children }) => (
         },
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/usecases"),
-          label: "Usecases",
+          label: "Use Cases",
         },
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/data"),
@@ -146,7 +146,7 @@ const Page = ({ children }) => (
         </tr>
         <tr>
           <td>event_type</td>
-          <td>The type of this event: "ehr_validated"</td>
+          <td>The type of the event, in this case "ehr_validated".</td>
         </tr>
         <tr>
           <td>event_generated_timestamp</td>
@@ -159,7 +159,7 @@ const Page = ({ children }) => (
           <td>meta</td>
           <td>
             An object that contains information about the generation of the
-            event
+            event.
           </td>
         </tr>
         <tr>

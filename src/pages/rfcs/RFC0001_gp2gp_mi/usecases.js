@@ -23,7 +23,7 @@ const Page = ({ children }) => (
         },
         {
           url: "#top",
-          label: "Usecases",
+          label: "Use Cases",
           selected: true,
         },
         {
@@ -66,15 +66,18 @@ const Page = ({ children }) => (
         This RFC is currently 'Being discussed'. As such, it may be undergoing
         significant change and should not be used as the basis of an
         implementation at the moment. If you want to have your say and
-        contribute to this RFC then go to our <a
+        contribute to this RFC then go to our{" "}
+        <a
           href="https://github.com/nhsconnect/prm-external-developer-website/issues/1"
           title="External website where RFC comments are allowed"
-        >Github site</a>
+        >
+          Github site
+        </a>
         .
       </p>
     </InsetText>
     <h1>RFC0001 GP2GP MI</h1>
-    <h2>Usecases</h2>
+    <h2>Use Cases</h2>
     <h3>Registering a new-born via GMS1</h3>
 
     <p>A parent/guardian registers a new-born at a practice. </p>

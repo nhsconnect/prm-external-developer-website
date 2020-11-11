@@ -23,7 +23,7 @@ const Page = ({ children }) => (
         },
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/usecases"),
-          label: "Usecases",
+          label: "Use Cases",
         },
         {
           url: "#top",
@@ -33,7 +33,7 @@ const Page = ({ children }) => (
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_registration_started"),
           label: "Event: Registration Started",
-        },           
+        },
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_generated"),
           label: "Event: EHR Generated",

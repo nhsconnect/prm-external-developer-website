@@ -25,7 +25,7 @@ const Page = ({ children }) => (
         },
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/usecases"),
-          label: "Usecases",
+          label: "Use Cases",
         },
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/data"),
@@ -137,7 +137,7 @@ const Page = ({ children }) => (
     </p>
     <h3>Correlation to old MI data set</h3>
     <p>
-      Whilst we intend to decomission the existing MI data as soon as possible,
+      Whilst we intend to decommission the existing MI data as soon as possible,
       we know that for a period of time we need to dual run and be able to
       correlate data.
     </p>

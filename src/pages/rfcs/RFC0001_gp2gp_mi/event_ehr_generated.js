@@ -23,7 +23,7 @@ const Page = ({ children }) => (
         },
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/usecases"),
-          label: "Usecases",
+          label: "Use Cases",
         },
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/data"),
@@ -146,7 +146,7 @@ const Page = ({ children }) => (
         </tr>
         <tr>
           <td>event_type</td>
-          <td>The type of this event: “ehr_generated”</td>
+          <td>The type of the event, in this case “ehr_generated”.</td>
         </tr>
         <tr>
           <td>event_generated_timestamp</td>
@@ -159,12 +159,12 @@ const Page = ({ children }) => (
           <td>meta</td>
           <td>
             An object that contains information about the generation of the
-            event
+            event.
           </td>
         </tr>
         <tr>
           <td>payload</td>
-          <td>An object that contains the detailed payload of the event</td>
+          <td>An object that contains the detailed payload of the event.</td>
         </tr>
       </tbody>
     </table>
@@ -180,12 +180,12 @@ const Page = ({ children }) => (
           <td>system_supplier</td>
           <td>
             The system supplier who generated the event. A unique identifier
-            given to you as a supplier by NHSD
+            given to you as a supplier by NHSD.
           </td>
         </tr>
         <tr>
           <td>ods_code</td>
-          <td>The ODS code of the practice generating the event</td>
+          <td>The ODS code of the practice generating the event.</td>
         </tr>
       </tbody>
     </table>
@@ -200,18 +200,18 @@ const Page = ({ children }) => (
         <tr>
           <td>registration</td>
           <td>
-            An object that contains information about the registration process
+            An object that contains information about the registration process.
           </td>
         </tr>
         <tr>
           <td>gp2gp</td>
-          <td>An object that contains information about the GP2GP transfer</td>
+          <td>An object that contains information about the GP2GP transfer.</td>
         </tr>
         <tr>
           <td>ehr</td>
           <td>
             An object that contains information about the EHR used in the GP2GP
-            transfer
+            transfer.
           </td>
         </tr>
         <tr>
@@ -225,8 +225,8 @@ const Page = ({ children }) => (
         <tr>
           <td>placeholders</td>
           <td>
-            An list that contains information about the attachhments that were
-            in the EHR but not contained in the GP2GP message
+            An list that contains information about the attachments that were in
+            the EHR but not contained in the GP2GP message.
           </td>
         </tr>
       </tbody>
@@ -241,11 +241,11 @@ const Page = ({ children }) => (
         </tr>
         <tr>
           <td>requesting_ods_code</td>
-          <td>The ODS code of the practice requesting the EHR</td>
+          <td>The ODS code of the practice requesting the EHR.</td>
         </tr>
         <tr>
           <td>sending_ods_code</td>
-          <td>The ODS code of the practice sending the EHR</td>
+          <td>The ODS code of the practice sending the EHR.</td>
         </tr>
       </tbody>
     </table>
@@ -395,7 +395,7 @@ const Page = ({ children }) => (
           <td>attachment_id</td>
           <td>
             A reference to the attachment that the placeholder replaces (should
-            be contained in the list of attachments)
+            be contained in the list of attachments).
           </td>
         </tr>
         <tr>
@@ -414,6 +414,7 @@ const Page = ({ children }) => (
             >
               NPFIT-PC-BLD-0099.04 GP2GP Handling Missing Attachments
             </a>
+            .
           </td>
         </tr>
       </tbody>

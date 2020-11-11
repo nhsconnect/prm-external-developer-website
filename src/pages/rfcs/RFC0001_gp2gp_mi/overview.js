@@ -24,7 +24,7 @@ const Page = ({ children }) => (
         },
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/usecases"),
-          label: "Usecases",
+          label: "Use Cases",
         },
         {
           url: withPrefix("/rfcs/RFC0001_gp2gp_mi/data"),
