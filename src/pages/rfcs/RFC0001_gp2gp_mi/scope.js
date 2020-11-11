@@ -87,14 +87,15 @@ const Page = ({ children }) => (
       <h2>Scope</h2>
       <p>
         We believe that initially, we should focus on the areas where we want to
-        gather new information first, to prove out the solution, as such we will
-        be focusing on the events around when the EHR is sent and when the EHR
-        is received.
+        gather new information first in order to prove out the solution.
+        Therefore we will include within the scope 'Registration Started' as a
+        new event and more detailed data when the EHR is generated
+        and integrated.
       </p>
       <Image
         src={withPrefix("/RFC0001_gp2gp_mi/scope_example.png")}
-        alt="Highlighting areas of focus for this RFC around the EHR being sent and received"
-        caption="Our areas of focus around the EHR being sent and received"
+        alt="Highlighting areas of focus for this RFC."
+        caption="Our areas of focus."
         className="image-fullwidth"
       />
       <h3>Event delivery method</h3>
