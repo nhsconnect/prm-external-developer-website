@@ -94,48 +94,47 @@ const Page = ({ children }) => (
       <h3>EHR Validated Event Example Payload</h3>
       <pre>{`
 {
-	"event_id": "1234-123456-1234-123456",
-	"event_type": "ehr_validated",
-	"event_generated_timestamp": 1575384234,
-	"meta": {
-		"system_supplier": "SYSTEM_SUPPLIER",
-		"ods_code": "ABC1234"
-	},
-	"payload": {
-		"registration": {
-			"registration_id": "9087-978098-9087-978098",
-			"requesting_ods_code": "ABC1234",
-			"sending_ods_code": "XYZ4567"
-		},
-		"gp2gp": {
-			"conversation_id": "4345-986959-4930-684038",
-			"ehr_validated_timestamp": 1575384000
-		},
-		"ehr": {
-			"ehr_total_size_bytes": 5699433,
-			"ehr_structured_size_bytes": 4096,
-			"number_of_degrades": 27
-		},
-		"attachments": [{
-			"attachment_id": "3424-342456-3424-342456",
-			"clinical_type": "Scanned document",
-			"mime_type": "application/pdf",
-			"size_bytes": 3084322
-		}],
-		"placeholders": [{
-				"placeholder_id": "9876-987654-9876-987654",
-				"attachment_id": "1323-132345-1323-132345",
-				"generated_by": "XYZ4567",
-				"reason": 1
-			},
-			{
-				"placeholder_id": "4354-435467-4354-435467",
-				"attachment_id": "3424-342456-3424-342456",
-				"generated_by": "ABC1234",
-				"reason": 2
-			}
-		]
-	}
+  "event_id": "1234-123456-1234-123453",
+  "event_type": "EHR_VALIDATED",
+  "event_generated_timestamp": 1575384234,
+  "system_supplier": "SYSTEM_SUPPLIER",
+  "ods_code": "ABC1234",
+  "payload": {
+    "registration": {
+      "registration_id": "9087-978098-9087-978098",
+      "requesting_ods_code": "ABC1234",
+      "sending_ods_code": "XYZ4567"
+    },
+    "gp2gp": {
+      "conversation_id": "4345-986959-4930-684038",
+      "ehr_validated_timestamp": 1575384000
+    },
+    "ehr": {
+      "ehr_total_size_bytes": 5699433,
+      "ehr_structured_size_bytes": 4096,
+      "number_of_degrades": 27
+    },
+    "attachments": [{
+        "attachment_id": "3424-342456-3424-342456",
+        "clinical_type": "Scanned document",
+        "mime_type": "application/pdf",
+        "size_bytes": 3084322
+    }],
+    "placeholders": [
+      {
+        "placeholder_id": "9876-987654-9876-987654",
+        "attachment_id": "1323-132345-1323-132345",
+        "generated_by": "XYZ4567",
+        "reason": 1
+      },
+      {
+        "placeholder_id": "4354-435467-4354-435467",
+        "attachment_id": "3424-342456-3424-342456",
+        "generated_by": "ABC1234",
+        "reason": 2
+      }
+    ]
+  }
 }
     `}</pre>
 
@@ -152,7 +151,7 @@ const Page = ({ children }) => (
           </tr>
           <tr>
             <td>event_type</td>
-            <td>The type of the event, in this case "ehr_validated".</td>
+            <td>The type of the event, in this case "EHR_VALIDATED".</td>
           </tr>
           <tr>
             <td>event_generated_timestamp</td>
@@ -162,36 +161,19 @@ const Page = ({ children }) => (
             </td>
           </tr>
           <tr>
-            <td>meta</td>
-            <td>
-              An object that contains information about the generation of the
-              event.
-            </td>
-          </tr>
-          <tr>
-            <td>payload</td>
-            <td>An object that contains the detailed payload of the event</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h3>Meta Event Fields</h3>
-      <table>
-        <tbody>
-          <tr>
-            <th>Field</th>
-            <th>Description</th>
-          </tr>
-          <tr>
             <td>system_supplier</td>
             <td>
               The system supplier who generated the event. A unique identifier
-              given to you as a supplier by NHSD
+              given to you as a supplier by NHSD.
             </td>
           </tr>
           <tr>
             <td>ods_code</td>
-            <td>The ODS code of the practice generating the event</td>
+            <td>The ODS code of the practice generating the event.</td>
+          </tr>
+          <tr>
+            <td>payload</td>
+            <td>An object that contains the detailed payload of the event</td>
           </tr>
         </tbody>
       </table>

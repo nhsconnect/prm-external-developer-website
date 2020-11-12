@@ -92,15 +92,14 @@ const Page = ({ children }) => (
       <h3>EHR Generated Event Example Payload</h3>
       <pre>{`
 {
-  "event_id": "1234-123456-1234-123456",
-  "event_type": "ehr_generated",
+  "event_id": "1234-123456-1234-123451",
+  "event_type": "EHR_GENERATED",
   "event_generated_timestamp": 1575384234,
-  "meta": {
-    "system_supplier": "SYSTEM_SUPPLIER",
-    "ods_code": "XYZ4567"
-  },
+  "system_supplier": "SYSTEM_SUPPLIER",
+  "ods_code": "XYZ4567",
   "payload": {
     "registration": {
+      "registration_id": "9087-978098-9087-978098",
       "requesting_ods_code": "ABC1234",
       "sending_ods_code": "XYZ4567"
     },
@@ -112,23 +111,25 @@ const Page = ({ children }) => (
       "ehr_total_size_bytes": 5699433,
       "ehr_structured_size_bytes": 4096
     },
-    "attachments": [{
-      "attachment_id": "3424-342456-3424-342456",
-      "clinical_type": "Scanned document",
-      "mime_type": "application/pdf",
-      "size_bytes": 3084322,
-      "code": {
-        "coding": [{
-          "code": "886721000000107",
-          "system": "http://snomed.info/sct"
-        }]
+    "attachments": [
+      {
+        "attachment_id": "3424-342456-3424-342456",
+        "clinical_type": "Scanned document",
+        "mime_type": "application/pdf",
+        "size_bytes": 3084322,
+        "code": {
+          "coding": [{
+            "code": "886721000000107",
+            "system": "http://snomed.info/sct"
+          }]
+        }
+      },
+      {
+        "attachment_id": "1323-132345-1323-132345",
+        "mime_type": "audio/mpeg",
+        "size_bytes": 24352346
       }
-    },
-    {
-      "attachment_id": "1323-132345-1323-132345",
-      "mime_type": "audio/mpeg",
-      "size_bytes": 24352346
-    }],
+    ],
     "placeholders": [{
       "placeholder_id": "9876-987654-9876-987654",
       "attachment_id": "1323-132345-1323-132345",
@@ -152,7 +153,7 @@ const Page = ({ children }) => (
           </tr>
           <tr>
             <td>event_type</td>
-            <td>The type of the event, in this case “ehr_generated”.</td>
+            <td>The type of the event, in this case "EHR_GENERATED".</td>
           </tr>
           <tr>
             <td>event_generated_timestamp</td>
@@ -160,27 +161,6 @@ const Page = ({ children }) => (
               The unix timestamp in milliseconds of when the event was generated
               by the system.
             </td>
-          </tr>
-          <tr>
-            <td>meta</td>
-            <td>
-              An object that contains information about the generation of the
-              event.
-            </td>
-          </tr>
-          <tr>
-            <td>payload</td>
-            <td>An object that contains the detailed payload of the event.</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h3>Meta Event Fields</h3>
-      <table>
-        <tbody>
-          <tr>
-            <th>Field</th>
-            <th>Description</th>
           </tr>
           <tr>
             <td>system_supplier</td>
@@ -192,6 +172,10 @@ const Page = ({ children }) => (
           <tr>
             <td>ods_code</td>
             <td>The ODS code of the practice generating the event.</td>
+          </tr>
+          <tr>
+            <td>payload</td>
+            <td>An object that contains the detailed payload of the event.</td>
           </tr>
         </tbody>
       </table>
@@ -248,6 +232,13 @@ const Page = ({ children }) => (
           <tr>
             <th>Field</th>
             <th>Description</th>
+          </tr>
+          <tr>
+            <td>registration_id</td>
+            <td>
+              The unique identifier for this registration that can be resolved
+              in the clinical system.
+            </td>
           </tr>
           <tr>
             <td>requesting_ods_code</td>

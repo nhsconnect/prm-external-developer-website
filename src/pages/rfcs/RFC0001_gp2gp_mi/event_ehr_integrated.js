@@ -93,16 +93,14 @@ const Page = ({ children }) => (
       <h3>EHR Integrated Event Example Payload</h3>
       <pre>{`
 {
-  "event_id": "1234-123456-1234-123456",
-  "event_type": "ehr_integrated",
+  "event_id": "1234-123456-1234-123452",
+  "event_type": "EHR_INTEGRATED",
   "event_generated_timestamp": 1575384234,
-  "meta": {
-    "system_supplier": "SYSTEM_SUPPLIER",
-    "ods_code": "ABC1234"
-  },  
+  "system_supplier": "SYSTEM_SUPPLIER",
+  "ods_code": "ABC1234",
   "payload": {
     "registration": {
-      "registration_id": "",
+      registration_id": "9087-978098-9087-978098",
       "requesting_ods_code": "ABC1234",
       "sending_ods_code": "XYZ4567"
     },
@@ -128,7 +126,7 @@ const Page = ({ children }) => (
           </tr>
           <tr>
             <td>event_type</td>
-            <td>The type of the event, in this case "ehr_integrated".</td>
+            <td>The type of the event, in this case "EHR_INTEGRATED".</td>
           </tr>
           <tr>
             <td>event_generated_timestamp</td>
@@ -138,36 +136,19 @@ const Page = ({ children }) => (
             </td>
           </tr>
           <tr>
-            <td>meta</td>
-            <td>
-              An object that contains information about the generation of the
-              event.
-            </td>
-          </tr>
-          <tr>
-            <td>payload</td>
-            <td>An object that contains the detailed payload of the event.</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h3>Meta Event Fields</h3>
-      <table>
-        <tbody>
-          <tr>
-            <th>Field</th>
-            <th>Description</th>
-          </tr>
-          <tr>
             <td>system_supplier</td>
             <td>
               The system supplier who generated the event. A unique identifier
-              given to you as a supplier by NHSD
+              given to you as a supplier by NHSD.
             </td>
           </tr>
           <tr>
             <td>ods_code</td>
-            <td>The ODS code of the practice generating the event</td>
+            <td>The ODS code of the practice generating the event.</td>
+          </tr>
+          <tr>
+            <td>payload</td>
+            <td>An object that contains the detailed payload of the event.</td>
           </tr>
         </tbody>
       </table>
