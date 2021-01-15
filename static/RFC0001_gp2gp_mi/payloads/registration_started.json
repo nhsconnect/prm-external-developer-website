@@ -1,0 +1,19 @@
+{
+  "event_id": "1234-123456-1234-123454",
+  "event_type": "REGISTRATION_STARTED",
+  "event_generated_timestamp": 1575384234,
+  "system_supplier": "SYSTEM_SUPPLIER",
+  "ods_code": "ABC1234",
+  "payload": {
+    "registration": {
+      "registration_id": "9087-978098-9087-978098",
+      "registration_started_timestamp": 1575383999,
+      "requesting_ods_code": "ABC1234",
+    },
+    "unsupported_data_items": [{
+      "id": "1323-132345-1323-132345",
+      "type": "allergy / safeguarding flag",
+      "reason": "reason for being unsupported"
+    }]
+  }
+}

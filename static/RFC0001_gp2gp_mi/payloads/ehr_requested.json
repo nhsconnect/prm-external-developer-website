@@ -1,0 +1,15 @@
+{
+  "event_id": "1234-123456-1234-123454",
+  "event_type": "EHR_REQUESTED",
+  "event_generated_timestamp": 1575384234,
+  "system_supplier": "SYSTEM_SUPPLIER",
+  "ods_code": "ABC1234",
+  "payload": {
+    "registration": {
+      "registration_id": "9087-978098-9087-978098",
+      "registration_started_timestamp": 1575383999,
+      "requesting_ods_code": "ABC1234",
+      "sending_ods_code": "XYZ4567"
+    }
+  }
+}

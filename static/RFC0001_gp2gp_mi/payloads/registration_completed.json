@@ -1,0 +1,18 @@
+{
+  "event_id": "1234-123456-1234-123452",
+  "event_type": "REGISTRATION_COMPLETED",
+  "event_generated_timestamp": 1575384234,
+  "system_supplier": "SYSTEM_SUPPLIER",
+  "ods_code": "ABC1234",
+  "payload": {
+    "registration": {
+      "registration_id": "9087-978098-9087-978098",
+      "requesting_ods_code": "ABC1234",
+      "sending_ods_code": "XYZ4567"
+    },
+    "gp2gp": {
+      "conversation_id": "4345-986959-4930-684038",
+      "registration_completed_timestamp": 1575384000
+    }
+  }
+}
