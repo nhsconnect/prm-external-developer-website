@@ -20,33 +20,42 @@
       "number_of_degrades": 27,
       "degrades": [
         {
-          "type": "type of degrade?",
+          "type": "core_ehr / attachment",
           "metadata": "other degrades metadata",
-          "snomed_code": "345678 - snomed code that caused the degrade"
+          "code": {
+            "coding": [
+              {
+                "code": "886721000000107",
+                "system": "http://snomed.info/sct"
+              }
+            ]
+          }
+        }
+      ],
+      "attachments": [
+        {
+          "attachment_id": "3424-342456-3424-342456",
+          "clinical_type": "Scanned document",
+          "mime_type": "application/pdf",
+          "size_bytes": 3084322
+        }
+      ],
+      "placeholders": [
+        {
+          "placeholder_id": "9876-987654-9876-987654",
+          "attachment_id": "1323-132345-1323-132345",
+          "generated_by": "XYZ4567",
+          "reason": 1,
+          "original_mime_type": "audio/mpeg"
+        },
+        {
+          "placeholder_id": "4354-435467-4354-435467",
+          "attachment_id": "3424-342456-3424-342456",
+          "generated_by": "ABC1234",
+          "reason": 2,
+          "original_mime_type": "audio/mpeg"
         }
       ]
-    },
-    "attachments": [{
-      "attachment_id": "3424-342456-3424-342456",
-      "clinical_type": "Scanned document",
-      "mime_type": "application/pdf",
-      "size_bytes": 3084322
-    }],
-    "placeholders": [
-      {
-        "placeholder_id": "9876-987654-9876-987654",
-        "attachment_id": "1323-132345-1323-132345",
-        "generated_by": "XYZ4567",
-        "reason": 1,
-        "original_mime_type": "audio/mpeg"
-      },
-      {
-        "placeholder_id": "4354-435467-4354-435467",
-        "attachment_id": "3424-342456-3424-342456",
-        "generated_by": "ABC1234",
-        "reason": 2,
-        "original_mime_type": "audio/mpeg"
-      }
-    ]
+    }
   }
 }

@@ -16,8 +16,14 @@
     },
     "ehr": {
       "ehr_total_size_bytes": 5699433,
-      "ehr_structured_size_bytes": 4096
+      "ehr_structured_size_bytes": 4096,
+      "other codes/ snomed codes": "other codes attached to the ehr but not to attachments (pre degraded)"
     },
+    "unsupported_data_items": [{
+      "type": "allergy/flag",
+      "a unique way to identify it": "1323-132345-1323-132345",
+      "reason": "reason for being unsupported / why is it unsupported in gp2gp / what would have to change in gp2gp to express this",
+    }],
     "attachments": [
       {
         "attachment_id": "3424-342456-3424-342456",

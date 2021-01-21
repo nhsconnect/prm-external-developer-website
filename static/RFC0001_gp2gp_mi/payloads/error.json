@@ -1,0 +1,20 @@
+{
+  "event_id": "1234-123456-1234-123451",
+  "event_type": "ERROR",
+  "event_generated_timestamp": 1575384234,
+  "system_supplier": "SYSTEM_SUPPLIER",
+  "ods_code": "XYZ4567",
+  "payload": {
+    "registration": {
+      "registration_id": "9087-978098-9087-978098",
+      "registration_started_timestamp": 1575383999,
+      "requesting_ods_code": "ABC1234"
+    },
+    "gp2gp": {
+      "conversation_id": "4345-986959-4930-684038",
+      "error_timestamp": 1575384000,
+      "error_code": "",
+      "error_description": "stacktrace? detailed error message?"
+    }
+  }
+}
