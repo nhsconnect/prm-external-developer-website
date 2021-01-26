@@ -12,43 +12,49 @@
     },
     "gp2gp": {
       "conversation_id": "4345-986959-4930-684038",
-      "ehr_generated_timestamp": 1575384000
-    },
-    "ehr": {
-      "ehr_total_size_bytes": 5699433,
-      "ehr_structured_size_bytes": 4096,
-      "other codes/ snomed codes": "other codes attached to the ehr but not to attachments (pre degraded)"
-    },
-    "unsupported_data_items": [{
-      "type": "allergy/flag",
-      "a unique way to identify it": "1323-132345-1323-132345",
-      "reason": "reason for being unsupported / why is it unsupported in gp2gp / what would have to change in gp2gp to express this",
-    }],
-    "attachments": [
-      {
-        "attachment_id": "3424-342456-3424-342456",
-        "clinical_type": "Scanned document",
-        "mime_type": "application/pdf",
-        "size_bytes": 3084322,
-        "code": {
-          "coding": [{
-            "code": "886721000000107",
-            "system": "http://snomed.info/sct"
-          }]
-        }
+      "ehr_generated_timestamp": 1575384000,
+      "ehr": {
+        "ehr_total_size_bytes": 5699433,
+        "ehr_structured_size_bytes": 4096,
+        "other codes/ snomed codes": "other codes attached to the ehr but not to attachments (pre degraded)",
+        "attachments": [
+          {
+            "attachment_id": "3424-342456-3424-342456",
+            "clinical_type": "Scanned document",
+            "mime_type": "application/pdf",
+            "size_bytes": 3084322,
+            "code": {
+              "coding": [
+                {
+                  "code": "886721000000107",
+                  "system": "http://snomed.info/sct"
+                }
+              ]
+            }
+          },
+          {
+            "attachment_id": "1323-132345-1323-132345",
+            "mime_type": "audio/mpeg",
+            "size_bytes": 24352346
+          }
+        ],
+        "placeholders": [
+          {
+            "placeholder_id": "9876-987654-9876-987654",
+            "attachment_id": "1323-132345-1323-132345",
+            "generated_by": "XYZ4567",
+            "reason": 1,
+            "original_mime_type": "audio/mpeg"
+          }
+        ]
       },
-      {
-        "attachment_id": "1323-132345-1323-132345",
-        "mime_type": "audio/mpeg",
-        "size_bytes": 24352346
-      }
-    ],
-    "placeholders": [{
-      "placeholder_id": "9876-987654-9876-987654",
-      "attachment_id": "1323-132345-1323-132345",
-      "generated_by": "XYZ4567",
-      "reason": 1,
-      "original_mime_type": "audio/mpeg"
-    }]
+      "unsupported_data_items": [
+        {
+          "type": "allergy/flag",
+          "a unique way to identify it": "1323-132345-1323-132345",
+          "reason": "reason for being unsupported / why is it unsupported in gp2gp / what would have to change in gp2gp to express this"
+        }
+      ]
+    }
   }
 }

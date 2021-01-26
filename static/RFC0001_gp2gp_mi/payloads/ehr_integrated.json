@@ -13,9 +13,9 @@
     "gp2gp": {
       "conversation_id": "4345-986959-4930-684038",
       "ehr_integrated_timestamp": 1575384000,
-      "number_of_days_to_integrate": 4
-    },
-    "integration_status": "filed as attachment/ suppressed/ merged/ rejected",
-    "reason" : "Reason for integration status"
+      "number_of_days_to_integrate": 4,
+      "integration_status": "filed as attachment/ suppressed/ merged/ rejected",
+      "reason" : "Reason for integration status"
+    }
   }
 }
