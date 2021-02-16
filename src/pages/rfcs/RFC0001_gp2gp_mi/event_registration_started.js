@@ -3,11 +3,12 @@ import { withPrefix } from "gatsby"
 import { Helmet } from "react-helmet"
 
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
-import InsetText from "nhsuk-react-components/lib/components/inset-text"
+import WarningCallout from "nhsuk-react-components/lib/components/warning-callout"
 import Pagination from "nhsuk-react-components/lib/components/pagination"
+import registrationStarted from "../../../../static/RFC0001_gp2gp_mi/payloads/registrationStarted.json"
 import "../../index.scss"
 
-const Page = ({ children }) => (
+const Page = () => (
   <>
     <Helmet title="Registration Started - Patient Record Migration" />
     <PageWithSideMenu
@@ -65,7 +66,7 @@ const Page = ({ children }) => (
         ],
       }}
     >
-      <InsetText>
+      <WarningCallout heading="In progress">
         <p>
           This RFC is currently 'Being discussed'. As such, it may be undergoing
           significant change and should not be used as the basis of an
@@ -79,7 +80,7 @@ const Page = ({ children }) => (
           </a>
           .
         </p>
-      </InsetText>
+      </WarningCallout>
       <h1>RFC0001 GP2GP MI</h1>
       <h2>Registration Started</h2>
       <h3>Event Description</h3>
@@ -90,22 +91,7 @@ const Page = ({ children }) => (
         GP2GP transfer.
       </p>
       <h3>Registration Started Event Example Payload</h3>
-      <pre>{`
-{
-  "event_id": "1234-123456-1234-123454",
-  "event_type": "REGISTRATION_STARTED",
-  "event_generated_timestamp": 1575384234,
-  "system_supplier": "SYSTEM_SUPPLIER",
-  "ods_code": "ABC1234",
-  "payload": {
-    "registration": {
-      "registration_id": "9087-978098-9087-978098",
-      "registration_started_timestamp": 1575383999
-    }		
-  }
-}
-    `}</pre>
-
+      <pre>{JSON.stringify(registrationStarted, null, 2)}</pre>
       <h3>Top Level Event Fields</h3>
       <table>
         <tbody>

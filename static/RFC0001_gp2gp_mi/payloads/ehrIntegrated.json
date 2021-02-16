@@ -1,6 +1,6 @@
 {
-  "eventId": "1234-123456-1234-123454",
-  "eventType": "EHR_SENT",
+  "eventId": "1234-123456-1234-123452",
+  "eventType": "EHR_INTEGRATED",
   "eventGeneratedTimestamp": 1575384234,
   "systemSupplier": "SYSTEM_SUPPLIER",
   "odsCode": "ABC1234",
@@ -12,7 +12,10 @@
     },
     "gp2gp": {
       "conversationId": "4345-986959-4930-684038",
-      "ehrSentTimestamp": 1575384000
+      "ehrIntegratedTimestamp": 1575384000,
+      "numberOfDaysToIntegrate": 4,
+      "integrationStatus": "filed as attachment/ suppressed/ merged/ rejected",
+      "reason": "Reason for integration status"
     }
   }
 }

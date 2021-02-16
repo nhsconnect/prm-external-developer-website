@@ -3,11 +3,12 @@ import { withPrefix } from "gatsby"
 import { Helmet } from "react-helmet"
 
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
-import InsetText from "nhsuk-react-components/lib/components/inset-text"
+import WarningCallout from "nhsuk-react-components/lib/components/warning-callout"
 import Pagination from "nhsuk-react-components/lib/components/pagination"
+import ehrIntegrated from "../../../../static/RFC0001_gp2gp_mi/payloads/ehrIntegrated.json"
 import "../../index.scss"
 
-const Page = ({ children }) => (
+const Page = () => (
   <>
     <Helmet title="EHR Integrated - Patient Record Migration" />
     <PageWithSideMenu
@@ -67,7 +68,7 @@ const Page = ({ children }) => (
         ],
       }}
     >
-      <InsetText>
+      <WarningCallout heading="In progress">
         <p>
           This RFC is currently 'Being discussed'. As such, it may be undergoing
           significant change and should not be used as the basis of an
@@ -81,7 +82,7 @@ const Page = ({ children }) => (
           </a>
           .
         </p>
-      </InsetText>
+      </WarningCallout>
       <h1>RFC0001 GP2GP MI</h1>
       <h2>EHR Integrated</h2>
       <h3>Event Description</h3>
@@ -91,28 +92,7 @@ const Page = ({ children }) => (
         system.
       </p>
       <h3>EHR Integrated Event Example Payload</h3>
-      <pre>{`
-{
-  "event_id": "1234-123456-1234-123452",
-  "event_type": "EHR_INTEGRATED",
-  "event_generated_timestamp": 1575384234,
-  "system_supplier": "SYSTEM_SUPPLIER",
-  "ods_code": "ABC1234",
-  "payload": {
-    "registration": {
-      registration_id": "9087-978098-9087-978098",
-      "requesting_ods_code": "ABC1234",
-      "sending_ods_code": "XYZ4567"
-    },
-    "gp2gp": {
-      "conversation_id": "4345-986959-4930-684038"
-      "ehr_integrated_timestamp": 1575384000,
-      "number_of_days_to_integrate": 4
-    }
-  }
-}
-    `}</pre>
-
+      <pre>{JSON.stringify(ehrIntegrated, null, 2)}</pre>
       <h3>Top Level Event Fields</h3>
       <table>
         <tbody>

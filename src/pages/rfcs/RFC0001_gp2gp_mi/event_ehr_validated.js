@@ -3,11 +3,12 @@ import { withPrefix } from "gatsby"
 import { Helmet } from "react-helmet"
 
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
-import InsetText from "nhsuk-react-components/lib/components/inset-text"
+import WarningCallout from "nhsuk-react-components/lib/components/warning-callout"
 import Pagination from "nhsuk-react-components/lib/components/pagination"
+import ehrValidated from "../../../../static/RFC0001_gp2gp_mi/payloads/ehrValidated.json"
 import "../../index.scss"
 
-const Page = ({ children }) => (
+const Page = () => (
   <>
     <Helmet title="EHR Validated - Patient Record Migration" />
     <PageWithSideMenu
@@ -67,7 +68,7 @@ const Page = ({ children }) => (
         ],
       }}
     >
-      <InsetText>
+      <WarningCallout heading="In progress">
         <p>
           This RFC is currently 'Being discussed'. As such, it may be undergoing
           significant change and should not be used as the basis of an
@@ -81,7 +82,7 @@ const Page = ({ children }) => (
           </a>
           .
         </p>
-      </InsetText>
+      </WarningCallout>
       <h1>RFC0001 GP2GP MI</h1>
       <h2>Event: EHR Validated</h2>
       <h3>Event Description</h3>
@@ -92,52 +93,7 @@ const Page = ({ children }) => (
         enters the GP2GP WorkFlow for integration by the clinical system.
       </p>
       <h3>EHR Validated Event Example Payload</h3>
-      <pre>{`
-{
-  "event_id": "1234-123456-1234-123453",
-  "event_type": "EHR_VALIDATED",
-  "event_generated_timestamp": 1575384234,
-  "system_supplier": "SYSTEM_SUPPLIER",
-  "ods_code": "ABC1234",
-  "payload": {
-    "registration": {
-      "registration_id": "9087-978098-9087-978098",
-      "requesting_ods_code": "ABC1234",
-      "sending_ods_code": "XYZ4567"
-    },
-    "gp2gp": {
-      "conversation_id": "4345-986959-4930-684038",
-      "ehr_validated_timestamp": 1575384000
-    },
-    "ehr": {
-      "ehr_total_size_bytes": 5699433,
-      "ehr_structured_size_bytes": 4096,
-      "number_of_degrades": 27
-    },
-    "attachments": [{
-        "attachment_id": "3424-342456-3424-342456",
-        "clinical_type": "Scanned document",
-        "mime_type": "application/pdf",
-        "size_bytes": 3084322
-    }],
-    "placeholders": [
-      {
-        "placeholder_id": "9876-987654-9876-987654",
-        "attachment_id": "1323-132345-1323-132345",
-        "generated_by": "XYZ4567",
-        "reason": 1
-      },
-      {
-        "placeholder_id": "4354-435467-4354-435467",
-        "attachment_id": "3424-342456-3424-342456",
-        "generated_by": "ABC1234",
-        "reason": 2
-      }
-    ]
-  }
-}
-    `}</pre>
-
+      <pre>{JSON.stringify(ehrValidated, null, 2)}</pre>
       <h3>Top Level Event Fields</h3>
       <table>
         <tbody>
