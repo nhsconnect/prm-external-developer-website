@@ -8,7 +8,7 @@
     "registration": {
       "registrationId": "9087-978098-9087-978098",
       "requestingOdsCode": "ABC1234",
-      "sending_odsCode": "XYZ4567"
+      "sendingOdsCode": "XYZ4567"
     },
     "gp2gp": {
       "conversationId": "4345-986959-4930-684038",

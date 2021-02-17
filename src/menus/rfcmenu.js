@@ -9,6 +9,7 @@ export const REGISTRATION_STARTED = "REGISTRATION_STARTED"
 export const EHR_GENERATED = "EHR_GENERATED"
 export const EHR_VALIDATED = "EHR_VALIDATED"
 export const EHR_INTEGRATED = "EHR_INTEGRATED"
+export const REGISTRATION_COMPLETED = "REGISTRATION_COMPLETED"
 
 export const items = [
   {
@@ -55,5 +56,10 @@ export const items = [
     url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_integrated"),
     label: "Event: EHR Integrated",
     id: EHR_INTEGRATED,
+  },
+  {
+    url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_registration_completed"),
+    label: "Event: Registration Completed",
+    id: REGISTRATION_COMPLETED,
   },
 ]
