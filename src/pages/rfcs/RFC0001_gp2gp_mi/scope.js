@@ -3,12 +3,12 @@ import { withPrefix } from "gatsby"
 import { Helmet } from "react-helmet"
 
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
-import InsetText from "nhsuk-react-components/lib/components/inset-text"
+import WarningCallout from "nhsuk-react-components/lib/components/warning-callout"
 import Image from "nhsuk-react-components/lib/components/image"
 import Pagination from "nhsuk-react-components/lib/components/pagination"
 import "../../index.scss"
 
-const Page = ({ children }) => (
+const Page = () => (
   <>
     <Helmet title="Scope - Patient Record Migration" />
     <PageWithSideMenu
@@ -68,7 +68,7 @@ const Page = ({ children }) => (
         ],
       }}
     >
-      <InsetText>
+      <WarningCallout heading="In progress">
         <p>
           This RFC is currently 'Being discussed'. As such, it may be undergoing
           significant change and should not be used as the basis of an
@@ -82,15 +82,15 @@ const Page = ({ children }) => (
           </a>
           .
         </p>
-      </InsetText>
+      </WarningCallout>
       <h1>RFC0001 GP2GP MI</h1>
       <h2>Scope</h2>
       <p>
         We believe that initially, we should focus on the areas where we want to
         gather new information first in order to prove out the solution.
         Therefore we will include within the scope 'Registration Started' as a
-        new event and more detailed data when the EHR is generated
-        and integrated.
+        new event and more detailed data when the EHR is generated and
+        integrated.
       </p>
       <Image
         src={withPrefix("/RFC0001_gp2gp_mi/scope_example.png")}

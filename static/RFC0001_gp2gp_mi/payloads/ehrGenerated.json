@@ -59,7 +59,7 @@
         {
           "type": "allergy/flag",
           "uniqueIdentifier": "1323-132345-1323-132345",
-          "reason": "reason for being unsupported / why is it unsupported in gp2gp"
+          "reason": "reason for being unsupported / why is it unsupported in gp2gp / what would have to change in gp2gp to express this"
         }
       ]
     }

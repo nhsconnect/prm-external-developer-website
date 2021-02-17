@@ -3,11 +3,11 @@ import { withPrefix } from "gatsby"
 import { Helmet } from "react-helmet"
 
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
-import InsetText from "nhsuk-react-components/lib/components/inset-text"
+import WarningCallout from "nhsuk-react-components/lib/components/warning-callout"
 import Pagination from "nhsuk-react-components/lib/components/pagination"
 import "../../index.scss"
 
-const Page = ({ children }) => (
+const Page = () => (
   <>
     <Helmet title="Overview - Patient Record Migration" />
     <PageWithSideMenu
@@ -67,7 +67,7 @@ const Page = ({ children }) => (
         ],
       }}
     >
-      <InsetText>
+      <WarningCallout heading="In progress">
         <p>
           This RFC is currently 'Being discussed'. As such, it may be undergoing
           significant change and should not be used as the basis of an
@@ -81,7 +81,7 @@ const Page = ({ children }) => (
           </a>
           .
         </p>
-      </InsetText>
+      </WarningCallout>
       <h1>RFC0001 GP2GP MI</h1>
       <h2>Overview</h2>
       <p>In GP2GP we currently see a large number of errors that we either:</p>
