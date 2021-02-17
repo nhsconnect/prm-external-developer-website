@@ -337,9 +337,9 @@ const Page = () => (
 
       <Pagination>
         <Pagination.Previous
-          href={withPrefix("rfcs/RFC0001_gp2gp_mi/event_registration_started")}
+          href={withPrefix("rfcs/RFC0001_gp2gp_mi/event_ehr_requested")}
         >
-          Event: Registration Started
+          Event: EHR Requested
         </Pagination.Previous>
         <Pagination.Next
           href={withPrefix("rfcs/RFC0001_gp2gp_mi/event_ehr_validated")}

@@ -6,6 +6,7 @@ export const SCOPE = "SCOPE"
 export const USE_CASES = "USE_CASES"
 export const NEW_DATA = "NEW_DATA"
 export const REGISTRATION_STARTED = "REGISTRATION_STARTED"
+export const EHR_REQUESTED = "EHR_REQUESTED"
 export const EHR_GENERATED = "EHR_GENERATED"
 export const EHR_VALIDATED = "EHR_VALIDATED"
 export const EHR_INTEGRATED = "EHR_INTEGRATED"
@@ -41,6 +42,11 @@ export const items = [
     url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_registration_started"),
     label: "Event: Registration Started",
     id: REGISTRATION_STARTED,
+  },
+  {
+    url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_requested"),
+    label: "Event: EHR Requested",
+    id: EHR_REQUESTED,
   },
   {
     url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_generated"),
