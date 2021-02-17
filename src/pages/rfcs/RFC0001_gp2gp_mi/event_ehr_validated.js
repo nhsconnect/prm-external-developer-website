@@ -60,29 +60,29 @@ const Page = () => (
             <th>Description</th>
           </tr>
           <tr>
-            <td>event_id</td>
+            <td>eventId</td>
             <td>Unique identifier for this event.</td>
           </tr>
           <tr>
-            <td>event_type</td>
+            <td>eventType</td>
             <td>The type of the event, in this case "EHR_VALIDATED".</td>
           </tr>
           <tr>
-            <td>event_generated_timestamp</td>
+            <td>eventGeneratedTimestamp</td>
             <td>
               The unix timestamp in milliseconds of when the event was generated
               by the system.
             </td>
           </tr>
           <tr>
-            <td>system_supplier</td>
+            <td>systemSupplier</td>
             <td>
               The system supplier who generated the event. A unique identifier
               given to you as a supplier by NHSD.
             </td>
           </tr>
           <tr>
-            <td>ods_code</td>
+            <td>odsCode</td>
             <td>The ODS code of the practice generating the event.</td>
           </tr>
           <tr>
@@ -119,7 +119,7 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>attachments</td>
+            <td>attachment</td>
             <td>
               A list that contains information about ALL the attachments
               contained in the EHR as received by the receiving system. This
@@ -128,7 +128,7 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>placeholders</td>
+            <td>placeholder</td>
             <td>
               A list that contains information about all the placeholders in the
               EHR as received by the recieving system AND any placeholders that
@@ -146,18 +146,18 @@ const Page = () => (
             <th>Description</th>
           </tr>
           <tr>
-            <td>registration_id</td>
+            <td>registrationId</td>
             <td>
               The unique identifier for this registration that can be resolved
               in the clinical system.
             </td>
           </tr>
           <tr>
-            <td>requesting_ods_code</td>
+            <td>requestingOdsCode</td>
             <td>The ODS code of the practice requesting the EHR</td>
           </tr>
           <tr>
-            <td>sending_ods_code</td>
+            <td>sendingOdsCode</td>
             <td>The ODS code of the practice sending the EHR</td>
           </tr>
         </tbody>
@@ -171,14 +171,14 @@ const Page = () => (
             <th>Description</th>
           </tr>
           <tr>
-            <td>conversation_id</td>
+            <td>conversationId</td>
             <td>
               The ConversationID used in the GP2GP process for this
               registration.
             </td>
           </tr>
           <tr>
-            <td>ehr_validated_timestamp</td>
+            <td>ehrValidatedTimestamp</td>
             <td>
               The unix timestamp in milliseconds that the EHR used in the GP2GP
               transfer was added to the GP2GP workflow to be integrated by the
@@ -196,14 +196,14 @@ const Page = () => (
             <th>Description</th>
           </tr>
           <tr>
-            <td>ehr_total_size_bytes</td>
+            <td>ehrTotalSizeByte</td>
             <td>
               The total size in bytes of the GP2GP message as reconstituted by
               the recieving system including all attachments recieved.
             </td>
           </tr>
           <tr>
-            <td>ehr_structured_size_bytes</td>
+            <td>ehrStructuredSizeByte</td>
             <td>
               The total size in bytes of structured part of the GP2GP message as
               received by the recieving system (attachments are NOT to be
@@ -211,7 +211,7 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>number_of_degrades</td>
+            <td>numberOfDegrade</td>
             <td>
               The total number of degrades that the clinical staff will need to
               resolve.
@@ -228,14 +228,14 @@ const Page = () => (
             <th>Description</th>
           </tr>
           <tr>
-            <td>attachment_id</td>
+            <td>attachmentId</td>
             <td>
               A unique id for the attachment that can be resolved in the
               clinical system.
             </td>
           </tr>
           <tr>
-            <td>clinical_type</td>
+            <td>clinicalType</td>
             <td>
               The text value corresponding to the value used in
               EhrAttachmentCode in the code element of ExternalDocument as
@@ -243,14 +243,14 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>mime_type</td>
+            <td>mimeType</td>
             <td>
               The mime type of the attachment as used as part of the text
               element in ExternalDocument as defined in the MIM.
             </td>
           </tr>
           <tr>
-            <td>size_bytes</td>
+            <td>sizeByte</td>
             <td>The size in bytes of the attachment.</td>
           </tr>
         </tbody>
@@ -264,21 +264,21 @@ const Page = () => (
             <th>Description</th>
           </tr>
           <tr>
-            <td>placeholder_id</td>
+            <td>placeholderId</td>
             <td>
               A unique id for the placeholder that can be resolved in the
               clinical system.
             </td>
           </tr>
           <tr>
-            <td>attachment_id</td>
+            <td>attachmentId</td>
             <td>
               A reference to the attachment that the placeholder replaces
               (should be contained in the list of attachments)
             </td>
           </tr>
           <tr>
-            <td>generated_by</td>
+            <td>generatedBy</td>
             <td>
               The ODS code of the practice that generated the placeholder.
             </td>
@@ -302,9 +302,9 @@ const Page = () => (
 
       <Pagination>
         <Pagination.Previous
-          href={withPrefix("rfcs/RFC0001_gp2gp_mi/event_ehr_generated")}
+          href={withPrefix("rfcs/RFC0001_gp2gp_mi/event_ehr_sent")}
         >
-          Event: EHR Generated
+          Event: EHR Sent
         </Pagination.Previous>
         <Pagination.Next
           href={withPrefix("rfcs/RFC0001_gp2gp_mi/event_ehr_integrated")}

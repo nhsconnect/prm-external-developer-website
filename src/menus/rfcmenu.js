@@ -8,6 +8,7 @@ export const NEW_DATA = "NEW_DATA"
 export const REGISTRATION_STARTED = "REGISTRATION_STARTED"
 export const EHR_REQUESTED = "EHR_REQUESTED"
 export const EHR_GENERATED = "EHR_GENERATED"
+export const EHR_SENT = "EHR_SENT"
 export const EHR_VALIDATED = "EHR_VALIDATED"
 export const EHR_INTEGRATED = "EHR_INTEGRATED"
 export const REGISTRATION_COMPLETED = "REGISTRATION_COMPLETED"
@@ -52,6 +53,11 @@ export const items = [
     url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_generated"),
     label: "Event: EHR Generated",
     id: EHR_GENERATED,
+  },
+  {
+    url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_sent"),
+    label: "Event: EHR Sent",
+    id: EHR_SENT,
   },
   {
     url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_validated"),

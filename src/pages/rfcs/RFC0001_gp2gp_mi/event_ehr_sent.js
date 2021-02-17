@@ -4,15 +4,15 @@ import { Helmet } from "react-helmet"
 import WarningCallout from "nhsuk-react-components/lib/components/warning-callout"
 import Pagination from "nhsuk-react-components/lib/components/pagination"
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
-import { items, EHR_REQUESTED } from "../../../menus/rfcmenu"
-import ehrRequested from "../../../../static/RFC0001_gp2gp_mi/payloads/ehrRequested.json"
+import { items, EHR_SENT } from "../../../menus/rfcmenu"
+import ehrSent from "../../../../static/RFC0001_gp2gp_mi/payloads/ehrSent.json"
 import "../../index.scss"
 
 const Page = () => (
   <>
     <Helmet title="EHR Requested - Patient Record Migration" />
     <PageWithSideMenu
-      sidemenu={{ items, selectedItem: EHR_REQUESTED }}
+      sidemenu={{ items, selectedItem: EHR_SENT }}
       breadcrumb={{
         items: [
           {
@@ -42,15 +42,15 @@ const Page = () => (
         </p>
       </WarningCallout>
       <h1>RFC0001 GP2GP MI</h1>
-      <h2>EHR Requested</h2>
+      <h2>EHR Sent</h2>
       <h3>Event Description</h3>
       <p>
-        The EHR requested event should be sent when a receiving system has
-        triggered a GP2GP transfer. This should be sent before the EHR generated
-        event.
+        The EHR sent event should be sent when a sending practice has sent a
+        GP2GP transfer to the receiving practice. This should be sent before the
+        EHR validated event, and after all message fragments have been sent.
       </p>
-      <h3>EHR Requested Event Example Payload</h3>
-      <pre>{JSON.stringify(ehrRequested, null, 2)}</pre>
+      <h3>EHR Sent Event Example Payload</h3>
+      <pre>{JSON.stringify(ehrSent, null, 2)}</pre>
       <h3>Top Level Event Fields</h3>
       <table>
         <tbody>
@@ -65,7 +65,7 @@ const Page = () => (
           <tr>
             <td>eventType</td>
             <td>
-              The type of the event, in this case "EHR_REQUESTED".
+              The type of the event, in this case "EHR_SENT".
             </td>
           </tr>
           <tr>
@@ -155,10 +155,10 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>ehrRequestedTimestamp</td>
+            <td>ehrSentTimestamp</td>
             <td>
               The unix timestamp in milliseconds that the EHR used in the GP2GP
-              transfer was requested by the system.
+              transfer was sent by the system.
             </td>
           </tr>
         </tbody>
@@ -166,14 +166,14 @@ const Page = () => (
 
       <Pagination>
         <Pagination.Previous
-          href={withPrefix("rfcs/RFC0001_gp2gp_mi/event_registration_started")}
-        >
-          Event: Registration Started
+            href={withPrefix("rfcs/RFC0001_gp2gp_mi/event_ehr_generated")}
+            >
+              Event: EHR Generated
         </Pagination.Previous>
         <Pagination.Next
-          href={withPrefix("rfcs/RFC0001_gp2gp_mi/event_ehr_generated")}
+          href={withPrefix("rfcs/RFC0001_gp2gp_mi/event_ehr_validated")}
         >
-          Event: EHR Generated
+          Event: EHR Validated
         </Pagination.Next>
       </Pagination>
     </PageWithSideMenu>

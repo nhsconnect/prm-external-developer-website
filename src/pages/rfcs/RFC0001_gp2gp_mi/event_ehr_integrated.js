@@ -59,29 +59,29 @@ const Page = () => (
             <th>Description</th>
           </tr>
           <tr>
-            <td>event_id</td>
+            <td>eventId</td>
             <td>Unique identifier for this event.</td>
           </tr>
           <tr>
-            <td>event_type</td>
+            <td>eventType</td>
             <td>The type of the event, in this case "EHR_INTEGRATED".</td>
           </tr>
           <tr>
-            <td>event_generated_timestamp</td>
+            <td>eventGeneratedTimestamp</td>
             <td>
               The unix timestamp in milliseconds of when the event was generated
               by the system.
             </td>
           </tr>
           <tr>
-            <td>system_supplier</td>
+            <td>systemSupplier</td>
             <td>
               The system supplier who generated the event. A unique identifier
               given to you as a supplier by NHSD.
             </td>
           </tr>
           <tr>
-            <td>ods_code</td>
+            <td>odsCode</td>
             <td>The ODS code of the practice generating the event.</td>
           </tr>
           <tr>
@@ -121,18 +121,18 @@ const Page = () => (
             <th>Description</th>
           </tr>
           <tr>
-            <td>registration_id</td>
+            <td>registrationId</td>
             <td>
               The unique identifier for this registration that can be resolved
               in the clinical system.
             </td>
           </tr>
           <tr>
-            <td>requesting_ods_code</td>
+            <td>requestingOdsCode</td>
             <td>The ODS code of the practice requesting the EHR</td>
           </tr>
           <tr>
-            <td>sending_ods_code</td>
+            <td>sendingOdsCode</td>
             <td>The ODS code of the practice sending the EHR</td>
           </tr>
         </tbody>
@@ -146,14 +146,14 @@ const Page = () => (
             <th>Description</th>
           </tr>
           <tr>
-            <td>conversation_id</td>
+            <td>conversationId</td>
             <td>
               The ConversationID used in the GP2GP process for this
               registration.
             </td>
           </tr>
           <tr>
-            <td>ehr_integrated_timestamp</td>
+            <td>ehrIntegratedTimestamp</td>
             <td>
               The unix timestamp in milliseconds of when the EHR transferred via
               GP2GP was integrated by the clinical staff in the recieving
@@ -161,7 +161,7 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>number_of_days_to_integrate</td>
+            <td>numberOfDaysToIntegrate</td>
             <td>
               The number of days it took the practice staff to integrate the
               record as understood by the recieving system.
