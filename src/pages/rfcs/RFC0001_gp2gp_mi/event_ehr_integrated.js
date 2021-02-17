@@ -1,10 +1,10 @@
 import React from "react"
 import { withPrefix } from "gatsby"
 import { Helmet } from "react-helmet"
-
-import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
 import WarningCallout from "nhsuk-react-components/lib/components/warning-callout"
 import Pagination from "nhsuk-react-components/lib/components/pagination"
+import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
+import { items, EHR_INTEGRATED } from "../../../menus/rfcmenu"
 import ehrIntegrated from "../../../../static/RFC0001_gp2gp_mi/payloads/ehrIntegrated.json"
 import "../../index.scss"
 
@@ -12,49 +12,7 @@ const Page = () => (
   <>
     <Helmet title="EHR Integrated - Patient Record Migration" />
     <PageWithSideMenu
-      sidemenu={{
-        items: [
-          {
-            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/overview"),
-            label: "Overview",
-          },
-          {
-            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/vision"),
-            label: "Vision",
-          },
-          {
-            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/scope"),
-            label: "Scope",
-          },
-          {
-            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/usecases"),
-            label: "Use Cases",
-          },
-          {
-            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/data"),
-            label: "New data to be collected",
-          },
-          {
-            url: withPrefix(
-              "/rfcs/RFC0001_gp2gp_mi/event_registration_started"
-            ),
-            label: "Event: Registration Started",
-          },
-          {
-            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_generated"),
-            label: "Event: EHR Generated",
-          },
-          {
-            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_validated"),
-            label: "Event: EHR Validated",
-          },
-          {
-            url: "#top",
-            label: "Event: EHR Integrated",
-            selected: true,
-          },
-        ],
-      }}
+      sidemenu={{ items, selectemItem: EHR_INTEGRATED }}
       breadcrumb={{
         items: [
           {

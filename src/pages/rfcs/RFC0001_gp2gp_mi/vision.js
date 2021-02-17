@@ -1,11 +1,11 @@
 import React from "react"
 import { withPrefix } from "gatsby"
 import { Helmet } from "react-helmet"
-
-import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
 import WarningCallout from "nhsuk-react-components/lib/components/warning-callout"
 import Image from "nhsuk-react-components/lib/components/image"
 import Pagination from "nhsuk-react-components/lib/components/pagination"
+import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
+import { items, VISION } from "../../../menus/rfcmenu"
 import "../../index.scss"
 
 const Page = () => {
@@ -13,49 +13,7 @@ const Page = () => {
     <>
       <Helmet title="Vision - Patient Record Migration" />
       <PageWithSideMenu
-        sidemenu={{
-          items: [
-            {
-              url: withPrefix("/rfcs/RFC0001_gp2gp_mi/overview"),
-              label: "Overview",
-            },
-            {
-              url: "#top",
-              label: "Vision",
-              selected: true,
-            },
-            {
-              url: withPrefix("/rfcs/RFC0001_gp2gp_mi/scope"),
-              label: "Scope",
-            },
-            {
-              url: withPrefix("/rfcs/RFC0001_gp2gp_mi/usecases"),
-              label: "Use Cases",
-            },
-            {
-              url: withPrefix("/rfcs/RFC0001_gp2gp_mi/data"),
-              label: "New data to be collected",
-            },
-            {
-              url: withPrefix(
-                "/rfcs/RFC0001_gp2gp_mi/event_registration_started"
-              ),
-              label: "Event: Registration Started",
-            },
-            {
-              url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_generated"),
-              label: "Event: EHR Generated",
-            },
-            {
-              url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_validated"),
-              label: "Event: EHR Validated",
-            },
-            {
-              url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_integrated"),
-              label: "Event: EHR Integrated",
-            },
-          ],
-        }}
+        sidemenu={{ items, selectedItem: VISION }}
         breadcrumb={{
           items: [
             {

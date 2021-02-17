@@ -1,10 +1,10 @@
 import React from "react"
 import { withPrefix } from "gatsby"
 import { Helmet } from "react-helmet"
-
-import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
 import WarningCallout from "nhsuk-react-components/lib/components/warning-callout"
 import Pagination from "nhsuk-react-components/lib/components/pagination"
+import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
+import { items, EHR_VALIDATED } from "../../../menus/rfcmenu"
 import ehrValidated from "../../../../static/RFC0001_gp2gp_mi/payloads/ehrValidated.json"
 import "../../index.scss"
 
@@ -12,49 +12,7 @@ const Page = () => (
   <>
     <Helmet title="EHR Validated - Patient Record Migration" />
     <PageWithSideMenu
-      sidemenu={{
-        items: [
-          {
-            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/overview"),
-            label: "Overview",
-          },
-          {
-            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/vision"),
-            label: "Vision",
-          },
-          {
-            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/scope"),
-            label: "Scope",
-          },
-          {
-            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/usecases"),
-            label: "Use Cases",
-          },
-          {
-            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/data"),
-            label: "New data to be collected",
-          },
-          {
-            url: withPrefix(
-              "/rfcs/RFC0001_gp2gp_mi/event_registration_started"
-            ),
-            label: "Event: Registration Started",
-          },
-          {
-            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_generated"),
-            label: "Event: EHR Generated",
-          },
-          {
-            url: "#top",
-            label: "Event: EHR Validated",
-            selected: true,
-          },
-          {
-            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_integrated"),
-            label: "Event: EHR Integrated",
-          },
-        ],
-      }}
+      sidemenu={{ items, selectedItem: EHR_VALIDATED }}
       breadcrumb={{
         items: [
           {

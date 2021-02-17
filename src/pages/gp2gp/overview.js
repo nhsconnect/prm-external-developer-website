@@ -1,22 +1,12 @@
 import React from "react"
 import { withPrefix } from "gatsby"
 import { PageWithSideMenu } from "../../components/pagelayouts/pagewithsidemenu"
+import { items } from "../../menus/gp2gpmenu"
 import "../index.scss"
 
-const Page = ({ children }) => (
+const Page = () => (
   <PageWithSideMenu
-    sidemenu={{
-      items: [
-        {
-          url: withPrefix("/gp2gp/gp2gp_2.2b/overview"),
-          label: "GP2GP v2.2b",
-        },
-        {
-          url: withPrefix("/gp2gp/gp2gp_2.3/overview"),
-          label: "GP2GP v2.3",
-        },
-      ],
-    }}
+    sidemenu={{ items }}
     breadcrumb={{
       items: [
         {

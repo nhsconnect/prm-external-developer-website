@@ -3,31 +3,12 @@ import { withPrefix } from "gatsby"
 import Promo from "nhsuk-react-components/lib/components/promo"
 import Pagination from "nhsuk-react-components/lib/components/pagination"
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
+import { items, APPENDIX } from "../../../menus/gp2gp22bmenu"
 import "../../index.scss"
 
-const Page = ({ children }) => (
+const Page = () => (
   <PageWithSideMenu
-    sidemenu={{
-      items: [
-        {
-          url: withPrefix("gp2gp/gp2gp_2.2b/overview"),
-          label: "Overview",
-        },
-        {
-          url: withPrefix("gp2gp/gp2gp_2.2b/spine_technical_design"),
-          label: "Spine technical design",
-        },
-        {
-          url: withPrefix("gp2gp/gp2gp_2.2b/management_information"),
-          label: "Management Information",
-        },
-        {
-          url: withPrefix("gp2gp/gp2gp_2.2b/appendix"),
-          label: "Appendix",
-          selected: true,
-        },
-      ],
-    }}
+    sidemenu={{ items, selectedItem: APPENDIX }}
     breadcrumb={{
       items: [
         {

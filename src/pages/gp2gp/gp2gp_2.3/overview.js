@@ -2,19 +2,12 @@ import React from "react"
 import { withPrefix, Link } from "gatsby"
 import Promo from "nhsuk-react-components/lib/components/promo"
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
+import { items, OVERVIEW } from "../../../menus/gpgp23menu"
 import "../../index.scss"
 
-const Page = ({ children }) => (
+const Page = () => (
   <PageWithSideMenu
-    sidemenu={{
-      items: [
-        {
-          url: "#top",
-          label: "Overview",
-          selected: true,
-        },
-      ],
-    }}
+    sidemenu={{ items, selectedItem: OVERVIEW }}
     breadcrumb={{
       items: [
         {

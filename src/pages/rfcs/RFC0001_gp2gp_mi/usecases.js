@@ -1,59 +1,17 @@
 import React from "react"
 import { withPrefix } from "gatsby"
 import { Helmet } from "react-helmet"
-
-import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
 import WarningCallout from "nhsuk-react-components/lib/components/warning-callout"
 import Pagination from "nhsuk-react-components/lib/components/pagination"
+import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
+import { items, USE_CASES } from "../../../menus/rfcmenu"
 import "../../index.scss"
 
 const Page = () => (
   <>
     <Helmet title="Use Cases - Patient Record Migration" />
     <PageWithSideMenu
-      sidemenu={{
-        items: [
-          {
-            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/overview"),
-            label: "Overview",
-          },
-          {
-            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/vision"),
-            label: "Vision",
-          },
-          {
-            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/scope"),
-            label: "Scope",
-          },
-          {
-            url: "#top",
-            label: "Use Cases",
-            selected: true,
-          },
-          {
-            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/data"),
-            label: "New data to be collected",
-          },
-          {
-            url: withPrefix(
-              "/rfcs/RFC0001_gp2gp_mi/event_registration_started"
-            ),
-            label: "Event: Registration Started",
-          },
-          {
-            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_generated"),
-            label: "Event: EHR Generated",
-          },
-          {
-            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_validated"),
-            label: "Event: EHR Validated",
-          },
-          {
-            url: withPrefix("/rfcs/RFC0001_gp2gp_mi/event_ehr_integrated"),
-            label: "Event: EHR Integrated",
-          },
-        ],
-      }}
+      sidemenu={{ items, selectedItem: USE_CASES }}
       breadcrumb={{
         items: [
           {
