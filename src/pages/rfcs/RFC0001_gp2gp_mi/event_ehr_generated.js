@@ -193,14 +193,14 @@ const Page = () => (
             <th>Description</th>
           </tr>
           <tr>
-            <td>ehrTotalSizeByte</td>
+            <td>ehrTotalSizeBytes</td>
             <td>
               The total size in bytes of the GP2GP message BEFORE it is split
               for transfer including all attachments.
             </td>
           </tr>
           <tr>
-            <td>ehrStructuredSizeByte</td>
+            <td>ehrStructuredSizeBytes</td>
             <td>
               The total size in bytes of structured part of the GP2GP message
               (attachments are NOT to be included).
@@ -239,7 +239,7 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>sizeByte</td>
+            <td>sizeBytes</td>
             <td>The size in bytes of the attachment.</td>
           </tr>
           <tr>

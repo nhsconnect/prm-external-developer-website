@@ -196,25 +196,18 @@ const Page = () => (
             <th>Description</th>
           </tr>
           <tr>
-            <td>ehrTotalSizeByte</td>
+            <td>ehrTotalSizeBytes</td>
             <td>
               The total size in bytes of the GP2GP message as reconstituted by
               the recieving system including all attachments recieved.
             </td>
           </tr>
           <tr>
-            <td>ehrStructuredSizeByte</td>
+            <td>ehrStructuredSizeBytes</td>
             <td>
               The total size in bytes of structured part of the GP2GP message as
               received by the recieving system (attachments are NOT to be
               included).
-            </td>
-          </tr>
-          <tr>
-            <td>numberOfDegrade</td>
-            <td>
-              The total number of degrades that the clinical staff will need to
-              resolve.
             </td>
           </tr>
         </tbody>
@@ -250,7 +243,7 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>sizeByte</td>
+            <td>sizeBytes</td>
             <td>The size in bytes of the attachment.</td>
           </tr>
         </tbody>

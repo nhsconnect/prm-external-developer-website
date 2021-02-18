@@ -14,9 +14,8 @@
       "conversationId": "4345-986959-4930-684038",
       "ehrValidatedTimestamp": 1575384000,
       "ehr": {
-        "ehrTotalSizeByte": 5699433,
-        "ehrStructuredSizeByte": 4096,
-        "numberOfDegrade": 27,
+        "ehrTotalSizeBytes": 5699433,
+        "ehrStructuredSizeBytes": 4096,
         "degrade": [
           {
             "type": "core_ehr / attachment",
@@ -36,7 +35,7 @@
             "attachmentId": "3424-342456-3424-342456",
             "clinicalType": "Scanned document",
             "mimeType": "application/pdf",
-            "sizeByte": 3084322
+            "sizeBytes": 3084322
           }
         ],
         "placeholder": [
