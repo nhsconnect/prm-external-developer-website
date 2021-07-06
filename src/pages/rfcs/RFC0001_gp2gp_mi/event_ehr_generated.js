@@ -242,51 +242,6 @@ const Page = () => (
             <td>sizeBytes</td>
             <td>The size in bytes of the attachment.</td>
           </tr>
-          <tr>
-            <td>code</td>
-            <td>
-              An object that contains the code given to the attachment by the
-              clinician as the attachment was attached to the EHR.
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h3>Code Event Fields</h3>
-      <table>
-        <tbody>
-          <tr>
-            <th>Field</th>
-            <th>Description</th>
-          </tr>
-          <tr>
-            <td>coding</td>
-            <td>
-              A list of objects that contain the codes used when the clinician
-              attached the object to the EHR.
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h3>Coding Event Fields</h3>
-      <table>
-        <tbody>
-          <tr>
-            <th>Field</th>
-            <th>Description</th>
-          </tr>
-          <tr>
-            <td>code</td>
-            <td>
-              The code entered by the clinican in the system as the attachment
-              was attached.
-            </td>
-          </tr>
-          <tr>
-            <td>system</td>
-            <td>The coding system used.</td>
-          </tr>
         </tbody>
       </table>
 
