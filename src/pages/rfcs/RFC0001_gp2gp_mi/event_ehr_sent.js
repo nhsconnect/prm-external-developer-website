@@ -10,7 +10,7 @@ import "../../index.scss"
 
 const Page = () => (
   <>
-    <Helmet title="EHR Requested - Patient Record Migration" />
+    <Helmet title="EHR Sent - Patient Record Migration" />
     <PageWithSideMenu
       sidemenu={{ items, selectedItem: EHR_SENT }}
       breadcrumb={{
