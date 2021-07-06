@@ -16,28 +16,12 @@
       "ehr": {
         "ehrTotalSizeBytes": 5699433,
         "ehrStructuredSizeBytes": 4096,
-        "code": {
-          "coding": [
-            {
-              "code": "164409007",
-              "system": "http://snomed.info/sct"
-            }
-          ]
-        },
         "attachment": [
           {
             "attachmentId": "3424-342456-3424-342456",
             "clinicalType": "Scanned document",
             "mimeType": "application/pdf",
             "sizeBytes": 3084322,
-            "code": {
-              "coding": [
-                {
-                  "code": "886721000000107",
-                  "system": "http://snomed.info/sct"
-                }
-              ]
-            }
           },
           {
             "attachmentId": "1323-132345-1323-132345",
