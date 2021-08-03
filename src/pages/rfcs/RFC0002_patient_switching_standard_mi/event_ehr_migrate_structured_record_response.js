@@ -50,7 +50,7 @@ const Page = () => (
         event.
       </p>
       <h3>EHR Migrate Structured Record Response Event Example Payload</h3>
-      <pre>{JSON.stringify(migrateStructuredRecordRequest, null, 2)}</pre>
+      <pre>{JSON.stringify(migrateStructuredRecordResponse, null, 2)}</pre>
       <h3>Top Level Event Fields</h3>
       <table>
         <tbody>
