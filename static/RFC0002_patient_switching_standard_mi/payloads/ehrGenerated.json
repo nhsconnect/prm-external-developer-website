@@ -1,0 +1,67 @@
+{
+  "eventId": "1234-123456-1234-123451",
+  "eventType": "EHR_GENERATED",
+  "eventGeneratedTimestamp": 1575384234,
+  "systemSupplier": "SYSTEM_SUPPLIER",
+  "odsCode": "XYZ4567",
+  "payload": {
+    "registration": {
+      "registrationId": "9087-978098-9087-978098",
+      "requestingOdsCode": "ABC1234",
+      "sendingOdsCode": "XYZ4567"
+    },
+    "gp2gp": {
+      "conversationId": "4345-986959-4930-684038",
+      "ehrGeneratedTimestamp": 1575384000,
+      "ehr": {
+        "ehrTotalSizeBytes": 5699433,
+        "ehrStructuredSizeBytes": 4096,
+        "code": {
+          "coding": [
+            {
+              "code": "164409007",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        },
+        "attachment": [
+          {
+            "attachmentId": "3424-342456-3424-342456",
+            "clinicalType": "Scanned document",
+            "mimeType": "application/pdf",
+            "sizeBytes": 3084322,
+            "code": {
+              "coding": [
+                {
+                  "code": "886721000000107",
+                  "system": "http://snomed.info/sct"
+                }
+              ]
+            }
+          },
+          {
+            "attachmentId": "1323-132345-1323-132345",
+            "mimeType": "audio/mpeg",
+            "sizeBytes": 24352346
+          }
+        ],
+        "placeholder": [
+          {
+            "placeholderId": "9876-987654-9876-987654",
+            "attachmentId": "1323-132345-1323-132345",
+            "generatedBy": "XYZ4567",
+            "reason": 1,
+            "originalMimeType": "audio/mpeg"
+          }
+        ]
+      },
+      "unsupportedDataItem": [
+        {
+          "type": "allergy/flag",
+          "uniqueIdentifier": "1323-132345-1323-132345",
+          "reason": "reason for being unsupported / why is it unsupported in gp2gp / what would have to change in gp2gp to express this"
+        }
+      ]
+    }
+  }
+}

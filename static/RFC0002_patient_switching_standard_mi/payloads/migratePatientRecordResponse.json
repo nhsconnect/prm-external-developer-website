@@ -1,0 +1,16 @@
+{
+  "eventId": "1234-123456-1234-123451",
+  "eventType": "MIGRATE_PATIENT_RECORD_RESPONSE",
+  "eventGeneratedTimestamp": 1575384234,
+  "systemSupplier": "SYSTEM_SUPPLIER",
+  "odsCode": "XYZ4567",
+  "payload": {
+    "registration": {
+      "registrationId": "9087-978098-9087-978098",
+      "requestingOdsCode": "ABC1234",
+      "sendingOdsCode": "XYZ4567"
+    },
+    "conversationId": "4345-986959-4930-684038",
+    "migratePatientRecordResponseTimestamp": 1575384000
+  }
+}

@@ -36,6 +36,12 @@ const Page = ({ children }) => (
         Below is time ordered, latest first, list of the RFCs across Patient
         Record Migration.
       </p>
+      <Promo href={withPrefix("/rfcs/RFC0002_patient_switching_standard_mi/overview")} small>
+        <Promo.Heading>RFC0002: Patient Switching Standard - Management Information</Promo.Heading>
+        <Promo.Content>
+          Describes the process of collecting Management Information in the New Patient Switching Standard
+        </Promo.Content>
+      </Promo>
       <Promo href={withPrefix("/rfcs/RFC0001_gp2gp_mi/overview")} small>
         <Promo.Heading>RFC0001: GP2GP MI</Promo.Heading>
         <Promo.Content>
