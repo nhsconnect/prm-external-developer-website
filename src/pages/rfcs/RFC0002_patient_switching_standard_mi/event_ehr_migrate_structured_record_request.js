@@ -5,12 +5,12 @@ import WarningCallout from "nhsuk-react-components/lib/components/warning-callou
 import Pagination from "nhsuk-react-components/lib/components/pagination"
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
 import { items, EHR_REQUESTED } from "../../../menus/rfcmenu"
-import ehrRequested from "../../../../static/RFC0002_patient_switching_standard_mi/payloads/ehrRequested.json"
+import migrateStructuredRecordRequest from "../../../../static/RFC0002_patient_switching_standard_mi/payloads/migrateStructuredRecordRequest.json"
 import "../../index.scss"
 
 const Page = () => (
   <>
-    <Helmet title="EHR Requested - Patient Record Migration" />
+    <Helmet title="EHR Migrate Structured Record Request - Patient Record Migration" />
     <PageWithSideMenu
       sidemenu={{ items, selectedItem: EHR_REQUESTED }}
       breadcrumb={{
@@ -50,7 +50,7 @@ const Page = () => (
         event.
       </p>
       <h3>EHR Requested Event Example Payload</h3>
-      <pre>{JSON.stringify(ehrRequested, null, 2)}</pre>
+      <pre>{JSON.stringify(migrateStructuredRecordRequest, null, 2)}</pre>
       <h3>Top Level Event Fields</h3>
       <table>
         <tbody>
@@ -65,7 +65,7 @@ const Page = () => (
           <tr>
             <td>eventType</td>
             <td>
-              The type of the event, in this case "EHR_REQUESTED".
+              The type of the event, in this case "MIGRATE_STRUCTURED_RECORD_REQUEST".
             </td>
           </tr>
           <tr>
@@ -150,12 +150,12 @@ const Page = () => (
           <tr>
             <td>conversationId</td>
             <td>
-              The ConversationID used in the GP2GP process for this
+              The ConversationID used in across all the GP Connect API calls for this
               registration.
             </td>
           </tr>
           <tr>
-            <td>ehrRequestedTimestamp</td>
+            <td>migrateStructuredRecordRequestTimestamp</td>
             <td>
               The unix timestamp in milliseconds that the EHR used in the GP2GP
               transfer was requested by the system.
@@ -171,9 +171,9 @@ const Page = () => (
           Event: Registration Started
         </Pagination.Previous>
         <Pagination.Next
-          href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/event_ehr_generated")}
+          href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/event_ehr_migrate_structured_record_response")}
         >
-          Event: EHR Generated
+          Event: EHR Migrate Structured Record Response
         </Pagination.Next>
       </Pagination>
     </PageWithSideMenu>
