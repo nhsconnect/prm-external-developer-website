@@ -42,20 +42,17 @@ const Page = () => (
       </WarningCallout>
       <h1>RFC0002 Patient Switching Standard MI</h1>
       <h2>Overview</h2>
-      <p>In GP2GP we currently see a large number of errors that we either:</p>
+      <p>In the current GP2GP implementation we currently see a large number of errors
+      that we either:</p>
       <ul>
         <li>cannot currently measure</li>
         <li>or when we can measure, cannot currently understand.</li>
       </ul>
       <p>
-        The aim of the Management Information (MI) specification update is to
-        provide visibility in these key areas in a timely fashion.
-      </p>
-      <p>
-        We believe that the current implementation is not fit for purpose and
-        cannot be extended simply. As such we are proposing moving to a more
-        'real time events' way of tracking the GP2GP and the surrounding
-        registraiton process.
+        We are proposing a new MI solution to be implemented by all suppliers.
+        This solution would be for suppliers to send events across the registrations
+        flow in JSON format via a RESTful API. The aim of the Management Information (MI) API
+        is to provide visibility in these key areas in a timely fashion.
       </p>
       <p>This RFC outlines the proposal.</p>
       <Pagination>

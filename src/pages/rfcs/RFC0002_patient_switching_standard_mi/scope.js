@@ -44,18 +44,9 @@ const Page = () => (
       <h1>RFC0002 Patient Switching Standard MI</h1>
       <h2>Scope</h2>
       <p>
-        We believe that initially, we should focus on the areas where we want to
-        gather new information first in order to prove out the solution.
-        Therefore we will include within the scope 'Registration Started' as a
-        new event and more detailed data when the EHR is generated and
-        integrated.
+        As part of the new Patient Switching Standard, we want to evolve the way of
+        collecting Management Information, via a GP Registrations Management Information API.
       </p>
-      <Image
-        src={withPrefix("/RFC0002_patient_switching_standard_mi/scope_example.png")}
-        alt="Highlighting areas of focus for this RFC."
-        caption="Our areas of focus."
-        className="image-fullwidth"
-      />
       <h3>Event delivery method</h3>
       <p>
         We intend to provide a public internet facing HTTPS end point and make
@@ -96,16 +87,10 @@ const Page = () => (
       </p>
       <h3>Assurance</h3>
       <p>
-        Assurance will intially take the form of collaboratively developing with
+        Assurance will initially take the form of collaboratively developing with
         suppliers against the use cases provided. We are then looking to explore
         how we might best continue assurance through to production and then
         ongoing.
-      </p>
-      <h3>Correlation to old MI data set</h3>
-      <p>
-        Whilst we intend to decommission the existing MI data as soon as
-        possible, we know that for a period of time we need to dual run and be
-        able to correlate data.
       </p>
       <Pagination>
         <Pagination.Previous href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/vision")}>
