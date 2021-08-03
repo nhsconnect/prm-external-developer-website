@@ -19,8 +19,8 @@ const Page = () => (
             label: "RFCs",
           },
           {
-            url: withPrefix("/rfcs/RFC00002_patient_switching_standard_mi/overview"),
-            label: "RFC00002 Patient Switching Standard MI",
+            url: withPrefix("/rfcs/RFC0002_patient_switching_standard_mi/overview"),
+            label: "RFC0002 Patient Switching Standard MI",
           },
         ],
       }}
@@ -40,7 +40,7 @@ const Page = () => (
           .
         </p>
       </WarningCallout>
-      <h1>RFC00002 Patient Switching Standard MI</h1>
+      <h1>RFC0002 Patient Switching Standard MI</h1>
       <h2>Overview</h2>
       <p>In GP2GP we currently see a large number of errors that we either:</p>
       <ul>
@@ -59,7 +59,7 @@ const Page = () => (
       </p>
       <p>This RFC outlines the proposal.</p>
       <Pagination>
-        <Pagination.Next href={withPrefix("rfcs/RFC00002_patient_switching_standard_mi/vision")}>
+        <Pagination.Next href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/vision")}>
           Vision
         </Pagination.Next>
       </Pagination>

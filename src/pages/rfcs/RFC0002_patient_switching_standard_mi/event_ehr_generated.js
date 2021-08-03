@@ -5,7 +5,7 @@ import WarningCallout from "nhsuk-react-components/lib/components/warning-callou
 import Pagination from "nhsuk-react-components/lib/components/pagination"
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
 import { items, EHR_GENERATED } from "../../../menus/rfcmenu"
-import ehrGenerated from "../../../../static/RFC00002_patient_switching_standard_mi/payloads/ehrGenerated.json"
+import ehrGenerated from "../../../../static/RFC0002_patient_switching_standard_mi/payloads/ehrGenerated.json"
 import "../../index.scss"
 
 const Page = () => (
@@ -20,8 +20,8 @@ const Page = () => (
             label: "RFCs",
           },
           {
-            url: withPrefix("/rfcs/RFC00002_patient_switching_standard_mi/overview"),
-            label: "RFC00002 Patient Switching Standard MI",
+            url: withPrefix("/rfcs/RFC0002_patient_switching_standard_mi/overview"),
+            label: "RFC0002 Patient Switching Standard MI",
           },
         ],
       }}
@@ -41,7 +41,7 @@ const Page = () => (
           .
         </p>
       </WarningCallout>
-      <h1>RFC00002 Patient Switching Standard MI</h1>
+      <h1>RFC0002 Patient Switching Standard MI</h1>
       <h2>EHR Generated</h2>
       <h3>Event Description</h3>
       <p>
@@ -292,12 +292,12 @@ const Page = () => (
 
       <Pagination>
         <Pagination.Previous
-          href={withPrefix("rfcs/RFC00002_patient_switching_standard_mi/event_ehr_requested")}
+          href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/event_ehr_requested")}
         >
           Event: EHR Requested
         </Pagination.Previous>
         <Pagination.Next
-          href={withPrefix("rfcs/RFC00002_patient_switching_standard_mi/event_ehr_sent")}
+          href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/event_ehr_sent")}
         >
           Event: EHR Sent
         </Pagination.Next>

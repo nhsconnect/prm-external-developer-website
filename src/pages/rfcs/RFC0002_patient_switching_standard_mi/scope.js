@@ -20,8 +20,8 @@ const Page = () => (
             label: "RFCs",
           },
           {
-            url: withPrefix("/rfcs/RFC00002_patient_switching_standard_mi/overview"),
-            label: "RFC00002 Patient Switching Standard MI",
+            url: withPrefix("/rfcs/RFC0002_patient_switching_standard_mi/overview"),
+            label: "RFC0002 Patient Switching Standard MI",
           },
         ],
       }}
@@ -41,7 +41,7 @@ const Page = () => (
           .
         </p>
       </WarningCallout>
-      <h1>RFC00002 Patient Switching Standard MI</h1>
+      <h1>RFC0002 Patient Switching Standard MI</h1>
       <h2>Scope</h2>
       <p>
         We believe that initially, we should focus on the areas where we want to
@@ -51,7 +51,7 @@ const Page = () => (
         integrated.
       </p>
       <Image
-        src={withPrefix("/RFC00002_patient_switching_standard_mi/scope_example.png")}
+        src={withPrefix("/RFC0002_patient_switching_standard_mi/scope_example.png")}
         alt="Highlighting areas of focus for this RFC."
         caption="Our areas of focus."
         className="image-fullwidth"
@@ -108,10 +108,10 @@ const Page = () => (
         able to correlate data.
       </p>
       <Pagination>
-        <Pagination.Previous href={withPrefix("rfcs/RFC00002_patient_switching_standard_mi/vision")}>
+        <Pagination.Previous href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/vision")}>
           Vision
         </Pagination.Previous>
-        <Pagination.Next href={withPrefix("/rfcs/RFC00002_patient_switching_standard_mi/usecases")}>
+        <Pagination.Next href={withPrefix("/rfcs/RFC0002_patient_switching_standard_mi/usecases")}>
           Usecases
         </Pagination.Next>
       </Pagination>

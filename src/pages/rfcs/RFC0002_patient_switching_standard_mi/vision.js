@@ -21,8 +21,8 @@ const Page = () => {
               label: "RFCs",
             },
             {
-              url: withPrefix("/rfcs/RFC00002_patient_switching_standard_mi/overview"),
-              label: "RFC00002 Patient Switching Standard MI",
+              url: withPrefix("/rfcs/RFC0002_patient_switching_standard_mi/overview"),
+              label: "RFC0002 Patient Switching Standard MI",
             },
           ],
         }}
@@ -42,7 +42,7 @@ const Page = () => {
             .
           </p>
         </WarningCallout>
-        <h1>RFC00002 Patient Switching Standard MI</h1>
+        <h1>RFC0002 Patient Switching Standard MI</h1>
         <h2>Vision</h2>
         <h3>Motivation</h3>
         <p>
@@ -97,7 +97,7 @@ const Page = () => {
           for capturing management information.
         </p>
         <Image
-          src={withPrefix("/RFC00002_patient_switching_standard_mi/events_example.png")}
+          src={withPrefix("/RFC0002_patient_switching_standard_mi/events_example.png")}
           alt="An example of events being raised by the registration process"
           caption="An example of raising different events during the registration process"
           className="image-fullwidth"
@@ -167,11 +167,11 @@ const Page = () => {
         </p>
         <Pagination>
           <Pagination.Previous
-            href={withPrefix("rfcs/RFC00002_patient_switching_standard_mi/overview")}
+            href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/overview")}
           >
             Overview
           </Pagination.Previous>
-          <Pagination.Next href={withPrefix("rfcs/RFC00002_patient_switching_standard_mi/scope")}>
+          <Pagination.Next href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/scope")}>
             Scope
           </Pagination.Next>
         </Pagination>

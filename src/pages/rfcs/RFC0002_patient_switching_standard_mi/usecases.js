@@ -19,8 +19,8 @@ const Page = () => (
             label: "RFCs",
           },
           {
-            url: withPrefix("/rfcs/RFC00002_patient_switching_standard_mi/overview"),
-            label: "RFC00002 Patient Switching Standard MI",
+            url: withPrefix("/rfcs/RFC0002_patient_switching_standard_mi/overview"),
+            label: "RFC0002 Patient Switching Standard MI",
           },
         ],
       }}
@@ -40,7 +40,7 @@ const Page = () => (
           .
         </p>
       </WarningCallout>
-      <h1>RFC00002 Patient Switching Standard MI</h1>
+      <h1>RFC0002 Patient Switching Standard MI</h1>
       <h2>Use Cases</h2>
       <h3>Registering a new-born via GMS1</h3>
 
@@ -245,10 +245,10 @@ const Page = () => (
         event to be emitted.
       </p>
       <Pagination>
-        <Pagination.Previous href={withPrefix("rfcs/RFC00002_patient_switching_standard_mi/scope")}>
+        <Pagination.Previous href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/scope")}>
           Scope
         </Pagination.Previous>
-        <Pagination.Next href={withPrefix("rfcs/RFC00002_patient_switching_standard_mi/data")}>
+        <Pagination.Next href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/data")}>
           New data to be collected
         </Pagination.Next>
       </Pagination>

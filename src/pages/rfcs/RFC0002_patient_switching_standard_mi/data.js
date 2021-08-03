@@ -19,8 +19,8 @@ const Page = () => (
             label: "RFCs",
           },
           {
-            url: withPrefix("/rfcs/RFC00002_patient_switching_standard_mi/overview"),
-            label: "RFC00002 Patient Switching Standard MI",
+            url: withPrefix("/rfcs/RFC0002_patient_switching_standard_mi/overview"),
+            label: "RFC0002 Patient Switching Standard MI",
           },
         ],
       }}
@@ -40,7 +40,7 @@ const Page = () => (
           .
         </p>
       </WarningCallout>
-      <h1>RFC00002 Patient Switching Standard MI</h1>
+      <h1>RFC0002 Patient Switching Standard MI</h1>
       <h2>New data to be collected</h2>
       <p>
         What follows is an overview of the additional data we wish to acquire as
@@ -88,12 +88,12 @@ const Page = () => (
       </p>
       <Pagination>
         <Pagination.Previous
-          href={withPrefix("rfcs/RFC00002_patient_switching_standard_mi/usecases")}
+          href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/usecases")}
         >
           Usecases
         </Pagination.Previous>
         <Pagination.Next
-          href={withPrefix("/rfcs/RFC00002_patient_switching_standard_mi/event_registration_started")}
+          href={withPrefix("/rfcs/RFC0002_patient_switching_standard_mi/event_registration_started")}
         >
           Event: Registration Started
         </Pagination.Next>
