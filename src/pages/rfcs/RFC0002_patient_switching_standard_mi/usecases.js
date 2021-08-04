@@ -248,8 +248,8 @@ const Page = () => (
         <Pagination.Previous href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/scope")}>
           Scope
         </Pagination.Previous>
-        <Pagination.Next href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/data")}>
-          New data to be collected
+        <Pagination.Next href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/event_registration_started")}>
+          Event: Registration Started
         </Pagination.Next>
       </Pagination>
     </PageWithSideMenu>
