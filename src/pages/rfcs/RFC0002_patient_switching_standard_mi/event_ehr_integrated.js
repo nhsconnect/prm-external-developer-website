@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 import WarningCallout from "nhsuk-react-components/lib/components/warning-callout"
 import Pagination from "nhsuk-react-components/lib/components/pagination"
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
-import { items, EHR_INTEGRATED } from "../../../menus/rfcmenu"
+import { items, EHR_INTEGRATED } from "../../../menus/rfc0002menu"
 import ehrIntegrated from "../../../../static/RFC0002_patient_switching_standard_mi/payloads/ehrIntegrated.json"
 import "../../index.scss"
 
@@ -86,7 +86,7 @@ const Page = () => (
           </tr>
           <tr>
             <td>payload</td>
-            <td>An object that contains the detailed payload of the event.</td>
+            <td>An object that contains the detailed payload of the event</td>
           </tr>
         </tbody>
       </table>
@@ -172,9 +172,9 @@ const Page = () => (
 
       <Pagination>
         <Pagination.Previous
-          href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/event_ehr_validated")}
+          href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/event_ehr_ready_to_integrate")}
         >
-          Event: EHR Validated
+          Event: EHR Ready To Integrate
         </Pagination.Previous>
         <Pagination.Next
           href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/event_registration_completed")}

@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 import WarningCallout from "nhsuk-react-components/lib/components/warning-callout"
 import Pagination from "nhsuk-react-components/lib/components/pagination"
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
-import { items, OVERVIEW } from "../../../menus/rfcmenu"
+import { items, OVERVIEW } from "../../../menus/rfc0002menu"
 import "../../index.scss"
 
 const Page = () => (

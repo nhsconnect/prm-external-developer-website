@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 import WarningCallout from "nhsuk-react-components/lib/components/warning-callout"
 import Pagination from "nhsuk-react-components/lib/components/pagination"
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
-import { items, REGISTRATION_COMPLETED } from "../../../menus/rfcmenu"
+import { items, REGISTRATION_COMPLETED } from "../../../menus/rfc0002menu"
 import registrationCompleted from "../../../../static/RFC0002_patient_switching_standard_mi/payloads/registrationCompleted.json"
 import "../../index.scss"
 

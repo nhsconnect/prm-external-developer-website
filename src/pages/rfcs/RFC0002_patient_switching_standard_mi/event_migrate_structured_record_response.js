@@ -4,15 +4,15 @@ import { Helmet } from "react-helmet"
 import WarningCallout from "nhsuk-react-components/lib/components/warning-callout"
 import Pagination from "nhsuk-react-components/lib/components/pagination"
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
-import { items, EHR_SENT } from "../../../menus/rfcmenu"
-import ehrSent from "../../../../static/RFC0002_patient_switching_standard_mi/payloads/ehrSent.json"
+import { items, MIGRATE_STRUCTURED_RECORD_RESPONSE } from "../../../menus/rfc0002menu"
+import migrateStructuredRecordResponse from "../../../../static/RFC0002_patient_switching_standard_mi/payloads/migrateStructuredRecordResponse.json"
 import "../../index.scss"
 
 const Page = () => (
   <>
-    <Helmet title="EHR Sent - Patient Record Migration" />
+    <Helmet title="Migrate Structured Record Response - Patient Record Migration" />
     <PageWithSideMenu
-      sidemenu={{ items, selectedItem: EHR_SENT }}
+      sidemenu={{ items, selectedItem: MIGRATE_STRUCTURED_RECORD_RESPONSE }}
       breadcrumb={{
         items: [
           {
@@ -42,15 +42,15 @@ const Page = () => (
         </p>
       </WarningCallout>
       <h1>RFC0002 Patient Switching Standard MI</h1>
-      <h2>EHR Sent</h2>
+      <h2>Migrate Structured Record Response</h2>
       <h3>Event Description</h3>
       <p>
-        The EHR sent event should be sent when a sending practice has sent a
-        GP2GP transfer to the receiving practice. This should be sent before the
-        EHR validated event, and after all message fragments have been sent.
+        The Migrate Structured Record Response event should be sent after the receiving system
+        has received the Structured Record from the Sending practice on the GP Connect
+        "Migrate Structured Record" Api.
       </p>
-      <h3>EHR Sent Event Example Payload</h3>
-      <pre>{JSON.stringify(ehrSent, null, 2)}</pre>
+      <h3>Migrate Structured Record Response Event Example Payload</h3>
+      <pre>{JSON.stringify(migrateStructuredRecordResponse, null, 2)}</pre>
       <h3>Top Level Event Fields</h3>
       <table>
         <tbody>
@@ -65,7 +65,7 @@ const Page = () => (
           <tr>
             <td>eventType</td>
             <td>
-              The type of the event, in this case "EHR_SENT".
+              The type of the event, in this case "MIGRATE_STRUCTURED_RECORD_RESPONSE".
             </td>
           </tr>
           <tr>
@@ -150,15 +150,15 @@ const Page = () => (
           <tr>
             <td>conversationId</td>
             <td>
-              The ConversationID used in the GP2GP process for this
+              The ConversationID used in across all the GP Connect API calls for this
               registration.
             </td>
           </tr>
           <tr>
-            <td>ehrSentTimestamp</td>
+            <td>migrateStructuredRecordResponseTimestamp</td>
             <td>
               The unix timestamp in milliseconds that the EHR used in the GP2GP
-              transfer was sent by the system.
+              transfer was requested by the system.
             </td>
           </tr>
         </tbody>
@@ -166,14 +166,14 @@ const Page = () => (
 
       <Pagination>
         <Pagination.Previous
-            href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/event_ehr_generated")}
-            >
-              Event: EHR Generated
+          href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/event_migrate_structured_record_request")}
+        >
+          Event: Migrate Structured Record Request
         </Pagination.Previous>
         <Pagination.Next
-          href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/event_ehr_validated")}
+          href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/event_migrate_document_request")}
         >
-          Event: EHR Validated
+          Event: Migrate Document Request
         </Pagination.Next>
       </Pagination>
     </PageWithSideMenu>

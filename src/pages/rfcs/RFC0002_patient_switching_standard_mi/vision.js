@@ -5,7 +5,7 @@ import WarningCallout from "nhsuk-react-components/lib/components/warning-callou
 import Image from "nhsuk-react-components/lib/components/image"
 import Pagination from "nhsuk-react-components/lib/components/pagination"
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
-import { items, VISION } from "../../../menus/rfcmenu"
+import { items, VISION } from "../../../menus/rfc0002menu"
 import "../../index.scss"
 
 const Page = () => {

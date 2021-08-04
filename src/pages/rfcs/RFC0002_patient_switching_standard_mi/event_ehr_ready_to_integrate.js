@@ -4,15 +4,15 @@ import { Helmet } from "react-helmet"
 import WarningCallout from "nhsuk-react-components/lib/components/warning-callout"
 import Pagination from "nhsuk-react-components/lib/components/pagination"
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
-import { items, EHR_REQUESTED } from "../../../menus/rfcmenu"
-import migrateStructuredRecordRequest from "../../../../static/RFC0002_patient_switching_standard_mi/payloads/migrateStructuredRecordRequest.json"
+import { items, EHR_READY_TO_INTEGRATE } from "../../../menus/rfc0002menu"
+import ehrReadyToIntegrate from "../../../../static/RFC0002_patient_switching_standard_mi/payloads/ehrReadyToIntegrate.json"
 import "../../index.scss"
 
 const Page = () => (
   <>
-    <Helmet title="EHR Migrate Structured Record Request - Patient Record Migration" />
+    <Helmet title="EHR Ready To Integrate - Patient Record Migration" />
     <PageWithSideMenu
-      sidemenu={{ items, selectedItem: EHR_REQUESTED }}
+      sidemenu={{ items, selectedItem: EHR_READY_TO_INTEGRATE }}
       breadcrumb={{
         items: [
           {
@@ -42,15 +42,15 @@ const Page = () => (
         </p>
       </WarningCallout>
       <h1>RFC0002 Patient Switching Standard MI</h1>
-      <h2>EHR Requested</h2>
+      <h2>EHR Ready To Integrate</h2>
       <h3>Event Description</h3>
       <p>
-        The EHR requested event should be sent when a receiving system has
-        triggered a GP2GP transfer. This should be sent before the EHR generated
-        event.
+        The EHR Ready To Integrate event should be sent immediately <em>after</em> the Requesting
+        System allows the user to see a pre-processed view of the Record Bundle and all associated
+        documents so they can determine whether to integrate.
       </p>
-      <h3>EHR Requested Event Example Payload</h3>
-      <pre>{JSON.stringify(migrateStructuredRecordRequest, null, 2)}</pre>
+      <h3>EHR Ready To Integrate Event Example Payload</h3>
+      <pre>{JSON.stringify(ehrReadyToIntegrate, null, 2)}</pre>
       <h3>Top Level Event Fields</h3>
       <table>
         <tbody>
@@ -64,9 +64,7 @@ const Page = () => (
           </tr>
           <tr>
             <td>eventType</td>
-            <td>
-              The type of the event, in this case "MIGRATE_STRUCTURED_RECORD_REQUEST".
-            </td>
+            <td>The type of the event, in this case "EHR_READY_TO_INTEGRATE".</td>
           </tr>
           <tr>
             <td>eventGeneratedTimestamp</td>
@@ -109,7 +107,7 @@ const Page = () => (
           <tr>
             <td>gp2gp</td>
             <td>
-              An object that contains information about the GP2GP transfer.
+              An object that contains information about the GP2GP transfer
             </td>
           </tr>
         </tbody>
@@ -131,11 +129,11 @@ const Page = () => (
           </tr>
           <tr>
             <td>requestingOdsCode</td>
-            <td>The ODS code of the practice requesting the EHR.</td>
+            <td>The ODS code of the practice requesting the EHR</td>
           </tr>
           <tr>
             <td>sendingOdsCode</td>
-            <td>The ODS code of the practice sending the EHR.</td>
+            <td>The ODS code of the practice sending the EHR</td>
           </tr>
         </tbody>
       </table>
@@ -150,15 +148,23 @@ const Page = () => (
           <tr>
             <td>conversationId</td>
             <td>
-              The ConversationID used in across all the GP Connect API calls for this
+              The ConversationID used in the GP2GP process for this
               registration.
             </td>
           </tr>
           <tr>
-            <td>migrateStructuredRecordRequestTimestamp</td>
+            <td>ehrIntegratedTimestamp</td>
             <td>
-              The unix timestamp in milliseconds that the EHR used in the GP2GP
-              transfer was requested by the system.
+              The unix timestamp in milliseconds of when the EHR transferred via
+              GP2GP was integrated by the clinical staff in the recieving
+              practice.
+            </td>
+          </tr>
+          <tr>
+            <td>numberOfDaysToIntegrate</td>
+            <td>
+              The number of days it took the practice staff to integrate the
+              record as understood by the recieving system.
             </td>
           </tr>
         </tbody>
@@ -166,14 +172,14 @@ const Page = () => (
 
       <Pagination>
         <Pagination.Previous
-          href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/event_registration_started")}
-        >
-          Event: Registration Started
+            href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/event_migrate_document_response")}
+            >
+              Event: Migrate Document Response
         </Pagination.Previous>
         <Pagination.Next
-          href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/event_ehr_migrate_structured_record_response")}
+          href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/event_ehr_integrated")}
         >
-          Event: EHR Migrate Structured Record Response
+          Event: EHR Integrated
         </Pagination.Next>
       </Pagination>
     </PageWithSideMenu>
