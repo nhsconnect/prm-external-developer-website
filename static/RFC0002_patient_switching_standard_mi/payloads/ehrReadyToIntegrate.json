@@ -1,6 +1,6 @@
 {
   "eventId": "1234-123456-1234-123453",
-  "eventType": "EHR_VALIDATED",
+  "eventType": "EHR_READY_TO_INTEGRATE",
   "eventGeneratedTimestamp": 1575384234,
   "systemSupplier": "SYSTEM_SUPPLIER",
   "odsCode": "ABC1234",

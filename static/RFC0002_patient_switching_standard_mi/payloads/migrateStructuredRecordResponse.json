@@ -1,6 +1,6 @@
 {
   "eventId": "1234-123456-1234-123454",
-  "eventType": "EHR_REQUESTED",
+  "eventType": "MIGRATE_STRUCTURED_RECORD_RESPONSE",
   "eventGeneratedTimestamp": 1575384234,
   "systemSupplier": "SYSTEM_SUPPLIER",
   "odsCode": "ABC1234",
