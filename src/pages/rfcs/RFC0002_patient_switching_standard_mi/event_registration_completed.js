@@ -33,7 +33,7 @@ const Page = () => (
           implementation at the moment. If you want to have your say and
           contribute to this RFC then go to our{" "}
           <a
-            href="https://github.com/nhsconnect/prm-external-developer-website/issues/1"
+            href="https://github.com/nhsconnect/prm-external-developer-website/issues/2"
             title="External website where RFC comments are allowed"
           >
             Github site
@@ -46,7 +46,7 @@ const Page = () => (
       <h3>Event Description</h3>
       <p>
         The Registration completed event should be sent once a receiving
-        practice has successfully registered a practice. This should be sent
+        practice has successfully registered a patient. This should be sent
         after the EHR integrated event.
       </p>
       <p>

@@ -33,7 +33,7 @@ const Page = () => (
           implementation at the moment. If you want to have your say and
           contribute to this RFC then go to our{" "}
           <a
-            href="https://github.com/nhsconnect/prm-external-developer-website/issues/1"
+            href="https://github.com/nhsconnect/prm-external-developer-website/issues/2"
             title="External website where RFC comments are allowed"
           >
             Github site
@@ -45,8 +45,9 @@ const Page = () => (
       <h2>Migrate Document Response</h2>
       <h3>Event Description</h3>
       <p>
-        The Migrate Document Response event should be sent after each API call to the
-        GP Connect "Migrate Document" API retrieves an individual document.
+        The Migrate Document Response event should be sent immediately <em>after</em> the Requesting System
+        receives a response on every individual request to retrieve each document via GP Connect using the
+        ‘Migrate Document’ end point.
       </p>
       <h3>Migrate Document Response Event Example Payload</h3>
       <pre>{JSON.stringify(migrateDocumentResponse, null, 2)}</pre>

@@ -33,7 +33,7 @@ const Page = () => (
           implementation at the moment. If you want to have your say and
           contribute to this RFC then go to our{" "}
           <a
-            href="https://github.com/nhsconnect/prm-external-developer-website/issues/1"
+            href="https://github.com/nhsconnect/prm-external-developer-website/issues/2"
             title="External website where RFC comments are allowed"
           >
             Github site
@@ -45,8 +45,12 @@ const Page = () => (
       <h2>Migrate Document Request</h2>
       <h3>Event Description</h3>
       <p>
-        The Migrate Document Request event should be sent after each API call to the
-        GP Connect "Migrate Document" API to retrieve an individual document.
+        The "Migrate Patient Record Bundle" response must contain a list of all documents that
+        the Requesting System must attempt to retrieve. The Requesting System must attempt to retrieve all
+        documents that are under 100mb and of supported MIME types.
+        The Migrate Document Request event should be sent immediately <em>after</em> the Requesting System
+        makes an individual request to retrieve each document via GP Connect using the ‘Migrate Document’
+        end point.
       </p>
       <h3>EHR Sent Event Example Payload</h3>
       <pre>{JSON.stringify(migrateDocumentRequest, null, 2)}</pre>

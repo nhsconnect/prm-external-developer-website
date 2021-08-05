@@ -32,7 +32,7 @@ const Page = () => (
           implementation at the moment. If you want to have your say and
           contribute to this RFC then go to our{" "}
           <a
-            href="https://github.com/nhsconnect/prm-external-developer-website/issues/1"
+            href="https://github.com/nhsconnect/prm-external-developer-website/issues/2"
             title="External website where RFC comments are allowed"
           >
             Github site
@@ -42,19 +42,22 @@ const Page = () => (
       </WarningCallout>
       <h1>RFC0002 Patient Switching Standard MI</h1>
       <h2>Overview</h2>
+      <p>Currently GP2GP is the standard by which electronic patient records and any associated documents are moved
+      when a patient transfers from one practice to another. GP2GP uses HL7 as the messaging format.</p>
+      <p>The Patient Switching Standard is set to replace the existing GP2GP model.</p>
+
       <p>In the current GP2GP implementation we currently see a large number of errors
       that we either:</p>
       <ul>
         <li>cannot currently measure</li>
         <li>or when we can measure, cannot currently understand.</li>
       </ul>
-      <p>
-        We are proposing a new MI solution to be implemented by all suppliers.
-        This solution would be for suppliers to send events across the registrations
-        flow in JSON format via a RESTful API. The aim of the Management Information (MI) API
-        is to provide visibility in these key areas in a timely fashion.
+      <p>As part of the Patient Switching Standard we are proposing collecting Management Information describing the
+      patient transfers in the form of JSON events sent on an RESTful API. The aim of the Management Information (MI)
+      API is to provide visibility over these events in a timely fashion.
       </p>
-      <p>This RFC outlines the proposal.</p>
+      <p>This RFC outlines the proposal. However, the events described in this RFC are not an exhausted list of
+      all the MI events that will be required in the finalised version.</p>
       <Pagination>
         <Pagination.Next href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/vision")}>
           Vision

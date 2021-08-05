@@ -33,7 +33,7 @@ const Page = () => (
           implementation at the moment. If you want to have your say and
           contribute to this RFC then go to our{" "}
           <a
-            href="https://github.com/nhsconnect/prm-external-developer-website/issues/1"
+            href="https://github.com/nhsconnect/prm-external-developer-website/issues/2"
             title="External website where RFC comments are allowed"
           >
             Github site
@@ -46,7 +46,7 @@ const Page = () => (
       <h3>Event Description</h3>
       <p>
         The EHR Integrated event should be sent immediately <em>after</em> the
-        clinical staff member has chosen to integrate the GP2GP record into the
+        clinical staff member has chosen to integrate the Patient record into the
         system.
       </p>
       <h3>EHR Integrated Event Example Payload</h3>

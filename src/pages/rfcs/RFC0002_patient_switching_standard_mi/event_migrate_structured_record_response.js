@@ -33,7 +33,7 @@ const Page = () => (
           implementation at the moment. If you want to have your say and
           contribute to this RFC then go to our{" "}
           <a
-            href="https://github.com/nhsconnect/prm-external-developer-website/issues/1"
+            href="https://github.com/nhsconnect/prm-external-developer-website/issues/2"
             title="External website where RFC comments are allowed"
           >
             Github site
@@ -45,9 +45,9 @@ const Page = () => (
       <h2>Migrate Structured Record Response</h2>
       <h3>Event Description</h3>
       <p>
-        The Migrate Structured Record Response event should be sent after the receiving system
-        has received the Structured Record from the Sending practice on the GP Connect
-        "Migrate Structured Record" Api.
+        The Migrate Structured Record Response event should be sent immediately <em>after</em> the Requesting System
+        has received a response from the request made via GP Connect using the ‘Migrate Structured Record’ end point.
+        In a happy-path scenario, the response should contain the "Migrate Patient Record Bundle".
       </p>
       <h3>Migrate Structured Record Response Event Example Payload</h3>
       <pre>{JSON.stringify(migrateStructuredRecordResponse, null, 2)}</pre>

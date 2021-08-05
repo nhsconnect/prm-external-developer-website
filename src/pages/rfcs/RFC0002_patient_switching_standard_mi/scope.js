@@ -33,7 +33,7 @@ const Page = () => (
           implementation at the moment. If you want to have your say and
           contribute to this RFC then go to our{" "}
           <a
-            href="https://github.com/nhsconnect/prm-external-developer-website/issues/1"
+            href="https://github.com/nhsconnect/prm-external-developer-website/issues/2"
             title="External website where RFC comments are allowed"
           >
             Github site
@@ -84,6 +84,10 @@ const Page = () => (
       <p>
         We intend to provide use cases that outline the events and data we
         expect to see for specific flows in the registration process.
+      </p>
+      <p>
+      The events described in this RFC are not an exhausted list of
+      all the MI events that will be required in the finalised version.
       </p>
       <h3>Assurance</h3>
       <p>
