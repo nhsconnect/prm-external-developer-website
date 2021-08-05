@@ -53,6 +53,7 @@ const Page = () => (
         end point.
       </p>
       <h3>EHR Sent Event Example Payload</h3>
+      <p>Event payload to be updated.</p>
       <pre>{JSON.stringify(migrateDocumentRequest, null, 2)}</pre>
 
       <Pagination>

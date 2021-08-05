@@ -50,6 +50,7 @@ const Page = () => (
         Health Care Provider code that was cached.
       </p>
       <h3>Migrate Structured Record Request Event Example Payload</h3>
+      <p>Event payload to be updated.</p>
       <pre>{JSON.stringify(migrateStructuredRecordRequest, null, 2)}</pre>
 
       <Pagination>

@@ -50,6 +50,7 @@ const Page = () => (
         system.
       </p>
       <h3>EHR Integrated Event Example Payload</h3>
+      <p>Event payload to be updated.</p>
       <pre>{JSON.stringify(ehrIntegrated, null, 2)}</pre>
 
       <Pagination>

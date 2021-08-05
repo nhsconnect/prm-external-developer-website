@@ -55,6 +55,7 @@ const Page = () => (
         the EHR integrated event that could trigger this Registration completed?
       </p>
       <h3>Registration Completed Event Example Payload</h3>
+      <p>Event payload to be updated.</p>
       <pre>{JSON.stringify(registrationCompleted, null, 2)}</pre>
       <h3>Top Level Event Fields</h3>
       <table>

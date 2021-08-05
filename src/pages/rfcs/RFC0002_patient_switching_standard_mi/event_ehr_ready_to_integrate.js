@@ -50,6 +50,7 @@ const Page = () => (
         documents so they can determine whether to integrate.
       </p>
       <h3>EHR Ready To Integrate Event Example Payload</h3>
+      <p>Event payload to be updated.</p>
       <pre>{JSON.stringify(ehrReadyToIntegrate, null, 2)}</pre>
 
       <Pagination>

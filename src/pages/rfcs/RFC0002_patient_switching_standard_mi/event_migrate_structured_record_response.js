@@ -50,6 +50,7 @@ const Page = () => (
         In a happy-path scenario, the response should contain the "Migrate Patient Record Bundle".
       </p>
       <h3>Migrate Structured Record Response Event Example Payload</h3>
+      <p>Event payload to be updated.</p>
       <pre>{JSON.stringify(migrateStructuredRecordResponse, null, 2)}</pre>
 
       <Pagination>

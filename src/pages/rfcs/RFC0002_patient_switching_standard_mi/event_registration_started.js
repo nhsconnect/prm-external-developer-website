@@ -51,6 +51,7 @@ const Page = () => (
         electronic GP transfer.
       </p>
       <h3>Registration Started Event Example Payload</h3>
+      <p>Event payload to be updated.</p>
       <pre>{JSON.stringify(registrationStarted, null, 2)}</pre>
       <h3>Top Level Event Fields</h3>
       <table>

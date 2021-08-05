@@ -50,6 +50,7 @@ const Page = () => (
         ‘Migrate Document’ end point.
       </p>
       <h3>Migrate Document Response Event Example Payload</h3>
+      <p>Event payload to be updated.</p>
       <pre>{JSON.stringify(migrateDocumentResponse, null, 2)}</pre>
 
       <Pagination>
