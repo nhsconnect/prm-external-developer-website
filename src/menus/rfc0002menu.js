@@ -4,6 +4,7 @@ export const OVERVIEW = "OVERVIEW"
 export const VISION = "VISION"
 export const SCOPE = "SCOPE"
 export const USE_CASES = "USE_CASES"
+export const ERROR = "ERROR"
 export const REGISTRATION_STARTED = "REGISTRATION_STARTED"
 export const MIGRATE_STRUCTURED_RECORD_REQUEST = "MIGRATE_STRUCTURED_RECORD_REQUEST"
 export const MIGRATE_STRUCTURED_RECORD_RESPONSE = "MIGRATE_STRUCTURED_RECORD_RESPONSE"
@@ -73,5 +74,10 @@ export const items = [
     url: withPrefix("/rfcs/RFC0002_patient_switching_standard_mi/event_registration_completed"),
     label: "Event: Registration Completed",
     id: REGISTRATION_COMPLETED,
+  },
+  {
+    url: withPrefix("/rfcs/RFC0002_patient_switching_standard_mi/error"),
+    label: "Event: Error",
+    id: ERROR,
   },
 ]
