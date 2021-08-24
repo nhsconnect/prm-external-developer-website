@@ -54,7 +54,7 @@ const Page = () => (
 
       <Pagination>
         <Pagination.Previous
-          href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/internal_transfer")}
+          href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/event_internal_transfer")}
         >
           Event: Internal Transfer
         </Pagination.Previous>

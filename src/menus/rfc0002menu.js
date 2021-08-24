@@ -77,12 +77,12 @@ export const items = [
     id: REGISTRATION_COMPLETED,
   },
   {
-    url: withPrefix("/rfcs/RFC0002_patient_switching_standard_mi/internal_transfer"),
+    url: withPrefix("/rfcs/RFC0002_patient_switching_standard_mi/event_internal_transfer"),
     label: "Event: Internal Transfer",
     id: INTERNAL_TRANSFER,
   },
   {
-    url: withPrefix("/rfcs/RFC0002_patient_switching_standard_mi/error"),
+    url: withPrefix("/rfcs/RFC0002_patient_switching_standard_mi/event_error"),
     label: "Event: Error",
     id: ERROR,
   },

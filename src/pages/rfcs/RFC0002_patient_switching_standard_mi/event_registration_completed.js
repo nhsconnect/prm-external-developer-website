@@ -178,7 +178,7 @@ const Page = () => (
           Event: EHR Integrated
         </Pagination.Previous>
         <Pagination.Next
-          href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/internal_transfer")}
+          href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/event_internal_transfer")}
         >
           Event: Internal Transfer
         </Pagination.Next>

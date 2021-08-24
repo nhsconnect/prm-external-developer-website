@@ -59,7 +59,7 @@ const Page = () => (
           Event: Registration Completed
         </Pagination.Previous>
         <Pagination.Next
-          href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/error")}
+          href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/event_error")}
         >
           Event: Error
         </Pagination.Next>
