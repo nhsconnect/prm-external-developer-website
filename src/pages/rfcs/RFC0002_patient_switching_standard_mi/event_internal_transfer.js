@@ -4,15 +4,15 @@ import { Helmet } from "react-helmet"
 import WarningCallout from "nhsuk-react-components/lib/components/warning-callout"
 import Pagination from "nhsuk-react-components/lib/components/pagination"
 import { PageWithSideMenu } from "../../../components/pagelayouts/pagewithsidemenu"
-import { items, ERROR } from "../../../menus/rfc0002menu"
-import errorPayload from "../../../../static/RFC0002_patient_switching_standard_mi/payloads/error.json"
+import { items, INTERNAL_TRANSFER } from "../../../menus/rfc0002menu"
+import internalTransfer from "../../../../static/RFC0002_patient_switching_standard_mi/payloads/internalTransfer.json"
 import "../../index.scss"
 
 const Page = () => (
   <>
     <Helmet title="EHR Integrated - Patient Record Migration" />
     <PageWithSideMenu
-      sidemenu={{ items, selectedItem: ERROR }}
+      sidemenu={{ items, selectedItem: INTERNAL_TRANSFER }}
       breadcrumb={{
         items: [
           {
@@ -42,22 +42,27 @@ const Page = () => (
         </p>
       </WarningCallout>
       <h1>RFC0002 Patient Switching Standard MI</h1>
-      <h2>Error</h2>
+      <h2>Internal Transfer</h2>
       <h3>Event Description</h3>
       <p>
-        The Error event should be sent immediately <em>after</em> an error has occurred, or has been detected by
-        the Supplier System.
+        The Internal Transfer event should be sent immediately <em>after</em> a patient transfer has occurred between two
+        practices using the same Supplier System.
       </p>
-      <h3>Error Event Example Payload</h3>
+      <h3>Internal Transfer Event Example Payload</h3>
       <p>Event payload to be updated.</p>
-      <pre>{JSON.stringify(errorPayload, null, 2)}</pre>
+      <pre>{JSON.stringify(internalTransfer, null, 2)}</pre>
 
       <Pagination>
         <Pagination.Previous
-          href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/internal_transfer")}
+          href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/event_registration_completed")}
         >
-          Event: Internal Transfer
+          Event: Registration Completed
         </Pagination.Previous>
+        <Pagination.Next
+          href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/error")}
+        >
+          Event: Error
+        </Pagination.Next>
       </Pagination>
     </PageWithSideMenu>
   </>
