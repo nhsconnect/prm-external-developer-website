@@ -58,7 +58,7 @@ const Page = () => (
       />
       <h3>Event delivery method</h3>
       <p>
-        We intend to provide a public internet facing HTTPS end point and make
+        We intend to provide a public internet facing HTTPS API and make
         it available via the evolving NHS 'developer' website:{" "}
         <a
           href="https://digital.nhs.uk/developer"
@@ -72,10 +72,6 @@ const Page = () => (
         All data should be captured as close to the time of the real life event
         as possible.
       </p>
-      <p>
-        We are equally happy to explore other methods with suppliers if
-        appropriate.
-      </p>
       <h3>Authorisation and Authentication</h3>
       <p>
         We intend to provide authorisation and authentication via existing
@@ -86,8 +82,6 @@ const Page = () => (
         >
           https://digital.nhs.uk/developer/guides-and-documentation/security-and-authorisations
         </a>
-        . We are equally happy to explore other methods with suppliers if
-        appropriate.
       </p>
       <h3>Use cases</h3>
       <p>
@@ -96,7 +90,7 @@ const Page = () => (
       </p>
       <h3>Assurance</h3>
       <p>
-        Assurance will intially take the form of collaboratively developing with
+        Assurance will initially take the form of collaboratively developing with
         suppliers against the use cases provided. We are then looking to explore
         how we might best continue assurance through to production and then
         ongoing.

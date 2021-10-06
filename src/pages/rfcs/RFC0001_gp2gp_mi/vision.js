@@ -149,8 +149,7 @@ const Page = () => {
           MI Events must be submitted when the corresponding action they expose
           data for has been completed. For example an event must be sent as soon
           as the requesting system integrates an EHR. Events are to be submitted
-          via HTTPS POST request to the GP2GP MI endpoint. To simplify the
-          implementation, systems will not have to retry if this request fails.
+          via HTTPS POST request to their respective GP2GP MI endpoint.
         </p>
         <h4>End to end view of the registration process</h4>
         <p>
