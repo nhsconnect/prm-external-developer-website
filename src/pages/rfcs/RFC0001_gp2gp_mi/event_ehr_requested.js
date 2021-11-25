@@ -63,12 +63,6 @@ const Page = () => (
             <td>Unique identifier for this event.</td>
           </tr>
           <tr>
-            <td>eventType</td>
-            <td>
-              The type of the event, in this case "EHR_REQUESTED".
-            </td>
-          </tr>
-          <tr>
             <td>eventGeneratedTimestamp</td>
             <td>
               The unix timestamp in milliseconds of when the event was generated
@@ -76,14 +70,21 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>systemSupplier</td>
+            <td>registrationId</td>
+            <td>
+              The unique identifier for this registration that can be resolved
+              in the clinical system.
+            </td>
+          </tr>
+          <tr>
+            <td>reportingSystemSupplier</td>
             <td>
               The system supplier who generated the event. A unique identifier
               given to you as a supplier by NHSD.
             </td>
           </tr>
           <tr>
-            <td>odsCode</td>
+            <td>reportingPracticeOdsCode</td>
             <td>The ODS code of the practice generating the event.</td>
           </tr>
           <tr>
@@ -122,19 +123,13 @@ const Page = () => (
             <th>Field</th>
             <th>Description</th>
           </tr>
+
           <tr>
-            <td>registrationId</td>
-            <td>
-              The unique identifier for this registration that can be resolved
-              in the clinical system.
-            </td>
-          </tr>
-          <tr>
-            <td>requestingOdsCode</td>
+            <td>requestingPracticeOdsCode</td>
             <td>The ODS code of the practice requesting the EHR.</td>
           </tr>
           <tr>
-            <td>sendingOdsCode</td>
+            <td>sendingPracticeOdsCode</td>
             <td>The ODS code of the practice sending the EHR.</td>
           </tr>
         </tbody>
