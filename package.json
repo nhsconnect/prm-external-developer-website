@@ -18,7 +18,7 @@
     "gatsby-source-filesystem": "^2.1.51",
     "gatsby-transformer-json": "^2.2.27",
     "gatsby-transformer-sharp": "^2.3.18",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "nhsuk-frontend": "^3.0.3",
     "nhsuk-react-components": "^0.8.15",
     "node-sass": "^6.0.1",
