@@ -21,7 +21,7 @@
     "lodash": "^4.17.21",
     "nhsuk-frontend": "^3.0.3",
     "nhsuk-react-components": "^0.8.15",
-    "node-sass": "^6.0.1",
+    "node-sass": "^4.13.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
