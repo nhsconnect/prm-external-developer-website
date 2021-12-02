@@ -95,7 +95,7 @@ const Page = () => (
       <h3>Payload Event Fields</h3>
       <table>
         <tbody>
-          <tr>ehr
+          <tr>
             <th>Field</th>
             <th>Description</th>
           </tr>
