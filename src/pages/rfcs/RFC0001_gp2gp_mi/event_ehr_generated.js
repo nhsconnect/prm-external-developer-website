@@ -112,6 +112,29 @@ const Page = () => (
               An object that contains information about the GP2GP transfer.
             </td>
           </tr>
+          <tr>
+            <td>ehr</td>
+            <td>
+              An object that contains information about the EHR used in the
+              GP2GP transfer.
+            </td>
+          </tr>
+          <tr>
+            <td>attachment</td>
+            <td>
+              A list that contains information about ALL the attachments
+              contained in the EHR. This should include all attachments that are
+              either directly attached OR that are linked to from within the
+              EHR.
+            </td>
+          </tr>
+          <tr>
+            <td>placeholder</td>
+            <td>
+              An list that contains information about the attachments that were
+              in the EHR but not contained in the GP2GP message.
+            </td>
+          </tr>
         </tbody>
       </table>
 
@@ -157,6 +180,110 @@ const Page = () => (
         </tbody>
       </table>
 
+      <h3>EHR Event Fields</h3>
+      <table>
+        <tbody>
+          <tr>
+            <th>Field</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>ehrTotalSizeBytes</td>
+            <td>
+              The total size in bytes of the GP2GP message BEFORE it is split
+              for transfer including all attachments.
+            </td>
+          </tr>
+          <tr>
+            <td>ehrStructuredSizeBytes</td>
+            <td>
+              The total size in bytes of structured part of the GP2GP message
+              (attachments are NOT to be included).
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Attachments Event Fields</h3>
+      <table>
+        <tbody>
+          <tr>
+            <th>Field</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>attachmentId</td>
+            <td>
+              A unique id for the attachment that can be resolved in the
+              clinical system.
+            </td>
+          </tr>
+          <tr>
+            <td>clinicalType</td>
+            <td>
+              The text value corresponding to the value used in
+              EhrAttachmentCode in the code element of ExternalDocument as
+              defined in the MIM.
+            </td>
+          </tr>
+          <tr>
+            <td>mimeType</td>
+            <td>
+              The mime type of the attachment as used as part of the text
+              element in ExternalDocument as defined in the MIM.
+            </td>
+          </tr>
+          <tr>
+            <td>sizeBytes</td>
+            <td>The size in bytes of the attachment.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Placeholders Event Fields</h3>
+      <table>
+        <tbody>
+          <tr>
+            <th>Field</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>placeholderId</td>
+            <td>
+              A unique id for the placeholder that can be resolved in the
+              clinical system.
+            </td>
+          </tr>
+          <tr>
+            <td>attachmentId</td>
+            <td>
+              A reference to the attachment that the placeholder replaces
+              (should be contained in the list of attachments).
+            </td>
+          </tr>
+          <tr>
+            <td>generatedBy</td>
+            <td>
+              The ODS code of the practice that generated the placeholder.
+            </td>
+          </tr>
+          <tr>
+            <td>reason</td>
+            <td>
+              The reason the placeholder was generated. These codes should match
+              the values described in{" "}
+              <a
+                href={withPrefix(
+                  "/NPFIT-PC-BLD-0099.04 GP2GP Handling Missing Attachments.pdf"
+                )}
+              >
+                NPFIT-PC-BLD-0099.04 GP2GP Handling Missing Attachments
+              </a>
+              .
+            </td>
+          </tr>
+        </tbody>
+      </table>
       <Pagination>
         <Pagination.Previous
           href={withPrefix("rfcs/RFC0001_gp2gp_mi/event_ehr_requested")}
