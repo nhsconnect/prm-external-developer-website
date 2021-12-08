@@ -6,7 +6,7 @@
   "reportingPracticeOdsCode": "ABC1234",
   "payload": {
     "registration": {
-      "reportingPracticeOdsCode": "ABC1234",
+      "requestingPracticeOdsCode": "ABC1234",
       "sendingPracticeOdsCode": "XYZ4567"
     },
     "gp2gp": {

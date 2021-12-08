@@ -103,7 +103,7 @@ const Page = () => (
           <tr>
             <td>registration</td>
             <td>
-              An object that contains information about the registration process
+              An object that contains information about the registration process.
             </td>
           </tr>
           <tr>
