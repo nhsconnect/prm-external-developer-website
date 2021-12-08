@@ -57,7 +57,7 @@ export const items = [
     id: MIGRATE_DOCUMENT_REQUEST,
   },
   {
-    url: withPrefix("/rfcs/RFC0002_patient_switching_standard_mi/event_migrate_structured_record_response"),
+    url: withPrefix("/rfcs/RFC0002_patient_switching_standard_mi/event_migrate_document_response"),
     label: "Event: Migrate Document Response",
     id: MIGRATE_DOCUMENT_RESPONSE,
   },
