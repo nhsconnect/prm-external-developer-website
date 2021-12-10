@@ -4,6 +4,16 @@
   "description": "Externally facing developer focussed website, for all things PRM",
   "version": "0.1.0",
   "author": "The PRM team @ NHSD",
+  "scripts": {
+    "build": "gatsby build --prefix-paths",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve --prefix-paths",
+    "clean": "gatsby clean",
+    "test": "jest",
+    "preinstall": "npx npm-force-resolutions"
+  },
   "dependencies": {
     "classnames": "^2.2.6",
     "gatsby": "^2.25.0",
@@ -21,7 +31,7 @@
     "lodash": "^4.17.21",
     "nhsuk-frontend": "^3.0.3",
     "nhsuk-react-components": "^0.8.15",
-    "node-sass": "^4.13.0",
+    "node-sass": "^6.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
@@ -29,22 +39,20 @@
     "react-responsive": "^8.0.3"
   },
   "devDependencies": {
-    "jest": "^25.1.0",
+    "jest": "^26.6.3",
     "prettier": "^1.19.1"
+  },
+  "resolutions": {
+    "trim": "^0.0.3",
+    "ws": "^7.4.6",
+    "nth-check": "^2.0.1",
+    "ansi-regex": "^5.0.1",
+    "trim-newlines": "^3.0.1"
   },
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
-  "scripts": {
-    "build": "gatsby build --prefix-paths",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve --prefix-paths",
-    "clean": "gatsby clean",
-    "test": "jest"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
