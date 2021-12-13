@@ -15,7 +15,7 @@
       "ehr": {
         "ehrTotalSizeBytes": 5699433,
         "ehrStructuredSizeBytes": 4096,
-        "attachments": [
+        "attachment": [
           {
             "attachmentId": "3424-342456-3424-342456",
             "clinicalType": "Scanned document",
@@ -28,7 +28,7 @@
             "sizeBytes": 24352346
           }
         ],
-        "placeholders": [
+        "placeholder": [
           {
             "placeholderId": "9876-987654-9876-987654",
             "attachmentId": "1323-132345-1323-132345",
@@ -38,7 +38,7 @@
           }
         ]
       },
-      "unsupportedDataItems": [
+      "unsupportedDataItem": [
         {
           "type": "allergy/flag",
           "uniqueIdentifier": "1323-132345-1323-132345",

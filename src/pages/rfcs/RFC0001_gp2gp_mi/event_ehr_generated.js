@@ -162,7 +162,7 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>unsupportedDataItems</td>
+            <td>unsupportedDataItem</td>
             <td>
               An object that contains information about any unsupported data items that failed to transfer.
             </td>
@@ -192,7 +192,7 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>attachments</td>
+            <td>attachment</td>
             <td>
               A list that contains information about ALL the attachments
               contained in the EHR. This should include all attachments that are
@@ -201,7 +201,7 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>placeholders</td>
+            <td>placeholder</td>
             <td>
               An list that contains information about the attachments that were
               in the EHR but not contained in the GP2GP message.
@@ -210,7 +210,7 @@ const Page = () => (
         </tbody>
       </table>
 
-      <h3>Attachments Event Fields</h3>
+      <h3>Attachment Event Fields</h3>
       <table>
         <tbody>
           <tr>
@@ -246,7 +246,7 @@ const Page = () => (
         </tbody>
       </table>
 
-      <h3>Placeholders Event Fields</h3>
+      <h3>Placeholder Event Fields</h3>
       <table>
         <tbody>
           <tr>
@@ -297,7 +297,7 @@ const Page = () => (
         </tbody>
       </table>
 
-      <h3>Unsupported Data Items Event Fields</h3>
+      <h3>Unsupported Data Item Event Fields</h3>
       <table>
         <tbody>
         <tr>

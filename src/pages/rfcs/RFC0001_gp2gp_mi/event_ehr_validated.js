@@ -189,14 +189,14 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>degrades</td>
+            <td>degrade</td>
             <td>
               A list that contains information about ALL the degrades
               contained in the EHR that occurred due to the gp2gp transfer.
             </td>
           </tr>
           <tr>
-            <td>attachments</td>
+            <td>attachment</td>
             <td>
               A list that contains information about ALL the attachments
               contained in the EHR. This should include all attachments that are
@@ -205,7 +205,7 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>placeholders</td>
+            <td>placeholder</td>
             <td>
               An list that contains information about the attachments that were
               in the EHR but not contained in the GP2GP message.
@@ -214,7 +214,7 @@ const Page = () => (
         </tbody>
       </table>
 
-      <h3>Degrades Event Fields</h3>
+      <h3>Degrade Event Fields</h3>
       <table>
         <tbody>
         <tr>
@@ -246,7 +246,7 @@ const Page = () => (
         </tbody>
       </table>
 
-      <h3>Attachments Event Fields</h3>
+      <h3>Attachment Event Fields</h3>
       <table>
         <tbody>
           <tr>
@@ -282,7 +282,7 @@ const Page = () => (
         </tbody>
       </table>
 
-      <h3>Placeholders Event Fields</h3>
+      <h3>Placeholder Event Fields</h3>
       <table>
         <tbody>
           <tr>
