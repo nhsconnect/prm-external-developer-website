@@ -1,18 +1,18 @@
 {
   "eventId": "1234-123456-1234-123451",
   "eventType": "ERROR",
-  "eventGeneratedTimestamp": 1575384234,
+  "eventGeneratedDateTime": "2020-02-08T09:30:26Z",
   "systemSupplier": "SYSTEM_SUPPLIER",
   "odsCode": "XYZ4567",
   "payload": {
     "registration": {
       "registrationId": "9087-978098-9087-978098",
-      "registrationStartedTimestamp": 1575383999,
+      "registrationStartedDateTime": "2020-02-08T09:30:26Z",
       "requestingOdsCode": "ABC1234"
     },
     "gp2gp": {
       "conversationId": "4345-986959-4930-684038",
-      "errorTimestamp": 1575384000,
+      "errorDateTime": "2020-02-08T09:30:26Z",
       "errorCode": "",
       "errorDescription": "stacktrace? detailed error message?"
     }

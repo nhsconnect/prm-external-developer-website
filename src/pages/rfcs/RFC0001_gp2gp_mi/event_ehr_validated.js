@@ -64,25 +64,27 @@ const Page = () => (
             <td>Unique identifier for this event.</td>
           </tr>
           <tr>
-            <td>eventType</td>
-            <td>The type of the event, in this case "EHR_VALIDATED".</td>
-          </tr>
-          <tr>
-            <td>eventGeneratedTimestamp</td>
+            <td>eventGeneratedDateTime</td>
             <td>
-              The unix timestamp in milliseconds of when the event was generated
+              The ISO 8601 Date time in UTC of when the event was generated
               by the system.
             </td>
           </tr>
           <tr>
-            <td>systemSupplier</td>
+            <td>registrationId</td>
+            <td>
+              The unique identifier for this registration that can be resolved in the clinical system.
+            </td>
+          </tr>
+          <tr>
+            <td>reportingSystemSupplier</td>
             <td>
               The system supplier who generated the event. A unique identifier
               given to you as a supplier by NHSD.
             </td>
           </tr>
           <tr>
-            <td>odsCode</td>
+            <td>reportingPracticeOdsCode</td>
             <td>The ODS code of the practice generating the event.</td>
           </tr>
           <tr>
@@ -111,55 +113,24 @@ const Page = () => (
               An object that contains information about the GP2GP transfer
             </td>
           </tr>
-          <tr>
-            <td>ehr</td>
-            <td>
-              An object that contains information about the EHR used in the
-              GP2GP transfer
-            </td>
-          </tr>
-          <tr>
-            <td>attachment</td>
-            <td>
-              A list that contains information about ALL the attachments
-              contained in the EHR as received by the receiving system. This
-              should include all attachments that are either directly attached
-              OR that are linked to from within the EHR.
-            </td>
-          </tr>
-          <tr>
-            <td>placeholder</td>
-            <td>
-              A list that contains information about all the placeholders in the
-              EHR as received by the recieving system AND any placeholders that
-              have been created by the recieving system.
-            </td>
-          </tr>
         </tbody>
       </table>
 
       <h3>Registration Event Fields</h3>
       <table>
         <tbody>
-          <tr>
-            <th>Field</th>
-            <th>Description</th>
-          </tr>
-          <tr>
-            <td>registrationId</td>
-            <td>
-              The unique identifier for this registration that can be resolved
-              in the clinical system.
-            </td>
-          </tr>
-          <tr>
-            <td>requestingOdsCode</td>
-            <td>The ODS code of the practice requesting the EHR</td>
-          </tr>
-          <tr>
-            <td>sendingOdsCode</td>
-            <td>The ODS code of the practice sending the EHR</td>
-          </tr>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>requestingPracticeOdsCode</td>
+          <td>The ODS code of the practice requesting the EHR.</td>
+        </tr>
+        <tr>
+          <td>sendingPracticeOdsCode</td>
+          <td>The ODS code of the practice sending the EHR.</td>
+        </tr>
         </tbody>
       </table>
 
@@ -178,11 +149,18 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>ehrValidatedTimestamp</td>
+            <td>ehrValidatedDateTime</td>
             <td>
-              The unix timestamp in milliseconds that the EHR used in the GP2GP
+              The ISO 8601 Date time in UTC of when the EHR used in the GP2GP
               transfer was added to the GP2GP workflow to be integrated by the
               clinical staff.
+            </td>
+          </tr>
+          <tr>
+            <td>ehr</td>
+            <td>
+              An object that contains information about the EHR used in the
+              GP2GP transfer.
             </td>
           </tr>
         </tbody>
@@ -210,6 +188,61 @@ const Page = () => (
               included).
             </td>
           </tr>
+          <tr>
+            <td>degrades</td>
+            <td>
+              A list that contains information about ALL the degrades
+              contained in the EHR that occurred due to the gp2gp transfer.
+            </td>
+          </tr>
+          <tr>
+            <td>attachments</td>
+            <td>
+              A list that contains information about ALL the attachments
+              contained in the EHR. This should include all attachments that are
+              either directly attached OR that are linked to from within the
+              EHR.
+            </td>
+          </tr>
+          <tr>
+            <td>placeholders</td>
+            <td>
+              An list that contains information about the attachments that were
+              in the EHR but not contained in the GP2GP message.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Degrades Event Fields</h3>
+      <table>
+        <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>type</td>
+          <td>
+            The type/category of this degrade.
+          </td>
+        </tr>
+        <tr>
+          <td>metadata</td>
+          <td>
+            Any additional metadata that provides valuable intel on this degrade.
+          </td>
+        </tr>
+        <tr>
+          <td>code</td>
+          <td>
+            The designated code for this particular degrade.
+          </td>
+        </tr>
+        <tr>
+          <td>system</td>
+          <td>The system in which this degrade occurred.</td>
+        </tr>
         </tbody>
       </table>
 
@@ -230,7 +263,7 @@ const Page = () => (
           <tr>
             <td>clinicalType</td>
             <td>
-              The text value corresponding to the value used in
+              (Optional) The text value corresponding to the value used in
               EhrAttachmentCode in the code element of ExternalDocument as
               defined in the MIM.
             </td>
@@ -288,6 +321,12 @@ const Page = () => (
               >
                 NPFIT-PC-BLD-0099.04 GP2GP Handling Missing Attachments
               </a>
+            </td>
+          </tr>
+          <tr>
+            <td>originalMimeType</td>
+            <td>
+              The original mime type of the attachment this placeholder is for.
             </td>
           </tr>
         </tbody>

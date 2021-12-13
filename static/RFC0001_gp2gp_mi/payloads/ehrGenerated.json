@@ -1,6 +1,6 @@
 {
   "eventId": "1234-123456-1234-123451",
-  "eventGeneratedTimestamp": 1575384234,
+  "eventGeneratedDateTime": "2020-02-08T09:30:26Z",
   "registrationId": "9087-978098-9087-978098",
   "reportingSystemSupplier": "SYSTEM_SUPPLIER",
   "reportingPracticeOdsCode": "XYZ4567",
@@ -11,11 +11,11 @@
     },
     "gp2gp": {
       "conversationId": "4345-986959-4930-684038",
-      "ehrGeneratedTimestamp": 1575384000,
+      "ehrGeneratedDateTime": "2020-02-08T09:30:26Z",
       "ehr": {
         "ehrTotalSizeBytes": 5699433,
         "ehrStructuredSizeBytes": 4096,
-        "attachment": [
+        "attachments": [
           {
             "attachmentId": "3424-342456-3424-342456",
             "clinicalType": "Scanned document",
@@ -28,7 +28,7 @@
             "sizeBytes": 24352346
           }
         ],
-        "placeholder": [
+        "placeholders": [
           {
             "placeholderId": "9876-987654-9876-987654",
             "attachmentId": "1323-132345-1323-132345",
@@ -38,7 +38,7 @@
           }
         ]
       },
-      "unsupportedDataItem": [
+      "unsupportedDataItems": [
         {
           "type": "allergy/flag",
           "uniqueIdentifier": "1323-132345-1323-132345",

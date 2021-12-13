@@ -1,6 +1,6 @@
 {
   "eventId": "1234-123456-1234-123454",
-  "eventGeneratedTimestamp": 1575384234,
+  "eventGeneratedDateTime": "2020-02-08T09:30:26Z",
   "registrationId": "9087-978098-9087-978098",
   "reportingSystemSupplier": "SYSTEM_SUPPLIER",
   "reportingPracticeOdsCode": "ABC1234",
@@ -11,7 +11,7 @@
     },
     "gp2gp": {
       "conversationId": "4345-986959-4930-684038",
-      "ehrSentTimestamp": 1575384000
+      "ehrSentDateTime": "2020-02-08T09:30:26Z"
     }
   }
 }

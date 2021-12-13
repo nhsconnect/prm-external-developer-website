@@ -68,27 +68,27 @@ const Page = () => (
             <td>Unique identifier for this event.</td>
           </tr>
           <tr>
-            <td>eventType</td>
+            <td>eventGeneratedDateTime</td>
             <td>
-              The type of the event, in this case "REGISTRATION_COMPLETED".
-            </td>
-          </tr>
-          <tr>
-            <td>eventGeneratedTimestamp</td>
-            <td>
-              The unix timestamp in milliseconds of when the event was generated
+              The ISO 8601 Date time in UTC of when the event was generated
               by the system.
             </td>
           </tr>
           <tr>
-            <td>systemSupplier</td>
+            <td>registrationId</td>
+            <td>
+              The unique identifier for this registration that can be resolved in the clinical system.
+            </td>
+          </tr>
+          <tr>
+            <td>reportingSystemSupplier</td>
             <td>
               The system supplier who generated the event. A unique identifier
               given to you as a supplier by NHSD.
             </td>
           </tr>
           <tr>
-            <td>odsCode</td>
+            <td>reportingPracticeOdsCode</td>
             <td>The ODS code of the practice generating the event.</td>
           </tr>
           <tr>
@@ -123,25 +123,18 @@ const Page = () => (
       <h3>Registration Event Fields</h3>
       <table>
         <tbody>
-          <tr>
-            <th>Field</th>
-            <th>Description</th>
-          </tr>
-          <tr>
-            <td>registrationId</td>
-            <td>
-              The unique identifier for this registration that can be resolved
-              in the clinical system.
-            </td>
-          </tr>
-          <tr>
-            <td>requestingOdsCode</td>
-            <td>The ODS code of the practice requesting the EHR.</td>
-          </tr>
-          <tr>
-            <td>sendingOdsCode</td>
-            <td>The ODS code of the practice sending the EHR.</td>
-          </tr>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>requestingPracticeOdsCode</td>
+          <td>The ODS code of the practice requesting the EHR.</td>
+        </tr>
+        <tr>
+          <td>sendingPracticeOdsCode</td>
+          <td>The ODS code of the practice sending the EHR.</td>
+        </tr>
         </tbody>
       </table>
 
@@ -160,9 +153,9 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>registrationCompletedTimestamp</td>
+            <td>registrationCompletedDateTime</td>
             <td>
-              The unix timestamp in milliseconds of when the registration
+              The ISO 8601 Date time in UTC of when the registration
               completed.
             </td>
           </tr>

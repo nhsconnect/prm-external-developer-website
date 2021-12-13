@@ -63,9 +63,9 @@ const Page = () => (
             <td>Unique identifier for this event.</td>
           </tr>
           <tr>
-            <td>eventGeneratedTimestamp</td>
+            <td>eventGeneratedDateTime</td>
             <td>
-              The unix timestamp in milliseconds of when the event was generated
+              The ISO 8601 Date time in UTC of when the event was generated
               by the system.
             </td>
           </tr>
@@ -148,9 +148,9 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>ehrSentTimestamp</td>
+            <td>ehrSentDateTime</td>
             <td>
-              The unix timestamp in milliseconds that the EHR used in the GP2GP
+              The ISO 8601 Date time in UTC that the EHR used in the GP2GP
               transfer was sent by the system.
             </td>
           </tr>

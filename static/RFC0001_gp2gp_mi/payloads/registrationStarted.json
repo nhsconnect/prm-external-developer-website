@@ -1,12 +1,12 @@
 {
   "eventId": "1234-123456-1234-123454",
-  "eventGeneratedTimestamp": 1575384234,
+  "eventGeneratedDateTime": "2020-02-08T09:30:26Z",
   "registrationId": "6235-123456-8947-127834",
   "reportingSystemSupplier": "EMIS",
   "reportingPracticeOdsCode": "ABC1234",
   "payload": {
     "registration": {
-      "registrationStartedTimestamp": 1575383999,
+      "registrationStartedDateTime": "2020-02-08T08:30:26Z",
       "registrationType": "newRegistrant",
       "requestingPracticeOdsCode": "ABC1234"
     }

@@ -1,18 +1,17 @@
 {
-  "eventId": "1234-123456-1234-123453",
-  "eventType": "EHR_VALIDATED",
-  "eventGeneratedTimestamp": 1575384234,
-  "systemSupplier": "SYSTEM_SUPPLIER",
-  "odsCode": "ABC1234",
+  "eventId": "1234-123456-1234-123451",
+  "eventGeneratedDateTime": "2020-02-08T09:30:26Z",
+  "registrationId": "9087-978098-9087-978098",
+  "reportingSystemSupplier": "SYSTEM_SUPPLIER",
+  "reportingPracticeOdsCode": "XYZ4567",
   "payload": {
     "registration": {
-      "registrationId": "9087-978098-9087-978098",
-      "requestingOdsCode": "ABC1234",
-      "sendingOdsCode": "XYZ4567"
+      "requestingPracticeOdsCode": "ABC1234",
+      "sendingPracticeOdsCode": "XYZ4567"
     },
     "gp2gp": {
       "conversationId": "4345-986959-4930-684038",
-      "ehrValidatedTimestamp": 1575384000,
+      "ehrValidatedDateTime": "2020-02-08T09:30:26Z",
       "ehr": {
         "ehrTotalSizeBytes": 5699433,
         "ehrStructuredSizeBytes": 4096,

@@ -64,9 +64,9 @@ const Page = () => (
             <td>Unique identifier for this event.</td>
           </tr>
           <tr>
-            <td>eventGeneratedTimestamp</td>
+            <td>eventGeneratedDateTime</td>
             <td>
-              The unix timestamp in milliseconds of when the event was generated
+              The ISO 8601 Date time in UTC of when the event was generated
               by the system.
             </td>
           </tr>
@@ -119,9 +119,9 @@ const Page = () => (
             <th>Description</th>
           </tr>
           <tr>
-            <td>registrationStartedTimestamp</td>
+            <td>registrationStartedDateTime</td>
             <td>
-              The unix timestamp in milliseconds of when the registration
+              The ISO 8601 Date time in UTC of when the registration
               started.
             </td>
           </tr>
