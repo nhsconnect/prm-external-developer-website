@@ -1,14 +1,13 @@
 {
-  "eventId": "1234-123456-1234-123452",
-  "eventType": "REGISTRATION_COMPLETED",
+  "eventId": "1234-123456-1234-123454",
   "eventGeneratedTimestamp": 1575384234,
-  "systemSupplier": "SYSTEM_SUPPLIER",
-  "odsCode": "ABC1234",
+  "registrationId": "9087-978098-9087-978098",
+  "reportingSystemSupplier": "SYSTEM_SUPPLIER",
+  "reportingPracticeOdsCode": "ABC1234",
   "payload": {
     "registration": {
-      "registrationId": "9087-978098-9087-978098",
-      "requestingOdsCode": "ABC1234",
-      "sendingOdsCode": "XYZ4567"
+      "requestingPracticeOdsCode": "ABC1234",
+      "sendingPracticeOdsCode": "XYZ4567"
     },
     "gp2gp": {
       "conversationId": "4345-986959-4930-684038",
