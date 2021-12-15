@@ -1,0 +1,22 @@
+{
+  "eventId": "1234-123456-1234-123451",
+  "eventType": "ERROR",
+  "eventGeneratedDateTime": "2020-02-08T09:30:26Z",
+  "systemSupplier": "SYSTEM_SUPPLIER",
+  "odsCode": "XYZ4567",
+  "payload": {
+    "registration": {
+      "registrationId": "9087-978098-9087-978098",
+      "registrationStartedDateTime": "2020-02-08T09:30:26Z",
+      "requestingOdsCode": "ABC1234"
+    },
+    "gpTransferMetadata": {
+      "conversationId": "4345-986959-4930-684038",
+      "transferEventDateTime": "2020-02-08T09:30:26Z"
+    },
+    "error": {
+      "errorCode": "",
+      "errorDescription": "stacktrace? detailed error message?"
+    }
+  }
+}
