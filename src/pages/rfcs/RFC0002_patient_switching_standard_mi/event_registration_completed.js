@@ -57,118 +57,112 @@ const Page = () => (
       <h3>Registration Completed Event Example Payload</h3>
       <p>Event payload to be updated.</p>
       <pre>{JSON.stringify(registrationCompleted, null, 2)}</pre>
+
       <h3>Top Level Event Fields</h3>
       <table>
         <tbody>
-          <tr>
-            <th>Field</th>
-            <th>Description</th>
-          </tr>
-          <tr>
-            <td>eventId</td>
-            <td>Unique identifier for this event.</td>
-          </tr>
-          <tr>
-            <td>eventType</td>
-            <td>
-              The type of the event, in this case "REGISTRATION_COMPLETED".
-            </td>
-          </tr>
-          <tr>
-            <td>eventGeneratedTimestamp</td>
-            <td>
-              The unix timestamp in milliseconds of when the event was generated
-              by the system.
-            </td>
-          </tr>
-          <tr>
-            <td>systemSupplier</td>
-            <td>
-              The system supplier who generated the event. A unique identifier
-              given to you as a supplier by NHSD.
-            </td>
-          </tr>
-          <tr>
-            <td>odsCode</td>
-            <td>The ODS code of the practice generating the event.</td>
-          </tr>
-          <tr>
-            <td>payload</td>
-            <td>An object that contains the detailed payload of the event.</td>
-          </tr>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>eventId</td>
+          <td>Unique identifier for this event.</td>
+        </tr>
+        <tr>
+          <td>eventGeneratedDateTime</td>
+          <td>
+            The ISO 8601 Date time in UTC of when the event was generated
+            by the system.
+          </td>
+        </tr>
+        <tr>
+          <td>registrationId</td>
+          <td>
+            The unique identifier for this registration that can be resolved in the clinical system.
+          </td>
+        </tr>
+        <tr>
+          <td>reportingSystemSupplier</td>
+          <td>
+            The system supplier who generated the event. A unique identifier
+            given to you as a supplier by NHSD.
+          </td>
+        </tr>
+        <tr>
+          <td>reportingPracticeOdsCode</td>
+          <td>The ODS code of the practice generating the event.</td>
+        </tr>
+        <tr>
+          <td>payload</td>
+          <td>An object that contains the detailed payload of the event.</td>
+        </tr>
         </tbody>
       </table>
 
       <h3>Payload Event Fields</h3>
       <table>
         <tbody>
-          <tr>
-            <th>Field</th>
-            <th>Description</th>
-          </tr>
-          <tr>
-            <td>registration</td>
-            <td>
-              An object that contains information about the registration process
-            </td>
-          </tr>
-          <tr>
-            <td>gp2gp</td>
-            <td>
-              An object that contains information about the GP2GP transfer.
-            </td>
-          </tr>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>registration</td>
+          <td>
+            An object that contains information about the registration process
+          </td>
+        </tr>
+        <tr>
+          <td>gpTransferMetadata</td>
+          <td>
+            An object that contains information about the transfer
+          </td>
+        </tr>
         </tbody>
       </table>
 
       <h3>Registration Event Fields</h3>
       <table>
         <tbody>
-          <tr>
-            <th>Field</th>
-            <th>Description</th>
-          </tr>
-          <tr>
-            <td>registrationId</td>
-            <td>
-              The unique identifier for this registration that can be resolved
-              in the clinical system.
-            </td>
-          </tr>
-          <tr>
-            <td>requestingOdsCode</td>
-            <td>The ODS code of the practice requesting the EHR.</td>
-          </tr>
-          <tr>
-            <td>sendingOdsCode</td>
-            <td>The ODS code of the practice sending the EHR.</td>
-          </tr>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>requestingPracticeOdsCode</td>
+          <td>The ODS code of the practice requesting the EHR.</td>
+        </tr>
+        <tr>
+          <td>sendingPracticeOdsCode</td>
+          <td>The ODS code of the practice sending the EHR.</td>
+        </tr>
         </tbody>
       </table>
 
-      <h3>GP2GP Event Fields</h3>
+      <h3>GP Transfer Metadata Event Fields</h3>
       <table>
         <tbody>
-          <tr>
-            <th>Field</th>
-            <th>Description</th>
-          </tr>
-          <tr>
-            <td>conversationId</td>
-            <td>
-              The ConversationID used in the GP2GP process for this
-              registration.
-            </td>
-          </tr>
-          <tr>
-            <td>registrationCompletedTimestamp</td>
-            <td>
-              The unix timestamp in milliseconds of when the registration
-              completed.
-            </td>
-          </tr>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>conversationId</td>
+          <td>
+            The ConversationID used in the transfer process for this
+            registration.
+          </td>
+        </tr>
+        <tr>
+          <td>transferEventDateTime</td>
+          <td>
+            The ISO 8601 Date time in UTC of when the registration was completed.
+          </td>
+        </tr>
         </tbody>
       </table>
+
 
 
       <Pagination>

@@ -53,6 +53,139 @@ const Page = () => (
       <p>Event payload to be updated.</p>
       <pre>{JSON.stringify(migrateStructuredRecordResponse, null, 2)}</pre>
 
+      <h3>Top Level Event Fields</h3>
+      <table>
+        <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>eventId</td>
+          <td>Unique identifier for this event.</td>
+        </tr>
+        <tr>
+          <td>eventGeneratedDateTime</td>
+          <td>
+            The ISO 8601 Date time in UTC of when the event was generated
+            by the system.
+          </td>
+        </tr>
+        <tr>
+          <td>registrationId</td>
+          <td>
+            The unique identifier for this registration that can be resolved in the clinical system.
+          </td>
+        </tr>
+        <tr>
+          <td>reportingSystemSupplier</td>
+          <td>
+            The system supplier who generated the event. A unique identifier
+            given to you as a supplier by NHSD.
+          </td>
+        </tr>
+        <tr>
+          <td>reportingPracticeOdsCode</td>
+          <td>The ODS code of the practice generating the event.</td>
+        </tr>
+        <tr>
+          <td>payload</td>
+          <td>An object that contains the detailed payload of the event.</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <h3>Payload Event Fields</h3>
+      <table>
+        <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>registration</td>
+          <td>
+            An object that contains information about the registration process
+          </td>
+        </tr>
+        <tr>
+          <td>gpTransferMetadata</td>
+          <td>
+            An object that contains information about the transfer
+          </td>
+        </tr>
+        <tr>
+          <td>structuredRecordMigration</td>
+          <td>
+            An object that contains details about the structured record migration
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+      <h3>Registration Event Fields</h3>
+      <table>
+        <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>requestingPracticeOdsCode</td>
+          <td>The ODS code of the practice requesting the EHR.</td>
+        </tr>
+        <tr>
+          <td>sendingPracticeOdsCode</td>
+          <td>The ODS code of the practice sending the EHR.</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <h3>GP Transfer Metadata Event Fields</h3>
+      <table>
+        <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>conversationId</td>
+          <td>
+            The ConversationID used in the process for this
+            registration.
+          </td>
+        </tr>
+        <tr>
+          <td>transferEventDateTime</td>
+          <td>
+            The ISO 8601 Date time in UTC of structured record migration response.
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+      <h3>Structured Record Event Fields</h3>
+      <table>
+        <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>status</td>
+          <td>
+            The status of this structured record migration (SUCCESS/FAILURE).
+          </td>
+        </tr>
+        <tr>
+          <td>reason</td>
+          <td>
+            The reason for the status of this structured record migration.
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
       <Pagination>
         <Pagination.Previous
           href={withPrefix("rfcs/RFC0002_patient_switching_standard_mi/event_migrate_structured_record_request")}

@@ -50,6 +50,7 @@ const Page = () => (
       </p>
       <h3>EHR Generated Event Example Payload</h3>
       <pre>{JSON.stringify(ehrGenerated, null, 2)}</pre>
+
       <h3>Top Level Event Fields</h3>
       <table>
         <tbody>
