@@ -10,9 +10,11 @@
       "registrationStartedDateTime": "2020-02-08T09:30:26Z",
       "requestingOdsCode": "ABC1234"
     },
-    "gp2gp": {
+    "gpTransferMetadata": {
       "conversationId": "4345-986959-4930-684038",
-      "errorDateTime": "2020-02-08T09:30:26Z",
+      "transferEventDateTime": "2020-02-08T09:30:26Z"
+    },
+    "error": {
       "errorCode": "",
       "errorDescription": "stacktrace? detailed error message?"
     }

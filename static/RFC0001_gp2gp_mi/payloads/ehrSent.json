@@ -9,9 +9,9 @@
       "requestingPracticeOdsCode": "ABC1234",
       "sendingPracticeOdsCode": "XYZ4567"
     },
-    "gp2gp": {
+    "gpTransferMetadata": {
       "conversationId": "4345-986959-4930-684038",
-      "ehrSentDateTime": "2020-02-08T09:30:26Z"
+      "transferEventDateTime": "2020-02-08T09:30:26Z"
     }
   }
 }

@@ -9,9 +9,11 @@
       "requestingPracticeOdsCode": "ABC1234",
       "sendingPracticeOdsCode": "XYZ4567"
     },
-    "gp2gp": {
+    "gpTransferMetadata": {
       "conversationId": "4345-986959-4930-684038",
-      "ehrIntegratedDateTime": "2020-02-08T09:30:26Z",
+      "transferEventDateTime": "2020-02-08T09:30:26Z"
+    },
+    "integration": {
       "numberOfDaysToIntegrate": 4,
       "integrationStatus": "filed as attachment/ suppressed/ merged/ rejected",
       "reason": "Reason for integration status"
