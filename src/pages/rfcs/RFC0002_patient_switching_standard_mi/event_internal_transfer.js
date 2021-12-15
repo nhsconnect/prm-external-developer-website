@@ -171,13 +171,6 @@ const Page = () => (
           <th>Description</th>
         </tr>
         <tr>
-          <td>numberOfDaysToIntegrate</td>
-          <td>
-            The number of days it took the practice staff to integrate the
-            record as understood by the receiving system.
-          </td>
-        </tr>
-        <tr>
           <td>integrationStatus</td>
           <td>
             The status of this ehr integration, (filed as attachment/ suppressed/ merged/ rejected).

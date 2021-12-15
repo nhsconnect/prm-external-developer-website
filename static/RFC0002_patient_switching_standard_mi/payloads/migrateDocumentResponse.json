@@ -13,6 +13,12 @@
       "conversationId": "4345-986959-4930-684038",
       "transferEventDateTime": "2020-02-08T09:30:26Z"
     },
+    "attachment":  {
+      "attachmentId": "3424-342456-3424-342456",
+      "clinicalType": "Scanned document",
+      "mimeType": "application/pdf",
+      "sizeBytes": 3084322
+    },
     "documentMigration": {
       "status": "FAILURE",
       "reason": "Large file size"

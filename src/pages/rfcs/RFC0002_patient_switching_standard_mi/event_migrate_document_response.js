@@ -115,6 +115,12 @@ const Page = () => (
           </td>
         </tr>
         <tr>
+          <td>attachment</td>
+          <td>
+            Information about the attachment this documentation response retrieved.
+          </td>
+        </tr>
+        <tr>
           <td>documentMigration</td>
           <td>
             An object that contains details about the document migration
@@ -160,6 +166,42 @@ const Page = () => (
           <td>
             The ISO 8601 Date time in UTC of document migration response.
           </td>
+        </tr>
+        </tbody>
+      </table>
+
+      <h3>Attachment Event Fields</h3>
+      <table>
+        <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>attachmentId</td>
+          <td>
+            A unique id for the attachment that can be resolved in the
+            clinical system.
+          </td>
+        </tr>
+        <tr>
+          <td>clinicalType</td>
+          <td>
+            (Optional) The text value corresponding to the value used in
+            EhrAttachmentCode in the code element of ExternalDocument as
+            defined in the MIM.
+          </td>
+        </tr>
+        <tr>
+          <td>mimeType</td>
+          <td>
+            The mime type of the attachment as used as part of the text
+            element in ExternalDocument as defined in the MIM.
+          </td>
+        </tr>
+        <tr>
+          <td>sizeBytes</td>
+          <td>The size in bytes of the attachment.</td>
         </tr>
         </tbody>
       </table>

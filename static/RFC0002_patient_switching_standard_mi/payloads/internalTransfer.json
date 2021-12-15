@@ -14,7 +14,6 @@
       "transferEventDateTime": "2020-02-08T09:30:26Z"
     },
     "integration": {
-      "numberOfDaysToIntegrate": 4,
       "integrationStatus": "filed as attachment/ suppressed/ merged/ rejected",
       "reason": "Reason for integration status"
     }
