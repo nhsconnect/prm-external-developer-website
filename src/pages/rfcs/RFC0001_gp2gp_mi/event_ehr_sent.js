@@ -51,6 +51,7 @@ const Page = () => (
       </p>
       <h3>EHR Sent Event Example Payload</h3>
       <pre>{JSON.stringify(ehrSent, null, 2)}</pre>
+
       <h3>Top Level Event Fields</h3>
       <table>
         <tbody>
@@ -107,7 +108,7 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>gp2gp</td>
+            <td>gpTransferMetadata</td>
             <td>
               An object that contains information about the GP2GP transfer.
             </td>
@@ -148,7 +149,7 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>ehrSentDateTime</td>
+            <td>transferEventDateTime</td>
             <td>
               The ISO 8601 Date time in UTC that the EHR used in the GP2GP
               transfer was sent by the system.

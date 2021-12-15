@@ -108,7 +108,7 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>gp2gp</td>
+            <td>gpTransferMetadata</td>
             <td>
               An object that contains information about the GP2GP transfer.
             </td>
@@ -135,7 +135,7 @@ const Page = () => (
         </tbody>
       </table>
 
-      <h3>GP2GP Event Fields</h3>
+      <h3>GP Transfer Metadata Event Fields</h3>
       <table>
         <tbody>
           <tr>
@@ -150,7 +150,7 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>ehrRequestedDateTime</td>
+            <td>transferEventDateTime</td>
             <td>
               The ISO 8601 Date time in UTC that the EHR used in the GP2GP
               transfer was requested by the system.

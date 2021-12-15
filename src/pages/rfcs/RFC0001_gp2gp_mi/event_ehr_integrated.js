@@ -51,6 +51,7 @@ const Page = () => (
       </p>
       <h3>EHR Integrated Event Example Payload</h3>
       <pre>{JSON.stringify(ehrIntegrated, null, 2)}</pre>
+
       <h3>Top Level Event Fields</h3>
       <table>
         <tbody>
@@ -107,9 +108,15 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>gp2gp</td>
+            <td>gpTransferMetadata</td>
             <td>
               An object that contains information about the GP2GP transfer
+            </td>
+          </tr>
+          <tr>
+            <td>integration</td>
+            <td>
+              An object that contains integration details about the GP2GP transfer
             </td>
           </tr>
         </tbody>
@@ -133,7 +140,7 @@ const Page = () => (
         </tbody>
       </table>
 
-      <h3>GP2GP Event Fields</h3>
+      <h3>GP Transfer Metadata Event Fields</h3>
       <table>
         <tbody>
           <tr>
@@ -148,20 +155,42 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>ehrIntegratedDateTime</td>
+            <td>transferEventDateTime</td>
             <td>
               The ISO 8601 Date time in UTC of when the EHR transferred via
               GP2GP was integrated by the clinical staff in the receiving
               practice.
             </td>
           </tr>
-          <tr>
-            <td>numberOfDaysToIntegrate</td>
-            <td>
-              The number of days it took the practice staff to integrate the
-              record as understood by the receiving system.
-            </td>
-          </tr>
+        </tbody>
+      </table>
+
+      <h3>Integration Event Fields</h3>
+      <table>
+        <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>numberOfDaysToIntegrate</td>
+          <td>
+            The number of days it took the practice staff to integrate the
+            record as understood by the receiving system.
+          </td>
+        </tr>
+        <tr>
+          <td>integrationStatus</td>
+          <td>
+            The status of this ehr integration, (filed as attachment/ suppressed/ merged/ rejected).
+          </td>
+        </tr>
+        <tr>
+          <td>reason</td>
+          <td>
+            The reason for this integration status.
+          </td>
+        </tr>
         </tbody>
       </table>
 

@@ -52,6 +52,7 @@ const Page = () => (
       </p>
       <h3>EHR Validated Event Example Payload</h3>
       <pre>{JSON.stringify(ehrValidated, null, 2)}</pre>
+
       <h3>Top Level Event Fields</h3>
       <table>
         <tbody>
@@ -108,9 +109,16 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>gp2gp</td>
+            <td>gpTransferMetadata</td>
             <td>
               An object that contains information about the GP2GP transfer
+            </td>
+          </tr>
+          <tr>
+            <td>ehr</td>
+            <td>
+              An object that contains information about the EHR used in the
+              GP2GP transfer.
             </td>
           </tr>
         </tbody>
@@ -134,7 +142,7 @@ const Page = () => (
         </tbody>
       </table>
 
-      <h3>GP2GP Event Fields</h3>
+      <h3>GP Transfer Metadata Event Fields</h3>
       <table>
         <tbody>
           <tr>
@@ -149,18 +157,11 @@ const Page = () => (
             </td>
           </tr>
           <tr>
-            <td>ehrValidatedDateTime</td>
+            <td>transferEventDateTime</td>
             <td>
               The ISO 8601 Date time in UTC of when the EHR used in the GP2GP
               transfer was added to the GP2GP workflow to be integrated by the
               clinical staff.
-            </td>
-          </tr>
-          <tr>
-            <td>ehr</td>
-            <td>
-              An object that contains information about the EHR used in the
-              GP2GP transfer.
             </td>
           </tr>
         </tbody>
@@ -177,14 +178,14 @@ const Page = () => (
             <td>ehrTotalSizeBytes</td>
             <td>
               The total size in bytes of the GP2GP message as reconstituted by
-              the recieving system including all attachments recieved.
+              the receiving system including all attachments received.
             </td>
           </tr>
           <tr>
             <td>ehrStructuredSizeBytes</td>
             <td>
               The total size in bytes of structured part of the GP2GP message as
-              received by the recieving system (attachments are NOT to be
+              received by the receiving system (attachments are NOT to be
               included).
             </td>
           </tr>

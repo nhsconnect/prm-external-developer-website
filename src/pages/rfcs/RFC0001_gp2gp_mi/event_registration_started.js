@@ -114,21 +114,24 @@ const Page = () => (
       <h3>Registration Event Fields</h3>
       <table>
         <tbody>
-          <tr>
-            <th>Field</th>
-            <th>Description</th>
-          </tr>
-          <tr>
-            <td>registrationStartedDateTime</td>
-            <td>
-              The ISO 8601 Date time in UTC of when the registration
-              started.
-            </td>
-          </tr>
-          <tr>
-            <td>requestingPracticeOdsCode</td>
-            <td>The ODS code of the practice requesting the EHR.</td>
-          </tr>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>registrationStartedDateTime</td>
+          <td>
+            The ISO 8601 Date time in UTC of when the registration started.
+          </td>
+        </tr>
+        <tr>
+          <td>requestingPracticeOdsCode</td>
+          <td>The ODS code of the practice requesting the EHR.</td>
+        </tr>
+        <tr>
+          <td>registrationType</td>
+          <td>The type of this registration (newRegistrant, etc...).</td>
+        </tr>
         </tbody>
       </table>
 
