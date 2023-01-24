@@ -1,3 +1,6 @@
+## Deprecated - 24 January 2023
+This site is no longer published and only for historical purposes
+
 # 🚀 Quick start
 
 1.  **Developing**
